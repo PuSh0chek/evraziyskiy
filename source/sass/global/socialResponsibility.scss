@@ -3,12 +3,17 @@
 .socialResponsibility__title-block {
   background-color: red;
   display: flex;
-  align-items: center;
+  
   width: 100%;
 }
 .socialResponsibility__img-down-header {
+  height: 120px;
 }
 .socialResponsibility__content-down-header {
+  margin: 22px;
+  font-size: 22px;
+  font-family: 600;
+  color: white;
 }
 .socialResponsibility__wrapper {
   display: grid;
