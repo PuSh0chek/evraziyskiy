@@ -1,0 +1,60 @@
+.main__wrapper-naming-block {
+  width: 100%;
+}
+.main__naming-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 120px;
+  background-color: red;
+}
+.main__main__naming-block-img {
+}
+.main__main__naming-block-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+.main__main__naming-block-content {
+  color: white;
+  width: 260px;
+}
+.main__wrapper-about-company {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.main__about-company {
+}
+.main__content {
+
+}
+.main__content-bolt {
+  font-weight: 600;
+}
+.main__content-list {
+}
+.main__content-element {
+}
+.main__mini-navigation-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.main__mini-navigation {
+}
+.main__mini-navigation-list {
+  list-style-type: none;
+}
+.main__mini-navigation-element {
+  margin-bottom: 10px;
+}
+.main__mini-navigation-link {
+}
+.main__mini-navigation-content {
+  color: rgb(99, 98, 98);
+}
+.main__mini-navigation-img {
+  margin: 20px 0;
+  width: 250px;
+  height: 150px;
+}
