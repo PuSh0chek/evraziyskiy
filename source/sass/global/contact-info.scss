@@ -1,0 +1,44 @@
+.contact__wrapper {
+
+}
+.contact {
+  display: flex;
+  align-items: center;
+  background-color: red;
+  width: 100%;
+}
+.contact__list {
+  padding: 0;
+  list-style-type: none;
+}
+.contact__img {
+  width: 220px;
+  height: 130px;
+}
+.contact__title-block {
+  margin-bottom: 50px;
+  margin-left: 20px;
+  font-weight: 600;
+  font-size: 22px;
+  color: white;
+}
+.contact__title {
+}
+.contact__content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact__content {
+  margin: 10px;
+}
+.contact__content-text{
+  color: blue;
+}
+.contact__sx {
+  margin-top: 10px;
+}
+.contact__link {
+}
+.contact__link-text {
+  color: rgba(94, 94, 94, 0.829);
+}
