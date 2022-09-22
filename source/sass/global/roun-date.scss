@@ -9,11 +9,18 @@
 .roundDate__link {
 }
 .roundDate__text {
+  margin: 20px;
   font-size: 22px;
   font-weight: 600;
   color: white;
 }
+.roundDate__title-img {
+  width: 900px;
+  height: 130px;
+}
 .roundDate__img {
+  width: 200px;
+  height: 130px;
 }
 .roundDate__wrapper-info {
   display: flex;
@@ -25,11 +32,16 @@
   align-items: center;
 }
 .roundDate__element {
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 800px;
 }
 .roundDate__block {
+  display: flex;
 }
 .roundDate__lick {
+  width: 500px;
+  margin-left: 10px;
 }
 .roundDate__title {
 }
