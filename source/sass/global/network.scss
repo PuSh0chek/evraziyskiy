@@ -1,0 +1,35 @@
+.network__content-wrapper {
+  display: flex;
+  border-left: 1px solid black;
+}
+.network__content {
+}
+.network__list {
+  list-style: square;
+}
+.contact__list {
+  display: flex;
+  flex-direction: column;
+}
+.network__element {
+  margin: 10px;
+}
+.network__link {
+}
+.network__information {
+  margin: 3px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.network__element-hearth-list {
+}
+.network__element-hearth-element {
+  margin: 5px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.network__element-bold {
+  font-weight: 600;
+}
