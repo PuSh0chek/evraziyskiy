@@ -1,6 +1,7 @@
 .main__wrapper-naming-block {
   width: 100%;
 }
+
 .main__naming-block {
   display: flex;
   justify-content: space-around;
@@ -8,53 +9,244 @@
   height: 120px;
   background-color: red;
 }
-.main__main__naming-block-img {
-}
+
+.main__main__naming-block-img {}
+
 .main__main__naming-block-title {
   font-size: 24px;
   font-weight: 600;
   color: white;
 }
+.main__main__naming-block-info {
+  width: 200px;
+  color: white;
+}
 .main__main__naming-block-content {
+  font-size: 17px;
+  font-weight: 500;
   color: white;
   width: 260px;
 }
+
 .main__wrapper-about-company {
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
-.main__about-company {
-}
-.main__content {
 
-}
+.main__about-company {}
+
+.main__content {}
+
 .main__content-bolt {
   font-weight: 600;
 }
-.main__content-list {
-}
-.main__content-element {
-}
+
+.main__content-list {}
+
+.main__content-element {}
+
 .main__mini-navigation-block {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.main__mini-navigation {
-}
+
+.main__mini-navigation {}
+
 .main__mini-navigation-list {
   list-style-type: none;
 }
+
 .main__mini-navigation-element {
   margin-bottom: 10px;
 }
-.main__mini-navigation-link {
-}
+
+.main__mini-navigation-link {}
+
 .main__mini-navigation-content {
   color: rgb(99, 98, 98);
 }
+
 .main__mini-navigation-img {
   margin: 20px 0;
   width: 250px;
   height: 150px;
+}
+
+/////////////////////////////
+/// about the company structure
+/// /////////////////////////
+
+.about-the-company-structure__wrapper-naming-block {
+  width: 100%;
+  height: 130px;
+  background-color: red;
+}
+
+.about-the-company-structure__naming-block {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.about-the-company-structure__main__naming-block-img {
+  height: 130px;
+  width: 220px;
+}
+
+.about-the-company-structure__main__naming-block-title {
+  color: white;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.about-the-company-structure__main__naming-block-content {
+  color: white;
+  font-size: 16px;
+}
+
+.about-the-company-structure__wrapper-about-company {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-the-company-structure__list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.about-the-company-structure__element {
+  margin: 10px;
+  list-style-type: none;
+}
+
+.about-the-company-structure__title {
+  color: #5376a6;
+}
+
+.about-the-company-structure__img {
+  width: 150px;
+  height: 200px;
+}
+
+.about-the-company-structure__text {}
+
+.about-the-company-structure__text-weigth {
+  font-weight: 600;
+}
+
+.about-the-company-structure__about-company {}
+
+.about-the-company-structure__mini-navigation-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-the-company-structure__mini-navigation {}
+
+.about-the-company-structure__mini-navigation-list {
+  list-style-type: none;
+}
+
+.about-the-company-structure__mini-navigation-element {
+  margin-bottom: 15px;
+}
+
+.about-the-company-structure__mini-navigation-link {}
+
+.about-the-company-structure__mini-navigation-content {}
+
+.main__mini-navigation-img {}
+
+///////////////////////////////
+/// about the company manager
+/// ///////////////////////////
+
+.about-the-company-manager__title {
+
+}
+
+.about-the-company-manager__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-the-company-manager__link {
+  color: blue;
+  text-decoration: underline;
+}
+
+/////////////////////////////
+/// about the company awards
+/// ////////////////////////
+
+.aboutTheCompany-awards__wrapper-about-company {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.aboutTheCompany-awards__about-company {
+}
+.aboutTheCompany-awards__list {
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.425);
+  list-style-type: none;
+}
+.aboutTheCompany-awards__element {
+  display: flex;
+  align-items: center;
+}
+.aboutTheCompany-awards__title {
+  margin: 0;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  background-color: #aaaa;
+  width: 100%;
+  height: 50px;
+  font-weight: 600;
+  font-size: 13px;
+
+}
+.aboutTheCompany-awards__img {
+  margin: 5px;
+  height: 200px;
+  width: 150px;
+}
+.aboutTheCompany-awards__content {
+  margin: 15px;
+  height: 100%;
+  width: 400px;
+}
+
+/////////////////////////////////
+/// about the company societies
+/// /////////////////////////////
+
+.aboutTheCompany-societies__wrapper-about-company {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.aboutTheCompany-societies__about-company {
+}
+.aboutTheCompany-societies__list {
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.651);
+  list-style-type: none;
+}
+.aboutTheCompany-societies__list-up {
+  background-color: #aaa;
+}
+.aboutTheCompany-societies__element {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.aboutTheCompany-societies__content {
+  padding: 10px;
+}
+.aboutTheCompany-societies__content-weigth {
+  font-weight: 600;
+}
+.aboutTheCompany-societies__info {
 }
