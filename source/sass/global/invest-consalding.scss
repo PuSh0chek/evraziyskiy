@@ -1,0 +1,38 @@
+.invest-consalding__wrapper {
+
+}
+.invest-consalding {
+  display: flex;
+  width: 100%;
+  height: 130px;
+  background-color: red;
+}
+.invest-consalding__img {
+  height: 130px;
+  width: 220px;
+}
+.invest-consalding__title-block {
+  margin: 20px;
+}
+.invest-consalding__title {
+
+  color: white;
+  font-weight: 600;
+  font-size: 22px;
+}
+.invest-consalding__content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.invest-consalding__content {
+}
+.invest-consalding__text {
+}
+.invest-consalding__list {
+  list-style: decimal;
+}
+.invest-consalding__element {
+}
+.invest-consalding__link {
+  color: blue;
+}
