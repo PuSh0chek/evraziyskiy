@@ -1,0 +1,76 @@
+.competiton__wrapper {
+}
+.competiton {
+  display: flex;
+  width: 100%;
+  background-color: rgb(227, 25, 33);
+}
+.competiton__img {
+  height: 130px;
+  width: 100px;
+}
+.competiton__title-block {
+  margin: 15px;
+}
+.competiton__title {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+}
+.competiton__content-wrapper {
+}
+.competiton__content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+.competiton__info {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.competiton__text {
+}
+.competiton__text-participants {
+  margin-left: 15px;
+}
+.competiton__element-img{
+  width: 100px;
+  height: 100px;
+}
+.competiton__text-bold {
+  font-weight: 600;
+}
+.competiton__link {
+  margin: 10px;
+  color: blue;
+  text-decoration: underline;
+}
+.competiton__list {
+  list-style-type: none;
+}
+.competiton__list-participants {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.competiton__element {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.competiton__element-participants {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+.competiton__element-img-participants {
+  height: 100px;
+  width: 100px;
+}
+.competiton__advertising {
+  margin: 20px 0 0 40px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
