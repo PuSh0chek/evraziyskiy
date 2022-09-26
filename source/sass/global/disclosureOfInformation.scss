@@ -62,3 +62,94 @@
 .disclosure-of-information__links-content {
   color: rgb(56, 56, 56);
 }
+
+/////////////////////////////////////
+///   financial
+/// /////////////////////////////////
+
+.disclosure-of-information__content-wrapper {
+}
+.disclosure-of-information-financial {
+}
+.disclosure-of-information-financial__content {
+  margin-top: 20px;
+}
+.disclosure-of-information-financial__link {
+  color: blue;
+  text-decoration: underline;
+}
+.disclosure-of-information-financial__text {
+}
+.disclosure-of-information-financial__text-blod {
+  font-weight: 600;
+}
+
+////////////////////////////////////////////
+///  disclosure of information issuing
+/// ////////////////////////////////////////
+
+.disclosure-of-information-issuing {
+
+}
+.disclosure-of-information-issuing__content {
+  margin-top: 20px;
+}
+.disclosure-of-information-issuing__link {
+  color: blue;
+  text-decoration: underline;
+}
+.disclosure-of-information-financial-issuing__text {
+}
+.disclosure-of-information-issuing__text {
+  font-weight: 600;
+}
+
+//////////////////////////////////////////
+/// disclosure of information affiliated persom (see above)
+/// /////////////////////////////////////
+///
+/// see above! classes assigned in above part
+///
+/// ///////////////////////////////////////
+/// disclosure of information registrant
+/// ///////////////////////////////////////
+
+.disclosure-of-information-registrant__content {
+}
+.disclosure-of-information-registrant__text {
+  font-weight: 500;
+}
+.disclosure-of-information-registrant__list {
+  padding: 0;
+  list-style-type: none;
+}
+.disclosure-of-information-registrant__element {
+}
+.disclosure-of-information-registrant__text-bold {
+  font-weight: 600;
+}
+.disclosure-of-information-registrant__link {
+  padding: 10px;
+  color: blue;
+  text-decoration: underline;
+}
+
+///////////////////////////////////////////////
+/// disclosure of information other document
+/// ///////////////////////////////////////////
+
+.disclosure-of-information-other-document__content {
+  display: flex;
+  flex-direction: column;
+}
+.disclosure-of-information-other-document__link {
+  margin-top: 10px;
+  color: blue;
+  text-decoration: underline;
+}
+.disclosure-of-information-other-document__title {
+}
+.disclosure-of-information-other-document__text {
+}
+.disclosure-of-information-other-document__lick {
+}
