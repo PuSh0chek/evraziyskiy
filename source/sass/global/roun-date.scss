@@ -42,6 +42,9 @@
 .roundDate__lick {
   width: 500px;
   margin-left: 10px;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 .roundDate__title {
 }

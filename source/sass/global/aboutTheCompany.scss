@@ -86,13 +86,18 @@
 .about-the-company-structure__naming-block {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .about-the-company-structure__main__naming-block-img {
   height: 130px;
   width: 220px;
 }
-
+.about-the-company-structure__main__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
 .about-the-company-structure__main__naming-block-title {
   color: white;
   font-weight: 600;
