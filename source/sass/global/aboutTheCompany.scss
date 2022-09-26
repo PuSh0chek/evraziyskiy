@@ -4,18 +4,30 @@
 
 .main__naming-block {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  height: 120px;
+  height: 130px;
   background-color: red;
 }
 
-.main__main__naming-block-img {}
+.main__naming-block__alternative {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 130px;
+  background-color: red;
+}
+
+.main__main__naming-block-img {
+  height: 130px;
+  width: 220px;
+}
 
 .main__main__naming-block-title {
   font-size: 24px;
   font-weight: 600;
   color: white;
+  margin: 0 0 0 10px;
+  padding: 0;
 }
 
 .main__main__naming-block-info {
@@ -28,6 +40,12 @@
   font-weight: 500;
   color: white;
   width: 260px;
+  margin: 0;
+  padding: 0;
+}
+
+.main__main__naming-block-content__alternative {
+  margin-left: 10px;
 }
 
 .main__wrapper-about-company {
@@ -50,7 +68,8 @@
 .main__mini-navigation-block {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items:flex-end;
+  margin-right: 20px;
 }
 
 .main__mini-navigation {}
@@ -152,6 +171,8 @@
 .about-the-company-structure__mini-navigation-block {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  margin-right: 20px;
 }
 
 .about-the-company-structure__mini-navigation {}
@@ -166,7 +187,9 @@
 
 .about-the-company-structure__mini-navigation-link {}
 
-.about-the-company-structure__mini-navigation-content {}
+.about-the-company-structure__mini-navigation-content {
+  color: #636262;
+}
 
 .main__mini-navigation-img {}
 
@@ -177,6 +200,7 @@
 .about-the-company-manager__title {}
 
 .about-the-company-manager__list {
+  max-width: 500px;
   list-style-type: none;
   padding: 0;
 }
