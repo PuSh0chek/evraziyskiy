@@ -10,6 +10,7 @@
   height: 130px;
 }
 .roundDate__link {
+  margin-left: 10px;
 }
 .roundDate__text {
   margin: 20px;
@@ -34,8 +35,7 @@
   flex-direction: column;
 }
 .roundDate__element {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0 10px 10px;
   width: 800px;
 }
 .roundDate__block {

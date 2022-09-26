@@ -1,45 +1,75 @@
-.socialResponsibility__content-wrapper {
-}
+.socialResponsibility__content-wrapper {}
+
 .socialResponsibility__title-block {
   background-color: red;
   display: flex;
-  
+
   width: 100%;
 }
+
 .socialResponsibility__img-down-header {
   height: 120px;
 }
+
 .socialResponsibility__content-down-header {
   margin: 22px;
   font-size: 22px;
   font-family: 600;
   color: white;
 }
+
 .socialResponsibility__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
 .socialResponsibility {
   display: flex;
   flex-direction: column;
 }
-.socialResponsibility__title {
-}
+
+.socialResponsibility__title {}
+
 .socialResponsibility__text {
   margin: 3px;
 }
-.socialResponsibility__list {
-}
-.socialResponsibility__element {
-}
-.socialResponsibility__head {
-}
+
+.socialResponsibility__list {}
+
+.socialResponsibility__element {}
+
+.socialResponsibility__head {}
+
 .socialResponsibility__links-block {
   display: flex;
   flex-direction: column;
 }
+
 .socialResponsibility__img {
   margin: 20px 0 20px 40px;
   width: 150px;
   height: 200px;
+  cursor: pointer;
+  transition-property: all;
+  transition: 0.4s;
+  &:hover {
+    transition: 0.59s;
+    width: 250px;
+    height: 300px;
+  }
 }
+
+.socialResponsibility__img-horizontal {
+  margin: 20px 0 20px 40px;
+  width: 150px;
+  height: 100px;
+  cursor: pointer;
+  transition-property: all;
+  transition: 0.4s;
+  &:hover {
+    transition: 0.59s;
+    width: 250px;
+    height: 200px;
+  }
+}
+
