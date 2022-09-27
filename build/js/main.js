@@ -14,4 +14,37 @@ links.forEach(element => {
       popup.classList.add('roundDate__popup-hidden');
     });
   });
+}); //////////////////////////////////////////////////////////////
+//////  press center
+//////////////////////////////////////////////////////////////
+
+const content = document.querySelector('.press__content-list');
+const buttonFilter = document.querySelector('.press__filter-button');
+const parentList = document.querySelector('.press__content-list'); // const filterManth = document.querySelector('.press__filter-input');
+// const filterYear = document.querySelector('.press__filter-input');
+
+const obj = {
+  first: {
+    day: 15,
+    manth: 12,
+    year: 2015,
+    info: 'Генерального директора АО «Евразийский» Вишневского Германа Александровича с Новым годом и Рождеством'
+  }
+};
+
+const createObj = (day, manth, year, info) => {
+  const date = document.createElement('p');
+  const contentInLi = document.createElement('p');
+  const li = document.createElement('li');
+  date.textContent = obj.first.day + '.' + obj.first.manth + '.' + obj.first.manth;
+  contentInLi.textContent = ': ' + obj.first.info;
+  li.appendChild(date);
+  li.appendChild(contentInLi);
+  parentList.appendChild(li);
+  console.log(li);
+};
+
+buttonFilter.addEventListener('click', () => {
+  createObj();
+  console.log(1);
 });
