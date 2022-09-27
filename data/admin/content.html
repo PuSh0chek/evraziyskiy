@@ -1,0 +1,21 @@
+<!--template admin/new/materials2-->
+<!--template admin/materials_template_lite-->
+
+<!--if Request['div'] == '23' || Request['div'] == '29' || Request['div'] == '24' || Request['div'] == '53'--><!--template admin/materials_template-->
+<!--elsif Request['div'] == '30' || Request['div'] == '4'--><!--template admin/materials_template_file-->
+<!--elsif Request['div'] == '28' || Request['div'] == '6'--><!--template admin/materials_template_vacancies-->
+<!--endif-->
+
+<html>
+<head>
+<link href="/share/admin/js-css/catalogue.css" rel="stylesheet" type="text/css">
+<link href="/admin/menu/styles.html" rel="stylesheet" type="text/css">
+<title>Администрирование материалов</title>
+</head>
+<script language="JavaScript">
+	window.first_material_come_in=[1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 26, 27, 43];
+	window.BigSrcFLAG = 2;
+</script>
+<!--object mat2 Materials2::Admin.new('content')-->
+<!--bind mat2_admin mat2.dispatch-->
+</html>

@@ -1,0 +1,9 @@
+<!--include _/include/header--><!--template user/votes--><!--object @votes Voting::VotingUser.new('')-->
+
+<!--if Request['id']!=nil-->
+	<!--bind vote_archive2_A @votes.archive2-->
+<!--else-->
+	<!--bind vote_archive2 @votes.archive2-->
+<!--endif-->
+		
+<!--include _/include/footer-->

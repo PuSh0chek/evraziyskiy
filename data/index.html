@@ -1,0 +1,521 @@
+<!--eval disable_cache-->
+<html>
+<!--template user/evraziyskiy-->
+<!--object @nav Navigation2::User.new()-->
+<!--object @content Materials2::User.new(prefix='content')-->
+
+<head>
+	<title></title>
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="pragma" content="no-cache">
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+	<link rel="stylesheet" type="text/css" href="/js-css/style.css" />
+	<script type="text/javascript" src="/js-css/cookie.js"></script>
+	<script type="text/javascript" src="/js-css/flashobject.js"></script>
+	<script type="text/javascript" src="/js-css/flash.js"></script>
+
+	  
+<script type="text/javascript">
+///////////////////////////////////////////////////////////////////////////
+// CONFIGURATION STARTS HERE
+///////////////////////////////////////////////////////////////////////////
+
+// Set the number of snowflakes (more than 30 - 40 not recommended)
+var snowmax=322
+
+
+var snowcolor=new Array("#aaaacc","#ddddFF","#ccccDD")
+var snowtype=new Array("Arial Black","Arial Narrow","Times","Comic Sans MS")
+var snowletter="*"
+
+// Set the speed of sinking (recommended values range from 0.3 to 2)
+var sinkspeed=0.8
+
+// Set the maximal-size of your snowflaxes
+var snowmaxsize=30
+
+// Set the minimal-size of your snowflaxes
+var snowminsize=8
+
+// Set the snowing-zone
+// Set 1 for all-over-snowing, set 2 for left-side-snowing 
+// Set 3 for center-snowing, set 4 for right-side-snowing
+var snowingzone=1
+
+
+// Do not edit below this line
+var snow=new Array()
+var marginbottom
+var marginright
+var timer
+var i_snow=0
+var x_mv=new Array();
+var crds=new Array();
+var lftrght=new Array();
+var browserinfos=navigator.userAgent 
+var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
+var ns6=document.getElementById&&!document.all
+var opera=browserinfos.match(/Opera/)  
+var browserok=ie5||ns6||opera
+
+function randommaker(range) {        
+    rand=Math.floor(range*Math.random())
+    return rand
+}
+
+function initsnow() {
+    if (ie5 || opera) {
+        marginbottom = document.body.clientHeight
+        marginright = document.body.clientWidth
+    }
+    else if (ns6) {
+        marginbottom = window.innerHeight
+        marginright = window.innerWidth
+    }
+    var snowsizerange=snowmaxsize-snowminsize
+    for (i=0;i<=snowmax;i++) {
+        crds[i] = 0;                      
+        lftrght[i] = Math.random()*15;         
+        x_mv[i] = 0.03 + Math.random()/10;
+        snow[i]=document.getElementById("s"+i)
+        snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
+        snow[i].size=randommaker(snowsizerange)+snowminsize
+        snow[i].style.fontSize=snow[i].size
+        snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
+        snow[i].sink=sinkspeed*snow[i].size/5
+        if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+        if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+        if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+        if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+        snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
+        snow[i].style.left=snow[i].posx
+        snow[i].style.top=snow[i].posy
+    }
+    movesnow()
+}
+
+function movesnow() {
+    for (i=0;i<=snowmax;i++) {
+        crds[i] += x_mv[i];
+        snow[i].posy+=snow[i].sink
+        snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i]);
+        snow[i].style.top=snow[i].posy
+        
+        if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+            if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+            if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+            if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+            if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+            snow[i].posy=0
+        }
+    }
+    var timer=setTimeout("movesnow()",50)
+}
+
+for (i=0;i<=snowmax;i++) {
+    document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+}
+if (browserok) {
+    window.onload=initsnow
+}
+</script>
+   -->
+
+
+
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#FFFFFF">
+	<!--div class='rel' style="position:absolute; left:240px; top:155px;"><img width='1021' height='102' src='/imgs/sochi2014.jpg'></div-->
+
+	<div class='rel' style="position:absolute; left:750px; top:40px;"><img width='246' height='53'
+			src='/imgs/slogan.png' class='png'></div>
+	<div class='rel' style="position:absolute; left:665px; top:150px;">
+		<!--<a href="http://www.evraziyskiy.ru/press/news/10442.html" style="text-decoration:none;"><font color=white><b>-      ,   ,</br>       -2014</b></font></a>-->
+		<!-- <img height="117" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/reiting-2015.jpg" /> -->
+		</br>
+
+		</br>
+		<!--<a href="http://www.evraziyskiy.ru/press/news/15253.html" target="blank" style="text-decoration:none;"><font color=white><b> -->
+		</br> <!--  --></b></a>
+	</div>
+	<!--   -->
+	<!--div style="position:absolute; right:0px;"><img src="/imgs/evrNG.gif" width="481px" height="125px"></div-->
+	<!--div style="position:absolute; right:0px;"><!--img src="/imgs/glenta.png" width="300px" height="146px"></div-->
+	<!--  9 -->
+	<table cellpadding="0" width="100%" height="100%" border="0" cellspacing="0">
+		<tr>
+			<!--td valign="top" height="125" style="background:url(/imgs/slogan.png) middle center no-repeat #000000"-->
+			<td valign="top" height="125" style="background: #000000 top right no-repeat;">
+
+				<div id="main" style="float:left; z-index:2000;"><img alt="" src="/imgs/logo.gif" width="185"
+						height="125" /></div>
+				<!--script type="text/javascript">
+	if (flashEnable(7)) {
+		var fo = new FlashObject("/imgs/promo7.swf", "main", "970", "125", "7", "#ffffff");
+		fo.addParam("wmode", "transparent");
+		fo.addParam("menu", "false");
+		fo.addParam("quality", "high");
+		fo.write("main");
+	}
+	</script-->
+				<ul class="top-menu">
+
+					<!--<li  id="menu_water"><span></span><a href="/water/">     </a></li>-->
+
+					<!--<li  id="menu_consulting"><span></span><a href="/consulting/"> </a></li>-->
+					<li id="menu_contest"><span></span><a href="/contest/">     </a></li>
+					<!--li  id="menu_happy"><span></span><a href="/congratulation/">   20 !</a></li-->
+
+
+				</ul>
+				<!--<div class="lang_bar">
+                        <a href="#" class="ru" title=""></a>
+                        <a href="http://en.evraziyskiy.ru/" class="en" title="English version"></a>
+                    </div>   -->
+
+
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<table cellpadding="0" width="100%" border="0" cellspacing="0" height="100%">
+					<tr>
+						<td width="220" valign="top">
+
+							<table cellpadding="0" border="0" cellspacing="0">
+								<tr>
+									<td height="10"></td>
+								</tr>
+								<tr>
+									<td width="18"></td>
+									<td><a href="/search/" title=""><img border="0" src="/imgs/img/search.gif"
+												alt=""></a></td>
+									<td width="30" align="center" class="grey">|</td>
+									<td><a href="/sitemap/" title=" "><img border="0"
+												src="/imgs/img/network.gif" alt=" "></a></td>
+									<td width="30" align="center" class="grey">|</td>
+									<td class="grey"><img border="0" src="/imgs/img/home.gif"
+											alt="  "></td>
+									<td width="30" align="center" class="grey">|</td>
+									<td class="grey">
+										<!--call WTE::EncryptEmail.encrypt_link 'mail@evraziyskiy.ru', '<img alt=" " src="/imgs/img/mail.jpg" width="23" height="19" />'-->
+									</td>
+								</tr>
+							</table>
+							<!--bind document.panel.box @nav.menu({'level_from'=>0,'level_to'=>0, 'filter'=>{'menu'=>['left']}})-->
+
+							<div style="padding-left:25; padding-top:30; padding-bottom:20;">
+								<!--  GISMETEO -->
+								<script>
+									URL = 'http://img.gismeteo.ru/flash/mtown.swf?cset=0&tnumber=4&city0=27612&city1=34731&city2=34929&city3=37099'; w = '160'; h = '95'; value = 'cset=0&tnumber=4&city0=27612&city1=34731&city2=34929&city3=37099'; lang = 'ru';
+								</script>
+								<script src='http://informer.gismeteo.ru/flash/fcode.js'></script>
+								<!--  GISMETEO -->
+							</div>
+
+							<div style="padding-left:25; padding-top:30; padding-bottom:20;">
+								<a class="menu1" href="http://www.evraziyskiy.ru/video/">
+									<img height="101" hspace="5" width="160" border="0" vspace="5" alt=""
+										src="/imgs/ev_video.jpg" />
+									<p><b></br></b></p>
+								</a>
+							</div>
+							<!--include _/include/links-->
+
+
+						</td>
+
+
+						<td valign="top" height="100%">
+
+							<table cellpadding="0" width="100%" height="100%" border="0" cellspacing="0">
+								<tr>
+									<!--td bgcolor="#e51721" width="786" height="10"><img width="786" height="203" border="0" src="/imgs/ng2014.jpg"-->
+									<!--td bgcolor="#e51721" width="786" height="10"><img width="786" height="203" border="0" src="/imgs/images/banner_new_1.jpg"-->
+
+									<!--   -->
+									<td bgcolor="#e51721" width="786" height="10"><a href="/congratulation/">
+											<!--img width="786" height="203" border="0" src="/imgs/ng2014.jpg"-->
+											<!--img width="786" height="203" border="0" src="/imgs/ng2014.jpg"--><img
+												width="786" height="203" border="0" src="/images/ban_20years.jpg">
+										</a></td>
+									<!--   -->
+									<!--td bgcolor="#e51721" width="786" height="10"><a href="/congratulation/"><img width="786" height="203" border="0" src="/images/ban_9maya2015.jpg"></a></td-->
+									<!-- 2013-->
+									<!--td width="786" height="203" valign="bottom"><img width="786" height="203" border="0" src="/imgs/images/evr1.jpg" valign="bottom"-->
+									<!--	<td bgcolor="#e31921" width="780" height="10"><a href="/social/competition/"><img width="758" height="203" border="0" src="/imgs/images/banner_new.jpg"></a></td>-->
+
+									<!--<td bgcolor="#e31921" width="786" height="10"><img width="786" height="203" border="0" src="/imgs/ng12.jpg"></td>-->
+									<!--td bgcolor="#e31921">&nbsp;</td-->
+									<td bgcolor="#e51721">&nbsp;</td>
+								</tr>
+								<tr>
+									<td colspan="2" height="15"></td>
+								</tr>
+								<tr>
+									<td width="770" height="100">
+										<table cellpadding="0" width="100%" border="0" cellspacing="0" height="100">
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td width="540" class="txt" valign="top">
+
+													<table width="100%" cellpadding="0" cellspacing="0">
+														<tr valign="top">
+															<td>
+																<div
+																	style="margin-bottom:10px; padding:10px 10px 10px 7px; background-color:#e41821; height:37px; vertical-align:middle;">
+																	<a href="/press/news/" class="news"
+																		style="font-size:14px; color:#FFFFFF; font-weight:bold;">
+																		</a>
+																</div>
+															</td>
+														</tr>
+														<tr valign="top">
+															<td style="padding-right:10px;">
+																<!--bind press_news.list3 @content.list({'division'=>'23', 'number'=>7})-->
+															</td>
+														</tr>
+
+														<!--                <tr>
+                    <td style="margin-top:20px; margin-bottom:10px; background-color:#c0c0c0; height:2px;"></td>
+					</tr>-->
+
+														<tr valign="top">
+															<td>
+																<!--div style="margin-bottom:10px; padding:10px 10px 10px 7px; background-color:#e41821; height:37px; vertical-align:middle;"><a href="/press/industry/"  class="news" style="font-size:14px; color:#FFFFFF; font-weight:bold;"> </a></div></td>
+					</tr>
+					<tr valign="top">
+					<td style="padding-right:10px;">
+					<!--#bind press_news.list4 @content.list({'division'=>'58', 'number'=>3})-->
+															</td>
+														</tr>
+												</td>
+											</tr>
+										</table>
+
+									</td>
+									<td width="20"></td>
+									<td width="1"
+										style="background-image:url(/imgs/img/vertical_dot.gif); backgound-repeat:repeat-y;">
+									</td>
+									<td width="10"></td>
+									<td class="txt" valign="top">
+
+										<!--<p><a href="http://ecology.lenexpo.ru/ru/about/index.html"><img src="/imgs/ecology.gif"></a></p>-->
+
+										<!--p><a class="outer" href="/files/round_table.doc"><img height="51" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/ecos_logo.jpg" /></a></p-->
+
+										<!--<p><img height="117" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/reiting.jpg" /></p>
+										
+										<p><a class="outer" href="http://www.evraziyskiy.ru/press/news/10084.html" target="blank">   </a></p><br>-->
+
+										<!--p><img src="/imgs/img/evra.gif"></p-->
+
+										<p><iframe width="209" height="200"
+												src="https://www.youtube.com/embed/JjEL5LH42sU" frameborder="0"
+												allowfullscreen="allowfullscreen"
+												data-link="https://www.youtube.com/watch?v=JjEL5LH42sU"></iframe>
+										<p>
+											  ""</p>
+										<p><iframe width="209" height="200"
+												src="https://www.youtube.com/embed/ZaiXdJvD-9c" frameborder="0"
+												allowfullscreen></iframe><br>
+											     "-2017"</p>
+
+										<p><a class="outer" href="http://www.evraziyskiy.ru/press/news/15527.html"><img
+													hspace="5" align="middle" width="209" height="160" vspace="5"
+													border="0" alt="" src="/imgs/centr1.PNG" />
+												<h4>    
+													-, -     
+													<br>
+
+													 : www.cppdo.umi.ru  www.rvdk.ru<br>
+
+													    : .: 8(863)282-50-50, .
+													11-86, 15-15, 17-01,<br>
+
+													-mail: cppdo@rvdk.ru</h4>
+											</a>
+										</p>
+
+										<p>
+											<a class="outer" href="#"><img hspace="5" align="middle" width="209"
+													height="108" vspace="5" border="0" alt=""
+													src="/imgs/logo_GE.png" /></a>
+										</p>
+
+										<!--p><a class="outer" href="http://www.kremlin-military-tattoo.ru" ><img hspace="5" align="middle" width="209" height="124" vspace="5" border="0" alt="" src="/imgs/logo_cb.png" /></a>										
+</p>		
+									
+									
+									
+									
+									
+									<p>
+										<a class="outer" href="files/byklet.docx"><img hspace="5"  align="middle" width="159" height="160" vspace="5" border="0" alt="" src="/imgs/buklet.jpg" /></a></p>
+										
+										<div style="height: 2px; background-image:url(/imgs/img/dot.gif); background-repeat:repeat-x;"></div>
+										
+										<p>
+										<a class="outer" href="http://p3operator.ru/"><img height="61" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/p3operator_logo.jpg" /></a></p>
+										
+										<br><!--div style="height: 2px; background-image:url(/imgs/img/dot.gif); background-repeat:repeat-x;"></div>
+										<p><a class="outer" href="http://www.evraziyskiy.ru/contest/">        </a><br>
+										<a class="outer" href="http://www.evraziyskiy.ru/contest/"><img height="83" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/1kon.jpg" /></a></p>
+										      <br>
+										<a class="outer" href="http://www.evraziyskiy.ru/contest/"><img height="83" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/2kon.jpg" /></a></p>
+										 -   <br>
+										<a class="outer" href="http://www.evraziyskiy.ru/contest/"><img height="83" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/3kon.jpg" /></a></p>
+										   
+										</p>
+										<br><div style="height: 2px; background-image:url(/imgs/img/dot.gif); background-repeat:repeat-x;"></div>
+										
+										<p><a class="outer" href="http://www.evraziyskiy.ru/press/news/8279.html"><img height="83" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/hartia.jpg" /></a></p><br><div style="height: 2px; background-image:url(/imgs/img/dot.gif); background-repeat:repeat-x;"></div>
+										
+										
+										<!--<p><a class="outer" href="http://www.evraziyskiy.ru/press/news/15271.html"><img height="205" hspace="5" width="205" align="middle" vspace="5" border="0" alt="" src="/imgs/banner-sezd.jpg" />
+										</a></p>>
+										<br>
+										<p><a class="outer" href="http://www.evraziyskiy.ru/press/news/15238.html"><img height="181" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/image001_8787878.png" /><br>
+										        ?</a></p>
+										<br>
+										<!--<p><a class="outer" href="http://www.evraziyskiy.ru/press/news/13416.html" target="blank"><img height="40" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/ekva2014_logo.jpg" /></a></p>
+										<p><a class="outer" href="http://www.evraziyskiy.ru/press/news/13416.html" target="blank"><font color="#0066cc">           -2014</font></a></p>
+										<br>
+										<div style="height: 2px; background-image:url(/imgs/img/dot.gif); background-repeat:repeat-x;"></div>
+										
+										<p><img height="107" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/eco_cerf.jpg" /></p>
+																				
+										<p><a href="http://www.evraziyskiy.ru/press/news/9404.html">    -   ,    </a></p>
+										<br>
+										<div style="height: 2px; background-image:url(/imgs/img/dot.gif); background-repeat:repeat-x;"></div>
+										
+										<!--p><a href="/investors/"><img height="240" hspace="5" width="173" align="middle" vspace="5" border="0" alt="" src="/imgs/Svid_Ev.jpg" /></a></p><br>
+																				
+										<p><a href="/investors/">           2011 </a></p>
+										<br>
+										<div style="height: 2px; background-image:url(/imgs/img/dot.gif); background-repeat:repeat-x;"></div>
+										
+										<p><a href="/investors/"><img height="245" hspace="5" width="173" align="middle" vspace="5" border="0" alt="" src="/imgs/svid.jpg" /></a></p>
+										<p><a href="/investors/">   2011          </a></p>
+										<br>
+									
+										
+									
+										<div style="height: 2px; background-image:url(/imgs/img/dot.gif); background-repeat:repeat-x;"></div-->
+
+
+										<p><a class="outer" href="http://narodfront.ru/" target="blank"><img
+													height="134" hspace="5" width="160" align="middle" vspace="5"
+													border="0" alt="" src="/imgs/internfront.jpg" /></a></p>
+
+										<p>  <br><a class="outer"
+												href="http://www.evraziyskiy.ru/press/news/6765.html" target="blank">
+												<font color="#0066cc"> ,    
+													      .
+												</font>
+											</a></p>
+										<br>
+										<!--<div style="height: 2px; background-image:url(/imgs/img/dot.gif); background-repeat:repeat-x;"></div>
+										
+										<p><a class="outer" href="http://www.evraziyskiy.ru/press/news/7310.html" target="blank"><img height="189" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/ekoug.jpg" /></a></p>
+														
+										<p>  2011 <br><a class="outer" href="http://www.evraziyskiy.ru/press/news/7310.html" target="blank"><font color="#0066cc">         . --  -    2011     </font></a></p>
+										<br>
+										<div style="height: 2px; background-image:url(/imgs/img/dot.gif); background-repeat:repeat-x;"></div>
+										
+										
+										<p><a class="outer" href="/files/bestconsept.html"><img height="124" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/bestconsept.jpg" /></a></p>
+										
+										<p>  <br><a class="outer" href="/files/bestconsept.html"><font color="#0066cc">        ?  ?</font></a></p>
+										<br>
+										<div style="height: 2px; background-image:url(/imgs/img/dot.gif); background-repeat:repeat-x;"></div>
+										
+										<p><a class="outer" href="/files/vserossezd.html"><img height="100" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/vserossezd.jpg" /></a></p>
+										
+										<p>  <br><a class="outer" href="/files/vserossezd.html"><font color="#0066cc">      ?,        .</font></a></p>-->
+										<br>
+
+										<!--div style="height: 2px; background-image:url(/imgs/img/dot.gif); background-repeat:repeat-x;"></div-->
+
+										<!--<p><a class="outer" href="/press/news/4624.html"><img height="108" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/chistvod.jpg" /></a></p>
+										
+					
+					<!--p>  <a class="outer" href="/files/round_table.doc"><font color="#0066cc">          </font></a>.</p-->
+
+										<!--<p>   -2010<br><a class="outer" href="/press/news/4624.html"><font color="#0066cc">   -     <nobr> -2010</nobr>.</font></a></p>
+					<br>
+
+                    <div style="height: 2px; background-image:url(/imgs/img/dot.gif); background-repeat:repeat-x;"></div>-->
+
+										<!--p><img height="46" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/ecwatech.jpg" /></p>
+										
+					
+					<p> - <a class="outer" href="/press/news/2469.html"><font color="#0066cc">     2020 </font></a>.</p><br-->
+
+										<!--p><a class="outer" href="/press/news/2523.html"><font color="#0066cc"> .. ,    </font></a></p><br-->
+
+
+
+										<!--p> &laquo;&raquo;   &laquo;<a class="outer" href="http://www.evraziyskiy.ru/press/news/2305.html"><font color="#0066cc"> </font></a>&raquo;    &laquo; &raquo;.</p>
+                    
+					<p><a href="http://www.evraziyskiy.ru/press/news/2305.html"><img height="130" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/ecoolimp1.jpg" /></a>&nbsp;</p-->
+										<!--<p> &laquo;&raquo;    &laquo;<a class="outer" href="http://www.evraziyskiy.ru/about/awards/"><font color="#0066cc">  2007</font></a>&raquo;   &laquo;    &raquo;.</p>
+					
+					<p><a href="/about/awards/"><img height="170" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/logo.jpg" /></a>&nbsp;</p>
+										
+					
+					<p>      <a class="outer" href="http://www.evraziyskiy.ru/press/news/294.html"><font color="#0066cc"> </font></a>.</p>
+					<p><img height="170" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/eurostandard.jpg" />&nbsp;</p>
+					
+					<p> &laquo;&raquo;     &laquo;<a class="outer" href="http://www.evraziyskiy.ru/about/awards/"><font color="#0066cc">-</font></a>&raquo;.</p>
+					<p><img height="235" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/eurostandard_2008.jpg" />&nbsp;</p>-->
+
+
+
+									</td>
+									<td width="10"></td>
+
+								<tr>
+							</table>
+						</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td height="100%">&nbsp;</td>
+					</tr>
+					<tr>
+
+						<td valign="bottom" height="20">
+							<!--template user/votes-->
+							<!--object @votes Voting::VotingUser.new('')-->
+							<!--bind votes @votes.main({'show'=>'auto'})-->
+						</td>
+
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td valign="middle" height="30" bgcolor="#000000" class="copyright" align="center">Copyright &copy; 
+			&laquo;&raquo;   </td>
+	</tr>
+	</table>
+	<!--include _/include/counter-->
+</body>
+
+</html>

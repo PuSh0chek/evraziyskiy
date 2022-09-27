@@ -1,0 +1,10 @@
+<!--include _/include/header-->
+<!--template user/search-->
+<!--use MnogoSearch-->
+<!--call MnogoSearch.print_form-->
+<!--if Request['q'].nil?-->
+	<!--p style="margin-top:20px;"><!--eval @t_9--></p-->
+<!--else-->
+	<!--call MnogoSearch.print_results-->
+<!--endif-->
+<!--include _/include/footer-->

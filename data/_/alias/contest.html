@@ -1,0 +1,251 @@
+<html><!--template user/evraziyskiy--><!--object @nav Navigation2::User.new()--><!--object @content Materials2::User.new(prefix='content')-->
+<head><!--object @serv Materials2::User.new(prefix='service')-->
+	<title><!--bind document.head.title nav.path({})--></title>
+	<meta http-equiv="cache-control" content="no-cache"> 
+	<meta http-equiv="pragma" content="no-cache"> 
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+	<link rel="stylesheet" type="text/css" href="/js-css/style.css" />
+	<script type="text/javascript" src="/js-css/cookie.js"></script>
+	<script type="text/javascript" src="/js-css/flashobject.js"></script>
+	<script type="text/javascript" src="/js-css/flash.js"></script>
+	<script type="text/javascript" src="/js-css/lib/prototype.js"></script>
+	<script type="text/javascript" src="/js-css/lib/scriptaculous.js?load=effects"></script>
+	<script type="text/javascript" src="/js-css/lib/lightbox.js"></script>
+	<link rel="stylesheet" href="/js-css/lib/lightbox.css" type="text/css" media="screen" />
+	
+<!-- скрипт снега -->	<script type="text/javascript">
+///////////////////////////////////////////////////////////////////////////
+// CONFIGURATION STARTS HERE
+///////////////////////////////////////////////////////////////////////////
+
+// Set the number of snowflakes (more than 30 - 40 not recommended)
+var snowmax=322
+
+
+var snowcolor=new Array("#aaaacc","#ddddFF","#ccccDD")
+var snowtype=new Array("Arial Black","Arial Narrow","Times","Comic Sans MS")
+var snowletter="*"
+
+// Set the speed of sinking (recommended values range from 0.3 to 2)
+var sinkspeed=0.8
+
+// Set the maximal-size of your snowflaxes
+var snowmaxsize=30
+
+// Set the minimal-size of your snowflaxes
+var snowminsize=8
+
+// Set the snowing-zone
+// Set 1 for all-over-snowing, set 2 for left-side-snowing 
+// Set 3 for center-snowing, set 4 for right-side-snowing
+var snowingzone=1
+
+
+// Do not edit below this line
+var snow=new Array()
+var marginbottom
+var marginright
+var timer
+var i_snow=0
+var x_mv=new Array();
+var crds=new Array();
+var lftrght=new Array();
+var browserinfos=navigator.userAgent 
+var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
+var ns6=document.getElementById&&!document.all
+var opera=browserinfos.match(/Opera/)  
+var browserok=ie5||ns6||opera
+
+function randommaker(range) {        
+    rand=Math.floor(range*Math.random())
+    return rand
+}
+
+function initsnow() {
+    if (ie5 || opera) {
+        marginbottom = document.body.clientHeight
+        marginright = document.body.clientWidth
+    }
+    else if (ns6) {
+        marginbottom = window.innerHeight
+        marginright = window.innerWidth
+    }
+    var snowsizerange=snowmaxsize-snowminsize
+    for (i=0;i<=snowmax;i++) {
+        crds[i] = 0;                      
+        lftrght[i] = Math.random()*15;         
+        x_mv[i] = 0.03 + Math.random()/10;
+        snow[i]=document.getElementById("s"+i)
+        snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
+        snow[i].size=randommaker(snowsizerange)+snowminsize
+        snow[i].style.fontSize=snow[i].size
+        snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
+        snow[i].sink=sinkspeed*snow[i].size/5
+        if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+        if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+        if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+        if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+        snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
+        snow[i].style.left=snow[i].posx
+        snow[i].style.top=snow[i].posy
+    }
+    movesnow()
+}
+
+function movesnow() {
+    for (i=0;i<=snowmax;i++) {
+        crds[i] += x_mv[i];
+        snow[i].posy+=snow[i].sink
+        snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i]);
+        snow[i].style.top=snow[i].posy
+        
+        if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+            if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+            if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+            if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+            if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+            snow[i].posy=0
+        }
+    }
+    var timer=setTimeout("movesnow()",50)
+}
+
+for (i=0;i<=snowmax;i++) {
+    document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+}
+if (browserok) {
+    window.onload=initsnow
+}
+</script>
+<!-- конец снега -->
+	
+</head>
+<body leftmargin="0" topmargin="0"   marginwidth="0" marginheight="0" bgcolor="#FFFFFF">
+<div class='rel' style="position:absolute; left:780px; top:50px;"><img width='246' height='53' src='/imgs/slogan.png' class='png'></div>	
+<!--div class='rel' style="position:absolute; left:600px; top:140px;"><img src="/imgs/sochi2013.jpg" width="100px" height="100px"></div-->
+<div class='rel' style="position:absolute; left:620px; top:125px;"><!--<img height="117" hspace="5" width="160" align="middle" vspace="5" border="0" alt="" src="/imgs/reiting.jpg" />
+										
+										</br><a href="http://www.evraziyskiy.ru/press/news/10084.html" target="blank" style="text-decoration:none;"><font color=white><b>Рейтинг кредитоспособности ОАО «Евразийский»</b></a>--></div>
+<!--div style="position:absolute; right:0px;"><img src="/imgs/evrNG.gif" width="481px" height="125px"></div-->
+	<table cellpadding="0" width="100%" height="100%" border="0" cellspacing="0">
+  		<tr>
+    		<td valign="top" height="125" bgcolor="#000000">
+			<!-- картинка шары --><!--td valign="top" height="125" style="background:url(/imgs/ng2012.jpg) top right no-repeat #000000"-->
+			<div id="main" style="float: left; z-index: 2000;"><a href="/"><img alt="" src="/imgs/logo.gif" width="185" height="125" /></a></div>
+			<script type="text/javascript">
+			if (flashEnable(7)) {
+				var fo = new FlashObject("/imgs/promo7.swf", "main", "970", "125", "7", "#ffffff");
+				fo.addParam("wmode", "transparent");
+				fo.addParam("menu", "false");
+				fo.addParam("quality", "high");
+				fo.write("main");
+			}
+			</script>
+			<div class="lang_bar">
+			    <a href="#" class="ru" title=""></a>
+			    <a href="http://en.evraziyskiy.ru" class="en" title="English version"></a>
+			</div>
+			<!--<script type="text/javascript">
+			if (flashEnable(7)) {
+				var fo = new FlashObject("/imgs/promo1.swf", "main", "820", "125", "7", "#ffffff");
+				fo.addParam("wmode", "transparent");
+				fo.addParam("menu", "false");
+				fo.addParam("quality", "high");
+				fo.write("main");
+			}
+			</script>-->
+		    </td>
+		</tr>
+		<tr>
+   			<td valign="top">
+				<table cellpadding="0"  width="100%" border="0" cellspacing="0" height="100%">
+	 		  		<tr>
+   						<td width="220" valign="top">	
+  							<table cellpadding="0"  border="0" cellspacing="0">
+	    					<tr><td height="10"></td></tr>
+   	     				<tr>
+		 					<td width="18"></td>
+    		 				<td><a href="/search/" title="Поиск"><img border="0" src="/imgs/img/search.gif" alt="Поиск"></a></td>
+		 					<td width="30" align="center" class="grey">|</td>
+		 					<td><a href="/sitemap/" title="Карта сайта"><img border="0" src="/imgs/img/network.gif" alt="Карта сайта"></a></td>
+							<td width="30" align="center" class="grey">|</td>
+		 					<td class="grey"><a href="/" title="Вернуться на главную"><img border="0" src="/imgs/img/home.gif" alt="Вернуться на главную"></a></td>
+		 					<td width="30" align="center" class="grey">|</td>
+		 					<td class="grey"><!--call WTE::EncryptEmail.encrypt_link 'contact@evraziyskiy.ru', '<img alt="Написать письмо" src="/imgs/img/mail.jpg" width="23" height="19" />'--></td>
+	     					</tr>
+							</table>
+							<!--bind document.panel.box @nav.menu({'level_from'=>0,'level_to'=>0, 'filter'=>{'menu'=>['left']}})-->
+							<!--include _/include/links-->
+					</td>
+					<td valign="top">
+
+
+<table cellpadding="0" width="100%" border="0" cellspacing="0">
+<tr>
+<td width="780" bgcolor="#e31921">
+
+ <table cellpadding="0" border="0" cellspacing="0" width="100%"> 
+ <tr> 
+ <!--td width="100"><img alt="Конкурс" src="/pictdb/pict/1.jpeg" src="/imgs/ccv3.jpg" width="93" height="130" /></td--> 
+ <td width="100"><img alt="Конкурс" src="/imgs/ccv3.jpg" width="93" height="130" /></td> 
+ <td width="20"></td> 
+ <td valign="top"> 
+ <div style="padding-top: 10px;" class="page_title">Конкурс</div>
+ </td> 
+ <td width="220"><div class="page_desc"><br /></div></td> 
+ </tr> 
+ </table> 
+ 
+</td>
+<td bgcolor="#e31921"></td>
+</tr>
+<tr>
+<td colspan="2" height="30"></td>
+</tr>
+<tr>
+
+<td width="780">
+ <table cellpadding="0" width="100%" border="0" cellspacing="0">
+ <tr>
+ <td width="540" class="txt" valign="top">
+ 
+	
+		
+		
+		
+
+
+<!--object @dsp Evraz::Competition::User.new-->
+<!--template user/competition-->
+
+<!--if get_document_uri =~ /^\/contest\/?$/-->
+	
+	<!--bind document.content.text @content.list({'dispatch'=>'1','number'=>'1'})-->
+	<!--bind file @content.list({'dispatch'=>'1','number'=>'1'})-->
+
+	<!--bind contest @dsp.list({:per_page=>10000})-->
+
+
+<!--elsif get_document_uri =~ /^\/contest\/(\d+)\/?$/-->
+
+	<!--eval 
+		if get_document_uri =~ /^\/contest\/(\d+)\/?$/
+			put_template('competition_item', @dsp.item($1))
+		end
+	-->
+
+<!--elsif get_document_uri =~ /^\/contest\/archive\/(\d+)\/?$/-->
+
+	<!--bind contest @dsp.list({:per_page=>10000, :year=>get_document_uri.scan(/\d+/)[0].to_i})-->
+
+<!--elsif get_document_uri =~ /^\/contest\/archive\/(\d+)\/(\d+)\/?$/-->
+
+	<!--eval 
+		params = get_document_uri.scan(/\d+/)
+		put_template('competition_item', @dsp.item(params[1], params[0]))
+	-->
+
+<!--endif-->
+	
+<!--include _/include/footer-->

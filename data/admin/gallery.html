@@ -1,0 +1,39 @@
+<!--template admin/photobank-->
+<!--use Photo-->
+<html>
+<HEAD>
+<TITLE>Администрирование: "Фото сессия"</TITLE>
+</HEAD>
+<link href="/share/admin/js-css/catalogue.css" rel="stylesheet" type="text/css">
+<link href="/admin/menu/styles.html" rel="stylesheet" type="text/css">
+<style>
+font,a,td,tr,table,b,h1,h2,h3,h4 {
+	font-family: Verdana,Tahoma,Arial,Helvetica;
+	font-size: 11;
+}
+.HiddenLine {
+	color: silver;
+}
+</style>
+
+<!--call PhotoAdminView.dispatch 'photobank'-->
+
+<!--if Request.has_key?('id')-->
+	<!--call PhotoAdminView.print_session_form 'photobank', true-->
+<!--elsif Request['action'] == 'divisions'-->
+	<!--object photo PhotoAdminView.create(self,'photobank')-->
+	<!--bind photobank_photo_divisions photo.print_divisions-->
+<!--elsif Request['action'] == 'edit_div'-->
+	<!--object photo PhotoAdminView.create(self,'photobank')-->
+	<!--bind photobank_photo_div_edit_form photo.print_div_edit_form-->
+<!--elsif Request.has_key?('div') || Request['action'] == 'sessions'-->
+	<!--call PhotoAdminView.print_sessions_list 'photobank', 50, true-->
+<!--else-->
+	<!--object photo PhotoAdminView.create(self, 'photobank')-->
+	<!--bind photobank_frameset photo.print_frameset-->
+<!--endif-->
+
+
+
+</body>
+</html>

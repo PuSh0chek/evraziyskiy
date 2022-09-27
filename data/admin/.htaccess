@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName 'Admin'
+AuthGroupFile /www/projects/groups
+AuthUserFile /www/projects/passwd
+<Limit GET POST PUT>
+require group webstroy evraz
+</Limit>

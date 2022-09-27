@@ -1,0 +1,32 @@
+<!--include _/include/header-->
+<!--if get_document_uri =~ /^\/information\/?$/-->
+	<!--eval redirect('/information/corpgov/')-->
+
+<!--elsif get_document_uri =~ /^\/information\/affiliated/ || get_document_uri =~ /^\/information\/annualreports/ || get_document_uri =~ /^\/information\/shareholdersinfo/-->     
+	<!--bind info.list @content.list({'dispatch'=>'0'})-->     
+<!--elsif get_document_uri =~ /^\/vacancies/-->
+	<!--bind vacancies.list @content.list({'dispatch'=>'1'})-->
+<!--elsif get_document_uri =~ /^\/press/ && Request['s'].to_i==1-->
+	<!--include _/include/control_date_month-->
+	<!--bind press.list @content.list({'dispatch'=>'1','date'=>1,'start_date'=>@start_date, 'end_date'=>@finish_date})-->
+<!--elsif get_document_uri =~ /^\/press\/news/ || get_document_uri =~ /^\/press\/releases/ || get_document_uri =~ /^\/press\/industry/-->
+	<!--bind press.list @content.list({'dispatch'=>'1'})-->
+<!--elsif get_document_uri =~ /^\/about\/administration/-->
+	<!--bind administration.list @content.list({'dispatch'=>'1'})-->
+<!--elsif get_document_uri =~ /^\/press\/publications/-->
+	<!--bind press.list2 @content.list({'dispatch'=>'1'})-->
+<!--elsif get_document_uri =~ /^\/press\/photo/-->
+	<!--include _/include/gallery--> 
+<!--elsif get_document_uri =~ /^\/press/-->
+	<!--eval redirect('/press/news/')-->
+	<!--#bind press.list @content.list({'division'=>'23', 'number'=>5})-->
+<!--elsif get_document_uri =~ /^\/about\/information\/report/-->
+	<!--bind document.content.file_ext @content.list({'dispatch'=>'1', 'number'=>'1000'})-->
+<!--elsif get_document_uri =~ /^\/about\/official/-->
+	<!--bind document.content.file_ext @content.list({'dispatch'=>'1', 'number'=>'1000'})-->
+<!--elsif get_document_uri =~ /^\/congratulation/-->
+	<!--bind press.list5 @content.list({'dispatch'=>'1'})-->
+<!--else-->
+	<!--bind document.content.text @content.list({'dispatch'=>'1', 'number'=>'1'})-->
+<!--endif-->
+<!--include _/include/footer-->

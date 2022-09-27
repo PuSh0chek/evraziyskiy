@@ -1,0 +1,6 @@
+<!--object @photo Photo::User.new('photobank')-->
+	<!--if get_document_uri =~ /html/-->
+	<!--bind gallery.session.list photo.session('dispatch'=>'1')-->
+<!--else-->
+	<!--bind gallery.list.view @photo.list('dispatch'=>'1')-->
+<!--endif-->

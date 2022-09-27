@@ -1,0 +1,25 @@
+<html>
+	<link rel=stylesheet href='/admin/menu/styles.html'>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+	<body style='margin:30px 25px 30px 25px;'>
+	<script type="text/javascript">
+	function o_promt() {
+		if (confirm('Вы действительно хотите полностью очистить кеш?')) {
+			parent.frames[0].location.href = "/admin/cache.html?cache=1";
+			return true;
+		}
+		return false;
+	}
+	</script>
+	
+	<!--if Request['cache']-->
+		<div style="display:none"><!--eval system("touch -m "+File.compose_path('nav.conf'))--></div>
+		<iframe style="display:none;position:absolute;top:220px;z-index:900;" name="frameViewerBronerium" id="frameViewerBronerium" src="/admin/menu/_drop_cache" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" width="700" height="150"></iframe>
+		<p style="padding-top:15px;font-size:44px;text-align:center;">Кэш успешно очищен.</p>
+	<!--else-->
+		<p>Кэш &mdash; технология с помощью которой ускоряется загрузка сайта для посетителя. Обратной стороной медали является ситуация, когда информация в административном разделе изменена, а на сайте показывается ее старая версия. Или добавленная новость появляется спустя несколько часов. Именно для этого нужна эта кнопка. Надеемся она Вам поможет.
+		<div style="text-align:center;padding-top:50px"><input type="button" value="ОЧИСТИТЬ КЭШ" style="font-size:34px;" onclick="o_promt();return false" /></div>
+	<!--endif-->
+	
+	</body>
+</html>
