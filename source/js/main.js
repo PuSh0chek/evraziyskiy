@@ -19,31 +19,55 @@ links.forEach((element) => {
 //////////////////////////////////////////////////////////////
 //////  press center
 //////////////////////////////////////////////////////////////
-const content = document.querySelector('.press__content-list');
+const list = document.querySelector('.press__content-list');
 const buttonFilter = document.querySelector('.press__filter-button');
 const parentList = document.querySelector('.press__content-list');
 // const filterManth = document.querySelector('.press__filter-input');
 // const filterYear = document.querySelector('.press__filter-input');
-const obj = {
-  first: {
-    day: 15,
-    manth: 12,
-    year: 2015,
-    info: 'Генерального директора АО «Евразийский» Вишневского Германа Александровича с Новым годом и Рождеством',
+
+console.log(list);
+const arrayOfPopups = [
+  {
+    day: 24,
+    month: 24,
+    year: 2022,
+    title: 'Генерального директора АО «Евразийский» Вишневского Германа Александровича с Новым годом и Рождеством',
+    createDate() {
+      return `${this.day}.${this.month}.${this.year}`;
+    },
   },
+
+  {
+    day: 12,
+    month: 8,
+    year: 2012,
+    title: 'asdasГенерального директора АО «Евразийский» Вишневского Германа Александровича с Новым годом и Рождеством',
+    createDate() {
+      return `${this.day}.${this.month}.${this.year}`;
+    },
+  },
+];
+console.log(arrayOfPopups[0].day);
+
+const makeElement = (tag, classTag, content = '') => {
+  const element = document.createElement(tag);
+  element.classList.add(classTag);
+  element.textContent = content;
+  return element;
 };
 
-const createObj = (day, manth, year, info) => {
-  const date = document.createElement('p');
-  const contentInLi = document.createElement('p');
-  const li = document.createElement('li');
-  date.textContent = obj.first.day + '.' + obj.first.manth + '.' + obj.first.manth;
-  contentInLi.textContent = ': ' + obj.first.info;
-  li.appendChild(date);
-  li.appendChild(contentInLi);
-  parentList.appendChild(li);
-  console.log(li);
+const createPopup = (item) => {
+  const li =  makeElement('li', 'popup__item', '');
+  const date = makeElement('time', 'popup__item-date', item.createDate());
+  const title = makeElement('h3', 'popup__item-title', item.title);
+  list.appendChild(li);
+  li.append(date);
+  li.append(title);
 };
+
+arrayOfPopups.forEach((item) => {
+  createPopup(item);
+});
 
 buttonFilter.addEventListener('click', () => {
   createObj();
