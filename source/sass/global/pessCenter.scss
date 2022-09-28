@@ -61,6 +61,7 @@
 .press__content-list {
   list-style-type: none;
   display: flex;
+  flex-direction: column;
 }
 .press__content-element {
   width: 500px;
@@ -76,7 +77,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
 }
 .press__center-smi-navigation {
 
