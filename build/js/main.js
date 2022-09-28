@@ -1,3 +1,2 @@
+// import  './js/pressCenter.js';
 "use strict";
-
-require("../../../../../../../sourse/js/pressCenter.js");

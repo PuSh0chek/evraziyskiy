@@ -1,4 +1,4 @@
-export {array} from './pressCenter.js';
+export * from './pressCenter.js';
 
 export const arrayOfPopups = [
   {
@@ -652,4 +652,331 @@ export const arrayOfPopups = [
       };
     },
   },
+  /////////////////////////////////////////////////////////// 3 страница /////////////////////////////
+  {
+    day: 10,
+    month: 10,
+    year: 2018,
+    title: '«Ростовводоканал» поделился опытом в сфере водосбережения на межрегиональном общественном форуме',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 2,
+    month: 10,
+    year: 2018,
+    title: 'Команда «Ростовводоканала» успешно выступила на Спартакиаде профсоюзов Дона',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 1,
+    month: 10,
+    year: 2018,
+    title: 'Лаборант Ростовского Водоканала заняла 2 место в областном конкурсе профмастерства',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 20,
+    month: 9,
+    year: 2018,
+    title: 'Автопарк Ростовского Водоканала пополнился современной землеройной техникой',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 20,
+    month: 9,
+    year: 2018,
+    title: 'Не замечая противоречий: Следствие ведется годами, а где выведенные из банков деньги - неизвестно',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 11,
+    month: 9,
+    year: 2018,
+    title: 'Награждение лучших сотрудников в честь 153-летия Ростовводоканала',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 10,
+    month: 9,
+    year: 2018,
+    title: 'Губит людей вода: история и итоги «войны водоканалов» в Сочи',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 10,
+    month: 9,
+    year: 2018,
+    title: 'Историческую экспозицию под открытым небом торжественно открыли к 153-годовщине Ростовского Водоканала',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 10,
+    month: 9,
+    year: 2018,
+    title: 'В Донской столице отметили 153-годовщину Ростовского Водоканала',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 22,
+    month: 8,
+    year: 2018,
+    title: 'В Ростовском Водоканале открылась детская экологическая смена «Капелька»',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 20,
+    month: 8,
+    year: 2018,
+    title: 'Водные перспективы. Водоканал Ростова-на-Дону — это отличный пример ГЧП',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 13,
+    month: 8,
+    year: 2018,
+    title: 'Гендиректор «Ростовводоканала» отмечен благодарностью за вклад в развитие строительной отрасли города',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 3,
+    month: 8,
+    year: 2018,
+    title: 'Ростовский Водоканал увеличил надежность водоснабжения восточной части города',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 23,
+    month: 7,
+    year: 2018,
+    title: 'Ростовский Водоканал построит новый водозабор и повысит надежность водоснабжения абонентов',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 19,
+    month: 7,
+    year: 2018,
+    title: 'АО «Ростовводокнал» признан лучшим социально ориентированным работодателем Ростовской области',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 17,
+    month: 7,
+    year: 2018,
+    title: 'В период проведения матчей ЧМ-2018 Ростовский Водоканал обеспечил бесперебойное водоснабжение значимых объектов',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 13,
+    month: 7,
+    year: 2018,
+    title: 'Кислород и уголь против сине-зеленых: Ростовский Водоканал рассказал журналистам о методах борьбы с запахом водопроводной воды',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 3,
+    month: 7,
+    year: 2018,
+    title: 'Ростовский Водоканал завершил реконструкцию главного городского коллектора в Батайске',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 25,
+    month: 6,
+    year: 2018,
+    title: 'Охрана и условия труда в Ростовском Водоканале признаны лучшими на уровне города',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 22,
+    month: 6,
+    year: 2018,
+    title: 'Охрана и условия труда в Ростовском Водоканале признаны лучшими на уровне города',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 19,
+    month: 6,
+    year: 2018,
+    title: 'Печальный итог "безнадежного дела"',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 18,
+    month: 6,
+    year: 2018,
+    title: 'Ростовский Водоканал провел детский экоквест с посвящением в «Зеленые агенты»',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 13,
+    month: 6,
+    year: 2018,
+    title: 'Лучший эколог Дона работает в Ростовском Водоканале',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 7,
+    month: 6,
+    year: 2018,
+    title: '"Ростовводоканал" открыл комплекс повторного использования промывных вод',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  {
+    day: 5,
+    month: 6,
+    year: 2018,
+    title: '"Ростовский Водоканал принял участие в экологическом фестивале «Дети России – за сохранение природы!»',
+    createDate() {
+      if (this.month < 10) {
+        return `${this.day}.0${this.month}.${this.year}`;
+      } else {
+        return `${this.day}.${this.month}.${this.year}`;
+      };
+    },
+  },
+  /////////////////////////////////////////////// 4 страница //////////////////////////////////////
 ];

@@ -1,4 +1,4 @@
-import array from './dateNews.js';
+import './dateNews';
 
 const list = document.querySelector('.press__content-list');
 const buttonFilter = document.querySelector('.press__filter-button');
@@ -26,3 +26,7 @@ array.forEach((item) => {
 buttonFilter.addEventListener('click', () => {
   createObj();
 });
+
+const start = 0;
+const end = 25;
+
