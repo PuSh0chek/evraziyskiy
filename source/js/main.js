@@ -5,6 +5,7 @@ const arrayOfPopups = [
     month: 9,
     year: 2019,
     title: 'Ростовский Водоканал раскрыл секреты очистки питьевой воды',
+    content: '<p>awdsdwadad<p><p>awdsdwadad<p><p>awdsdwadad<p><p>awdsdwadad<p>',
     createDate() {
       return (this.month < 10) ? `${this.day}.0${this.month}.${this.year}` : `${this.day}.${this.month}.${this.year}`;
     },
@@ -13,6 +14,7 @@ const arrayOfPopups = [
     day: 22,
     month: 10,
     year: 2019,
+    content: '<p>awdsdwadad<p><p>awdsdwadad<p><p>awdsdwadad<p><p>awdsdwadad<p>',
     title: 'Ростовский Водоканал оказывает помощь городской общественной организации инвалидов «Надежда»',
     createDate() {
       return (this.month < 10) ? `${this.day}.0${this.month}.${this.year}` : `${this.day}.${this.month}.${this.year}`;
@@ -681,8 +683,15 @@ const arrayOfPopups = [
 ];
 
 const list = document.querySelector('.press__content-list');
-const buttonFilter = document.querySelector('.press__filter-button');
+const buttonNext = document.querySelector('.press__content-button-next');
+const buttonBack = document.querySelector('.press__content-button-back');
+let start = 0;
+let end = 10;
 
+/////// /////////
+
+const copyArrayOfPopups = () => arrayOfPopups.map((item) => item).filter((item, index) => index > start - 1 || index < end + 1);
+// .splice(start, end)
 const makeElement = (tag, classTag, content = '') => {
   const element = document.createElement(tag);
   element.classList.add(classTag);
@@ -694,20 +703,54 @@ const createPopup = (item) => {
   const li = makeElement('li', 'popup__item', '');
   const date = makeElement('time', 'popup__item-date', item.createDate());
   const title = makeElement('h3', 'popup__item-title', item.title);
+  const wrapper = makeElement('div', 'popup__item-wrapper-content');
+  const buttonOpenPopup = makeElement('button', 'popup__item-button', 'Открыть');
+
   list.appendChild(li);
   li.append(date);
   li.append(title);
+  li.append(wrapper);
+  li.append(buttonOpenPopup);
 };
 
-arrayOfPopups.forEach((item) => {
+copyArrayOfPopups().forEach((item) => {
   createPopup(item);
 });
 
-buttonFilter.addEventListener('click', () => {
-  createObj();
+buttonNext.addEventListener('click', () => {
+  list.innerHTML = '';
+  start += 10;
+  end += 10;
+  copyArrayOfPopups();
+  console.log(copyArrayOfPopups());
 });
 
+buttonBack.addEventListener('click', () => {
+  list.innerHTML = '';
+  start -= 10;
+  end -= 10;
+  copyArrayOfPopups();
+  console.log(copyArrayOfPopups());
+});
 
+// const bringContent = (element) => {
+//   // const contentForLoad =
+//   wrapper.innerHTML = copyArrayOfPopups[element].content;
+// };
+
+// const rubOutContent = () => {
+//   wrapper.innerHTML = '';
+// };
+// };
+
+// buttonOpenPopup.addEventListener('click', () => {
+//   const searchIndexElement = () => {
+//     wrapper.findIndex((item) => {
+//       console.log(item[index]);
+//     });
+//   };
+//   wrapper.innerHTML.trim().length === 0 ? bringContent(searchIndexElement()) : rubOutContent();
+// });
 
 ///////////////////////////////////////   ROUNDDATE   ///////////////////////////////////////////////////////////
 
