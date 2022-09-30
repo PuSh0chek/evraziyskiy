@@ -693,6 +693,7 @@ let end = 10;
 //////////////////////////////////// slider ////////////////////////////////////////////
 
 const copyArrayOfPopups = () => arrayOfPopups.map((item) => item).filter((item, index) => index > start - 1 && index < end);
+copyArrayOfPopups();
 
 const makeElement = (tag, classTag, content = '') => {
   const element = document.createElement(tag);
@@ -717,7 +718,6 @@ const createPopup = (item) => {
 
 const loadArrayOfPopup = () => copyArrayOfPopups().forEach((item) => createPopup(item));
 loadArrayOfPopup();
-copyArrayOfPopups();
 
 buttonNext.addEventListener('click', () => {
   list.innerHTML = '';
@@ -739,7 +739,7 @@ buttonBack.addEventListener('click', () => {
 
 const buttonOpenPopup = document.querySelector('.popup__item-button');
 const wrapper = document.querySelector('.popup__item-wrapper-content');
-console.log();
+console.log(2);
 
 const bringContent = (item, index) => {
   copyArrayOfPopups();
