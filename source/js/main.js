@@ -682,16 +682,18 @@ const arrayOfPopups = [
   /////////////////////////////////////////////// 4 страница //////////////////////////////////////
 ];
 
+//////////////////////////////////// const //////////////////////////////////////////////
+
 const list = document.querySelector('.press__content-list');
 const buttonNext = document.querySelector('.press__content-button-next');
 const buttonBack = document.querySelector('.press__content-button-back');
 let start = 0;
 let end = 10;
 
-/////// /////////
+//////////////////////////////////// slider ////////////////////////////////////////////
 
-const copyArrayOfPopups = () => arrayOfPopups.map((item) => item).filter((item, index) => index > start - 1 || index < end + 1);
-// .splice(start, end)
+const copyArrayOfPopups = () => arrayOfPopups.map((item) => item).filter((item, index) => index > start - 1 && index < end);
+
 const makeElement = (tag, classTag, content = '') => {
   const element = document.createElement(tag);
   element.classList.add(classTag);
@@ -704,7 +706,7 @@ const createPopup = (item) => {
   const date = makeElement('time', 'popup__item-date', item.createDate());
   const title = makeElement('h3', 'popup__item-title', item.title);
   const wrapper = makeElement('div', 'popup__item-wrapper-content');
-  const buttonOpenPopup = makeElement('button', 'popup__item-button', 'Открыть');
+  const buttonOpenPopup = makeElement('button', 'popup__item-button', '+');
 
   list.appendChild(li);
   li.append(date);
@@ -713,16 +715,16 @@ const createPopup = (item) => {
   li.append(buttonOpenPopup);
 };
 
-copyArrayOfPopups().forEach((item) => {
-  createPopup(item);
-});
+const loadArrayOfPopup = () => copyArrayOfPopups().forEach((item) => createPopup(item));
+loadArrayOfPopup();
+copyArrayOfPopups();
 
 buttonNext.addEventListener('click', () => {
   list.innerHTML = '';
   start += 10;
   end += 10;
   copyArrayOfPopups();
-  console.log(copyArrayOfPopups());
+  loadArrayOfPopup();
 });
 
 buttonBack.addEventListener('click', () => {
@@ -730,27 +732,34 @@ buttonBack.addEventListener('click', () => {
   start -= 10;
   end -= 10;
   copyArrayOfPopups();
-  console.log(copyArrayOfPopups());
+  loadArrayOfPopup();
 });
 
-// const bringContent = (element) => {
-//   // const contentForLoad =
-//   wrapper.innerHTML = copyArrayOfPopups[element].content;
-// };
+//////////////////// asplime /////////////////////////////////////////////////////
 
-// const rubOutContent = () => {
-//   wrapper.innerHTML = '';
-// };
-// };
+const buttonOpenPopup = document.querySelector('.popup__item-button');
+const wrapper = document.querySelector('.popup__item-wrapper-content');
+console.log();
 
-// buttonOpenPopup.addEventListener('click', () => {
-//   const searchIndexElement = () => {
-//     wrapper.findIndex((item) => {
-//       console.log(item[index]);
-//     });
-//   };
-//   wrapper.innerHTML.trim().length === 0 ? bringContent(searchIndexElement()) : rubOutContent();
-// });
+const bringContent = (item, index) => {
+  copyArrayOfPopups();
+  wrapper.innerHTML = copyArrayOfPopups().content;
+};
+
+console.log(copyArrayOfPopups().content);
+console.log(copyArrayOfPopups());
+
+const cleanContent = () => wrapper.innerHTML = '';
+
+buttonOpenPopup.addEventListener('click', () => {
+  // const searchIndexElement = (, ) => {
+  //   wrapper.findIndex((item, index) => {
+  //     console.log(item[index]);
+  //   });
+  // };
+  wrapper.innerHTML.trim().length === 0 ? bringContent() : cleanContent();
+  console.log(1);
+});
 
 ///////////////////////////////////////   ROUNDDATE   ///////////////////////////////////////////////////////////
 
