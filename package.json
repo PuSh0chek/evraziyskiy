@@ -60,5 +60,8 @@
     "source/js/**/*.js",
     "source/img/**/*.svg",
     "source/sass/**/*.scss"
-  ]
+  ],
+  "dependencies": {
+    "swiper": "^8.4.2"
+  }
 }
