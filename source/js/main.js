@@ -692,7 +692,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
   let start = 0;
   let end = 15;
   // arrayOfPopups.length / 15
-  
+
   ///////////////////////// universal element creation function /////////////////////////
   const makeElement = (tag, parent, classTag, content = '') => {
     const element = document.createElement(tag);
@@ -2296,20 +2296,527 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
         },
       ],
     },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
   ];
 
   const listСollage = document.querySelector('.press__content-list-collage');
 
+  const createPhoto = (src) => {
+    const li = document.createElement('li');
+    const img = document.createElement('img');
+    li.classList.add('press__content-list-collage-item');
+    img.classList.add('press__content-list-collage-item-img');
+    img.src = src;
+    listСollage.appendChild(li);
+    li.appendChild(img);
+    return li;
+  };
+
   const createImg = (src) => {
     const img = document.createElement('img');
-    img.classList.add('press__content-list-collage-img');
+    img.classList.add('press__content-list-collage-item-img');
     img.src = src;
-    listСollage.appendChild(img);
     return img;
   };
 
-  arrayOfArchive.forEach((item) => createImg(item.img));
+  arrayOfArchive.forEach((item) => createPhoto(item.img));
+  /////////////////////////////// swiper /////////////////////////////////////////////////
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    simulateTouch: true,
+    touchRatio: 1,
+    touchAngle: 45,
+    grapCursor: true,
+    slideToClickedSlide: true,
+    autoHeight: true,
+    slidesPerGroup: 1,
+    spaceBetween: 30,
+    speed: 300,
+    effect: 'slide',
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    mousewheel: {
+      sensitivity: 1, // Чувствительность колеса мыши. Варианты : 1 | 2 | ...
+      eventsTarget: '.swiper', // Класс объекта, на котором будет срабатывать прокрутка мышью
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+  //////////////////////// include swiper /////////////////////////////////////////
+  // const sliderItem = document.querySelector('press__content-list-collage-item');
+  // const swipers = document.querySelector('swiper');
+  // console.log(sliderItem);
+  // sliderItem.adEventListener('click', () => {
+  //   swipers.style = 'width: 900px; height: 500px; z-index: 2;';
+  // });
+
+  const galleryPopup = document.querySelector('.gallery-popup');
+  const photos = document.querySelectorAll('.press__content-list-collage-item');
+  photos.forEach((item) => {
+    item.addEventListener('click', () => {
+      galleryPopup.showModal();
+      const swiperWrapper = galleryPopup.querySelector('.swiper-wrapper');
+      
+      arrayOfArchive[0].gallery.forEach((element) => {
+        const slide = document.createElement('div');
+        console.log(slide);
+        slide.classList.add('swiper-slide');
+        console.log(slide);
+        swiperWrapper.appendChild(slide);
+        slide.appendChild(createImg(element.img));
+      });
+    });
+  })
 };
+
 
 ////////////////////////////////// CONST /////////////////////////////////////////////
 const links = document.querySelectorAll('.roundDate__link');
