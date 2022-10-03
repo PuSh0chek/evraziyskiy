@@ -2505,14 +2505,6 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       img: '/img/ccv3.jpg'
     }, {
       img: '/img/ccv3.jpg'
-    }, {
-      img: '/img/ccv3.jpg'
-    }, {
-      img: '/img/ccv3.jpg'
-    }, {
-      img: '/img/ccv3.jpg'
-    }, {
-      img: '/img/ccv3.jpg'
     }]
   }, {
     img: '/img/ccv3.jpg',
@@ -2840,32 +2832,38 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
     }
   });
   const galleryPopup = document.querySelector('.gallery-popup');
-  const photos = document.querySelectorAll('.press__content-list-collage-item');
-  photos.forEach(item => {
-    item.addEventListener('click', () => {
+  const ul = document.querySelector('.press__content-list-collage');
+  const photos = ul.children;
+  console.log(photos);
+  const swiperWrapper = galleryPopup.querySelector('.swiper-wrapper');
+
+  for (let i = 0; i < photos.length; i++) {
+    photos[i].addEventListener('click', () => {
+      swiperWrapper.innerHTML = '';
       galleryPopup.showModal();
-
-      for (let i = 0; i < arrayOfArchive.length; i++) {
-        if (arrayOfArchive.indexOf(arrayOfArchive[i]) === photos[i]) {
-          console.log(2);
-          break;
-        } else {
-          console.log(photos);
-          console.log(photos.indexOf(photos[i]));
-          break;
-        }
-      }
-
-      const swiperWrapper = galleryPopup.querySelector('.swiper-wrapper');
-      arrayOfArchive[0].gallery.forEach(element => {
+      arrayOfArchive[i].gallery.forEach(element => {
         const slide = document.createElement('div');
         slide.classList.add('swiper-slide');
         swiperWrapper.appendChild(slide);
         slide.appendChild(createImg(element.img));
       });
     });
-  });
-} ////////////////////////////////// CONST /////////////////////////////////////////////
+  }
+} // const swiperWrapper = galleryPopup.querySelector('.swiper-wrapper');
+// photos.forEach((item, index) => {
+//   item.addEventListener('click', () => {
+//     swiperWrapper.innerHTML = '';
+//     galleryPopup.showModal();
+//     // console.log(arrayOfArchive[index])
+//     // arrayOfArchive[index].gallery.forEach((element) => {
+//     //   const slide = document.createElement('div');
+//     //   slide.classList.add('swiper-slide');
+//     //   swiperWrapper.appendChild(slide);
+//     //   slide.appendChild(createImg(element.img));
+//     // });
+//   })
+// })
+////////////////////////////////// CONST /////////////////////////////////////////////
 
 
 const links = document.querySelectorAll('.roundDate__link'); /////////////////////////////////////// ROUNDDATE /////////////////////////////////////////////
