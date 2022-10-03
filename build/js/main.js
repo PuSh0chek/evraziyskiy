@@ -2485,6 +2485,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
   /////////////////////////////// obj of pressCentre photo archive /////////////////////////
   const arrayOfArchive = [{
     img: '/img/ccv3.jpg',
+    title: 'qqqqqqq',
     gallery: [{
       img: '/img/ccv3.jpg'
     }, {
@@ -2826,9 +2827,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
     },
     mousewheel: {
       sensitivity: 1,
-      // Чувствительность колеса мыши. Варианты : 1 | 2 | ...
-      eventsTarget: '.swiper' // Класс объекта, на котором будет срабатывать прокрутка мышью
-
+      eventsTarget: '.swiper'
     },
     // Navigation arrows
     navigation: {
@@ -2839,25 +2838,28 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
     scrollbar: {
       el: '.swiper-scrollbar'
     }
-  }); //////////////////////// include swiper /////////////////////////////////////////
-  // const sliderItem = document.querySelector('press__content-list-collage-item');
-  // const swipers = document.querySelector('swiper');
-  // console.log(sliderItem);
-  // sliderItem.adEventListener('click', () => {
-  //   swipers.style = 'width: 900px; height: 500px; z-index: 2;';
-  // });
-
+  });
   const galleryPopup = document.querySelector('.gallery-popup');
   const photos = document.querySelectorAll('.press__content-list-collage-item');
   photos.forEach(item => {
     item.addEventListener('click', () => {
       galleryPopup.showModal();
+
+      for (let i = 0; i < arrayOfArchive.length; i++) {
+        if (arrayOfArchive.indexOf(arrayOfArchive[i]) === photos[i]) {
+          console.log(2);
+          break;
+        } else {
+          console.log(photos);
+          console.log(photos.indexOf(photos[i]));
+          break;
+        }
+      }
+
       const swiperWrapper = galleryPopup.querySelector('.swiper-wrapper');
       arrayOfArchive[0].gallery.forEach(element => {
         const slide = document.createElement('div');
-        console.log(slide);
         slide.classList.add('swiper-slide');
-        console.log(slide);
         swiperWrapper.appendChild(slide);
         slide.appendChild(createImg(element.img));
       });
