@@ -815,24 +815,48 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
     copyarrayOfPopups();
     loadArrayOfPopup();
-  }); /////////////////////////////////////////// photoArchive ///////////////////////////////////////
+  }); /////////////////////////////////// filter ////////////////////////////////////////////////////////
 
-  const copyarrayOfArchive = () => checkUrl().map(item => item);
+  const month = document.getElementById('input-month');
+  const year = document.getElementById('input-year');
+  const button = document.querySelector('.press__filter-button');
+  const array = []; // for(let i = 0; i < arrayOfPopups.length; i++) {
+  //   const arrayForFiltred = arrayOfPopups[i].month + '.' + arrayOfPopups[i].year;
+  //   console.log(arrayForFiltred);
+  // }
 
-  copyarrayOfArchive(); /////////////////////////////////// completion content archive /////////////////////////////////
+  button.addEventListener('click', () => {
+    while (array.length > 0) {
+      array.pop();
+    }
 
-  const createImgArchive = item => {
-    const li = makeElement('li', listImg, 'press__content-list-collage');
-    const img = makeElement('img', li, 'press__content-list-collage-img', item.img);
-  }; /////////////////////////////////////////// load content ////////////////////////////////////////
+    array.push(month.value);
+    console.log(month.value);
+    array.push(year.value);
+    console.log(year.value);
+    console.log(array);
 
+    for (let i = 0; i < array.length; i++) {
+      if (array[i].month === '') {
+        array[i].month;
+      }
+    } // console.log(arrayForFiltred);
 
-  const loadArrayOfArchive = () => copyarrayOfArchive().forEach(item => createImgArchive(item));
-
-  loadArrayOfArchive(); //////////////////////////////////// event listeners of photo archive  /////////////////////////
-
-  const img = document.querySelector('.press__content-list-collage-img');
-  img.addEventListener('click', () => {});
+  }); // /////////////////////////////////////////// photoArchive ///////////////////////////////////////
+  // const copyarrayOfArchive = () => arrayOfPopups.map((item) => item);
+  // copyarrayOfArchive();
+  // /////////////////////////////////// completion content archive /////////////////////////////////
+  // const createImgArchive = (item) => {
+  //   const li = makeElement('li', listImg, 'press__content-list-collage');
+  //   const img = makeElement('img', li, 'press__content-list-collage-img', item.img);
+  // };
+  // /////////////////////////////////////////// load content ////////////////////////////////////////
+  // const loadArrayOfArchive = () => copyarrayOfArchive().forEach((item) => createImgArchive(item));
+  // loadArrayOfArchive();
+  // //////////////////////////////////// event listeners of photo archive  /////////////////////////
+  // const img = document.querySelector('.press__content-list-collage-img');
+  // img.addEventListener('click', () => {
+  // });
 } else if (document.location.href === 'http://localhost:3000/pressCentre-publicationsSMI.html') {
   ///////////////////////////////// obj of pressCentre smi  ////////////////////////////
   const arrayOfPopups = [{
@@ -1639,24 +1663,21 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
     end -= 10;
     copyarrayOfPopups();
     loadArrayOfPopup();
-  }); /////////////////////////////////////////// photoArchive ///////////////////////////////////////
-
-  const copyarrayOfArchive = () => checkUrl().map(item => item);
-
-  copyarrayOfArchive(); /////////////////////////////////// completion content archive /////////////////////////////////
-
-  const createImgArchive = item => {
-    const li = makeElement('li', listImg, 'press__content-list-collage');
-    const img = makeElement('img', li, 'press__content-list-collage-img', item.img);
-  }; /////////////////////////////////////////// load content ////////////////////////////////////////
-
-
-  const loadArrayOfArchive = () => copyarrayOfArchive().forEach(item => createImgArchive(item));
-
-  loadArrayOfArchive(); //////////////////////////////////// event listeners of photo archive  /////////////////////////
-
-  const img = document.querySelector('.press__content-list-collage-img');
-  img.addEventListener('click', () => {});
+  }); // /////////////////////////////////////////// photoArchive ///////////////////////////////////////
+  // const copyarrayOfArchive = () => arrayOfPopups.map((item) => item);
+  // copyarrayOfArchive();
+  // /////////////////////////////////// completion content archive /////////////////////////////////
+  // const createImgArchive = (item) => {
+  //   const li = makeElement('li', listImg, 'press__content-list-collage');
+  //   const img = makeElement('img', li, 'press__content-list-collage-img', item.img);
+  // };
+  // /////////////////////////////////////////// load content ////////////////////////////////////////
+  // const loadArrayOfArchive = () => copyarrayOfArchive().forEach((item) => createImgArchive(item));
+  // loadArrayOfArchive();
+  // //////////////////////////////////// event listeners of photo archive  /////////////////////////
+  // const img = document.querySelector('.press__content-list-collage-img');
+  // img.addEventListener('click', () => {
+  // });
 } else if (document.location.href === 'http://localhost:3000/pressCentre-gosNews.html') {
   ///////////////////////////////// obj of pressCentre gos news /////////////////////////
   const arrayOfPopups = [{
@@ -2463,24 +2484,21 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
     end -= 10;
     copyarrayOfPopups();
     loadArrayOfPopup();
-  }); /////////////////////////////////////////// photoArchive ///////////////////////////////////////
-
-  const copyarrayOfArchive = () => checkUrl().map(item => item);
-
-  copyarrayOfArchive(); /////////////////////////////////// completion content archive /////////////////////////////////
-
-  const createImgArchive = item => {
-    const li = makeElement('li', listImg, 'press__content-list-collage');
-    const img = makeElement('img', li, 'press__content-list-collage-img', item.img);
-  }; /////////////////////////////////////////// load content ////////////////////////////////////////
-
-
-  const loadArrayOfArchive = () => copyarrayOfArchive().forEach(item => createImgArchive(item));
-
-  loadArrayOfArchive(); //////////////////////////////////// event listeners of photo archive  /////////////////////////
-
-  const img = document.querySelector('.press__content-list-collage-img');
-  img.addEventListener('click', () => {});
+  }); // /////////////////////////////////////////// photoArchive ///////////////////////////////////////
+  // const copyarrayOfArchive = () => checkUrl().map((item) => item);
+  // copyarrayOfArchive();
+  // /////////////////////////////////// completion content archive /////////////////////////////////
+  // const createImgArchive = (item) => {
+  //   const li = makeElement('li', listImg, 'press__content-list-collage');
+  //   const img = makeElement('img', li, 'press__content-list-collage-img', item.img);
+  // };
+  // /////////////////////////////////////////// load content ////////////////////////////////////////
+  // const loadArrayOfArchive = () => copyarrayOfArchive().forEach((item) => createImgArchive(item));
+  // loadArrayOfArchive();
+  // //////////////////////////////////// event listeners of photo archive  /////////////////////////
+  // const img = document.querySelector('.press__content-list-collage-img');
+  // img.addEventListener('click', () => {
+  // });
 } else if (document.location.href === 'http://localhost:3000/pressCente-photoArchive.html') {
   /////////////////////////////// obj of pressCentre photo archive /////////////////////////
   const arrayOfArchive = [{
@@ -2810,7 +2828,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
     slideToClickedSlide: true,
     autoHeight: true,
     slidesPerGroup: 1,
-    spaceBetween: 30,
+    spaceBetween: 15,
     speed: 300,
     effect: 'slide',
     // If we need pagination
@@ -2833,35 +2851,34 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
   });
   const galleryPopup = document.querySelector('.gallery-popup');
   const ul = document.querySelector('.press__content-list-collage');
-  const photos = ul.children; // console.log(photos)
-  //   const swiperWrapper = galleryPopup.querySelector('.swiper-wrapper');
-  //   for (let i = 0 ; i < photos.length; i++) {
-  //     photos[i].addEventListener('click', () => {
-  //       swiperWrapper.innerHTML = '';
-  //       galleryPopup.showModal();
-  //       arrayOfArchive[i].gallery.forEach((element) => {
-  //         const slide = document.createElement('div');
-  //         slide.classList.add('swiper-slide');
-  //         swiperWrapper.appendChild(slide);
-  //         slide.appendChild(createImg(element.img));
-  //       });
-  //     });
-  //   }
-  // };
-
+  const photos = ul.children;
   const swiperWrapper = galleryPopup.querySelector('.swiper-wrapper');
-  photos.forEach((item, index) => {
-    item.addEventListener('click', () => {
+
+  for (let i = 0; i < photos.length; i++) {
+    photos[i].addEventListener('click', () => {
       swiperWrapper.innerHTML = '';
       galleryPopup.showModal();
-      arrayOfArchive[index].gallery.forEach(element => {
+      arrayOfArchive[i].gallery.forEach(element => {
         const slide = document.createElement('div');
         slide.classList.add('swiper-slide');
         swiperWrapper.appendChild(slide);
         slide.appendChild(createImg(element.img));
       });
     });
-  });
+  } // const swiperWrapper = galleryPopup.querySelector('.swiper-wrapper');
+  // photos.forEach((item, index) => {
+  //   item.addEventListener('click', () => {
+  //     swiperWrapper.innerHTML = '';
+  //     galleryPopup.showModal();
+  //     arrayOfArchive[index].gallery.forEach((element) => {
+  //       const slide = document.createElement('div');
+  //       slide.classList.add('swiper-slide');
+  //       swiperWrapper.appendChild(slide);
+  //       slide.appendChild(createImg(element.img));
+  //     });
+  //   });
+  // });
+
 } ////////////////////////////////// CONST /////////////////////////////////////////////
 
 
