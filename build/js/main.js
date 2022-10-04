@@ -5,8 +5,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
   ///////////////////////////////// obj of pressCentre  ///////////////////////////////
   const arrayOfPopups = [{
     day: 24,
-    month: 9,
-    year: 2019,
+    month: '9',
+    year: '2019',
     title: 'Ростовский Водоканал раскрыл секреты очистки питьевой воды',
     content: '<p>awdsdwadad<p><p>awdsdwadad<p><p>awdsdwadad<p><p>awdsdwadad<p>',
 
@@ -16,8 +16,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 22,
-    month: 10,
-    year: 2019,
+    month: '10',
+    year: '2019',
     content: '<p>awdsdwadad<p><p>awdsdwadad<p><p>awdsdwadad<p><p>awdsdwadad<p>',
     title: 'Ростовский Водоканал оказывает помощь городской общественной организации инвалидов «Надежда»',
 
@@ -27,8 +27,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 10,
-    month: 10,
-    year: 2019,
+    month: '10',
+    year: '2019',
     title: 'Ростовский Водоканал признан социально-эффективным работодателем',
 
     createDate() {
@@ -37,8 +37,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 8,
-    month: 10,
-    year: 2019,
+    month: '10',
+    year: '2019',
     title: 'В День профессий Ростовский Водоканал предложил работу выпускникам вузов',
 
     createDate() {
@@ -47,8 +47,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 1,
-    month: 10,
-    year: 2019,
+    month: '10',
+    year: '2019',
     title: 'Ростовский Водоканал наградил школьников-победителей экологического диктанта',
 
     createDate() {
@@ -57,8 +57,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 6,
-    month: 9,
-    year: 2019,
+    month: '9',
+    year: '2019',
     title: 'Ростовский Водоканал отметил 154-летие своего основания',
 
     createDate() {
@@ -67,8 +67,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 4,
-    month: 9,
-    year: 2019,
+    month: '9',
+    year: '2019',
     title: 'Поздравление Генерального директора АО "Евразийский" Вишневского Германа Александровича со 154-й годовщиной основания Ростовского водоканала',
 
     createDate() {
@@ -77,8 +77,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 19,
-    month: 7,
-    year: 2019,
+    month: '7',
+    year: '2019',
     title: 'Ростовский Водоканал рассказал детям о секретах производства питьевой воды',
 
     createDate() {
@@ -87,8 +87,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 18,
-    month: 7,
-    year: 2019,
+    month: '7',
+    year: '2019',
     title: 'Ростовский Водоканал подключил к сетям водоснабжения Южно-Батайскую промзону',
 
     createDate() {
@@ -97,8 +97,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 12,
-    month: 7,
-    year: 2019,
+    month: '7',
+    year: '2019',
     title: 'Ростовский Водоканал поделился знаниями с будущими географами и экологами',
 
     createDate() {
@@ -107,8 +107,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 25,
-    month: 6,
-    year: 2019,
+    month: '6',
+    year: '2019',
     title: 'Ростовский Водоканал принял участие в работе Всероссийского водного конгресса',
 
     createDate() {
@@ -117,8 +117,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 17,
-    month: 6,
-    year: 2019,
+    month: '6',
+    year: '2019',
     title: 'Ростовский Водоканала заменил почти 10 километров сетей в рамках подготовки к отопительному сезону',
 
     createDate() {
@@ -127,8 +127,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 6,
-    month: 6,
-    year: 2019,
+    month: '6',
+    year: '2019',
     title: 'В Ростовском Водоканале заложили «капсулу времени» в честь 15-летия Информационно-экологического центра',
 
     createDate() {
@@ -137,8 +137,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 20,
-    month: 5,
-    year: 2019,
+    month: '5',
+    year: '2019',
     title: 'Коллектив Ростовского Водоканала провел субботник на берегу Дона',
 
     createDate() {
@@ -147,8 +147,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 8,
-    month: 5,
-    year: 2019,
+    month: '5',
+    year: '2019',
     title: 'В преддверии Дня Победы Ростовский Водоканал поздравил ветеранов и почтил память павших героев',
 
     createDate() {
@@ -157,8 +157,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 8,
-    month: 5,
-    year: 2019,
+    month: '5',
+    year: '2019',
     title: '15 лет Информационно-экологическому центру Ростовского водоканала',
 
     createDate() {
@@ -167,8 +167,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 6,
-    month: 5,
-    year: 2019,
+    month: '5',
+    year: '2019',
     title: 'Для надежной работы очистных сооружений городской канализации в Ростове запустили биоэнергетическую установку',
 
     createDate() {
@@ -177,8 +177,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 24,
-    month: 4,
-    year: 2019,
+    month: '4',
+    year: '2019',
     title: 'Ростовский Водоканал напомнил ростовчанам о бережном отношении к природе и подарил экопакеты',
 
     createDate() {
@@ -187,8 +187,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 15,
-    month: 4,
-    year: 2019,
+    month: '4',
+    year: '2019',
     title: 'Ростовский Водоканал высадил «живую изгородь» и организовал флешмоб в честь 15-летия своего экоцентра',
 
     createDate() {
@@ -197,8 +197,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 8,
-    month: 4,
-    year: 2019,
+    month: '4',
+    year: '2019',
     title: 'Ростовский Водоканал капитально отремонтировал более 800 метров сетей водоотведения',
 
     createDate() {
@@ -207,8 +207,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 5,
-    month: 4,
-    year: 2019,
+    month: '4',
+    year: '2019',
     title: 'Ростовский Водоканал снизил количество повреждений на сетях почти на треть',
 
     createDate() {
@@ -217,8 +217,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 2,
-    month: 4,
-    year: 2019,
+    month: '4',
+    year: '2019',
     title: 'Новое оборудование на станции аэрации Ростовского Водоканала повысило эффективность очистки стоков на 50%',
 
     createDate() {
@@ -227,8 +227,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 28,
-    month: 3,
-    year: 2019,
+    month: '3',
+    year: '2019',
     title: 'Эксперты отметили вклад Ростовского Водоканала в оздоровление реки Темерник',
 
     createDate() {
@@ -237,8 +237,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 26,
-    month: 3,
-    year: 2019,
+    month: '3',
+    year: '2019',
     title: 'За пять лет автотранспортный парк Ростовского Водоканала обновился более чем на 50%',
 
     createDate() {
@@ -248,8 +248,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
   }, //////////////////////////////////////////////////// 2 страница /////////////////////////////////////////////
   {
     day: 19,
-    month: 3,
-    year: 2019,
+    month: '3',
+    year: '2019',
     title: 'Лучших специалистов Ростовского Водоканала наградили в честь Дня работников ЖКХ',
 
     createDate() {
@@ -258,8 +258,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 18,
-    month: 3,
-    year: 2019,
+    month: '3',
+    year: '2019',
     title: 'Ростовский Водоканал – самый динамично развивающийся в регионе',
 
     createDate() {
@@ -268,8 +268,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 4,
-    month: 3,
-    year: 2019,
+    month: '3',
+    year: '2019',
     title: 'Ростовский Водоканал показал донским педагогам процесс производства питьевой воды',
 
     createDate() {
@@ -278,8 +278,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 20,
-    month: 2,
-    year: 2019,
+    month: '2',
+    year: '2019',
     title: 'Суд отказал мэрии Сочи в расторжении договора с ООО "Сочиводоканал". Решение вступает в законную силу.',
 
     createDate() {
@@ -288,8 +288,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 15,
-    month: 2,
-    year: 2019,
+    month: '2',
+    year: '2019',
     title: 'Донские ученые представили специалистам Ростовского Водоканала прибор для онлайн-мониторинга концентрации микроводорослей в воде',
 
     createDate() {
@@ -298,8 +298,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 15,
-    month: 2,
-    year: 2019,
+    month: '2',
+    year: '2019',
     title: 'Новогоднюю подсветку здания Ростовского Водоканала признали лучшей',
 
     createDate() {
@@ -308,8 +308,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 8,
-    month: 2,
-    year: 2019,
+    month: '2',
+    year: '2019',
     title: 'Ростовский Водоканал – один из самых стабильных работодателей области',
 
     createDate() {
@@ -318,8 +318,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 5,
-    month: 2,
-    year: 2019,
+    month: '2',
+    year: '2019',
     title: 'Ростовский Водоканал начал серию экскурсий для потребителей',
 
     createDate() {
@@ -328,8 +328,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 21,
-    month: 1,
-    year: 2019,
+    month: '1',
+    year: '2019',
     title: 'Ростовский Водоканал отправил в Шахты гуманитарную помощь',
 
     createDate() {
@@ -338,8 +338,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 16,
-    month: 1,
-    year: 2019,
+    month: '1',
+    year: '2019',
     title: 'Ростовский Водоканал реконструировал и автоматизировал четыре ВНС',
 
     createDate() {
@@ -348,8 +348,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 11,
-    month: 1,
-    year: 2019,
+    month: '1',
+    year: '2019',
     title: 'В ООО "Сочиводоканал" назначен новый руководитель',
 
     createDate() {
@@ -358,8 +358,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 25,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'АО «Евразийский» и АО «Ростовводоканал» поздравляют с Новым Годом!',
 
     createDate() {
@@ -368,8 +368,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 21,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'Ростовский Водоканал снизил количество повреждений на сетях водоснабжения на 6%',
 
     createDate() {
@@ -378,8 +378,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 11,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'Ростовский Водоканал снизил количество повреждений на сетях канализации на 6,4 %',
 
     createDate() {
@@ -388,8 +388,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 6,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'Ростовский Водоканал стал участником форума частных операторов сферы ЖКХ',
 
     createDate() {
@@ -398,8 +398,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 5,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'ООО «Сочиводоканал» вернул себе статус гарантирующей организации на территории Сочи',
 
     createDate() {
@@ -408,8 +408,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 3,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'Ростовский Водоканал капитально отремонтировал Центр помощи и развития детей-инвалидов',
 
     createDate() {
@@ -418,8 +418,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 28,
-    month: 11,
-    year: 2018,
+    month: '11',
+    year: '2018',
     title: 'В ногу со временем',
 
     createDate() {
@@ -428,8 +428,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 27,
-    month: 11,
-    year: 2018,
+    month: '11',
+    year: '2018',
     title: 'Ростовский Водоканал получил благодарственное письмо за стопроцентную исправность пожарных гидрантов в Батайске',
 
     createDate() {
@@ -438,8 +438,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 26,
-    month: 11,
-    year: 2018,
+    month: '11',
+    year: '2018',
     title: 'ООО "Сочиводоканал" подтвердил добросовестность исполнения договора аренды',
 
     createDate() {
@@ -448,8 +448,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 7,
-    month: 11,
-    year: 2018,
+    month: '11',
+    year: '2018',
     title: 'Жирберги и бахчевые «пробки»: Ростовский Водоканал с начала года устранил более 9 тысяч закупорок канализации',
 
     createDate() {
@@ -458,8 +458,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 1,
-    month: 11,
-    year: 2018,
+    month: '11',
+    year: '2018',
     title: 'Ростовский Водоканал наградил школьников за селфи с водой',
 
     createDate() {
@@ -468,8 +468,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 3,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'Ростовский Водоканал капитально отремонтировал Центр помощи и развития детей-инвалидов',
 
     createDate() {
@@ -478,8 +478,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 23,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: 'Животные-биоиндикаторы помогают Ростовскому Водоканалу следить за качеством очистки стоков и состоянием воды в реке Дон',
 
     createDate() {
@@ -488,8 +488,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 23,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: 'Учебный центр Ростовского Водоканала будет готовить специалистов со школьной скамьи',
 
     createDate() {
@@ -498,8 +498,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 16,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: '15 лет перемен: как менялся и менял свой город "Ростовводоканал',
 
     createDate() {
@@ -509,8 +509,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
   }, /////////////////////////////////////////////////////////// 3 страница /////////////////////////////
   {
     day: 10,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: '«Ростовводоканал» поделился опытом в сфере водосбережения на межрегиональном общественном форуме',
 
     createDate() {
@@ -519,8 +519,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 2,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: 'Команда «Ростовводоканала» успешно выступила на Спартакиаде профсоюзов Дона',
 
     createDate() {
@@ -529,8 +529,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 1,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: 'Лаборант Ростовского Водоканала заняла 2 место в областном конкурсе профмастерства',
 
     createDate() {
@@ -539,8 +539,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 20,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'Автопарк Ростовского Водоканала пополнился современной землеройной техникой',
 
     createDate() {
@@ -549,8 +549,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 20,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'Не замечая противоречий: Следствие ведется годами, а где выведенные из банков деньги - неизвестно',
 
     createDate() {
@@ -559,8 +559,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 11,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'Награждение лучших сотрудников в честь 153-летия Ростовводоканала',
 
     createDate() {
@@ -569,8 +569,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 10,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'Губит людей вода: история и итоги «войны водоканалов» в Сочи',
 
     createDate() {
@@ -579,8 +579,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 10,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'Историческую экспозицию под открытым небом торжественно открыли к 153-годовщине Ростовского Водоканала',
 
     createDate() {
@@ -589,8 +589,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 10,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'В Донской столице отметили 153-годовщину Ростовского Водоканала',
 
     createDate() {
@@ -599,8 +599,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 22,
-    month: 8,
-    year: 2018,
+    month: '8',
+    year: '2018',
     title: 'В Ростовском Водоканале открылась детская экологическая смена «Капелька»',
 
     createDate() {
@@ -609,8 +609,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 20,
-    month: 8,
-    year: 2018,
+    month: '8',
+    year: '2018',
     title: 'Водные перспективы. Водоканал Ростова-на-Дону — это отличный пример ГЧП',
 
     createDate() {
@@ -619,8 +619,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 13,
-    month: 8,
-    year: 2018,
+    month: '8',
+    year: '2018',
     title: 'Гендиректор «Ростовводоканала» отмечен благодарностью за вклад в развитие строительной отрасли города',
 
     createDate() {
@@ -629,8 +629,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 3,
-    month: 8,
-    year: 2018,
+    month: '8',
+    year: '2018',
     title: 'Ростовский Водоканал увеличил надежность водоснабжения восточной части города',
 
     createDate() {
@@ -639,8 +639,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 23,
-    month: 7,
-    year: 2018,
+    month: '7',
+    year: '2018',
     title: 'Ростовский Водоканал построит новый водозабор и повысит надежность водоснабжения абонентов',
 
     createDate() {
@@ -649,8 +649,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 19,
-    month: 7,
-    year: 2018,
+    month: '7',
+    year: '2018',
     title: 'АО «Ростовводокнал» признан лучшим социально ориентированным работодателем Ростовской области',
 
     createDate() {
@@ -659,8 +659,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 17,
-    month: 7,
-    year: 2018,
+    month: '7',
+    year: '2018',
     title: 'В период проведения матчей ЧМ-2018 Ростовский Водоканал обеспечил бесперебойное водоснабжение значимых объектов',
 
     createDate() {
@@ -669,8 +669,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 13,
-    month: 7,
-    year: 2018,
+    month: '7',
+    year: '2018',
     title: 'Кислород и уголь против сине-зеленых: Ростовский Водоканал рассказал журналистам о методах борьбы с запахом водопроводной воды',
 
     createDate() {
@@ -679,8 +679,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 3,
-    month: 7,
-    year: 2018,
+    month: '7',
+    year: '2018',
     title: 'Ростовский Водоканал завершил реконструкцию главного городского коллектора в Батайске',
 
     createDate() {
@@ -689,8 +689,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 25,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: 'Охрана и условия труда в Ростовском Водоканале признаны лучшими на уровне города',
 
     createDate() {
@@ -699,8 +699,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 22,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: 'Охрана и условия труда в Ростовском Водоканале признаны лучшими на уровне города',
 
     createDate() {
@@ -709,8 +709,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 19,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: 'Печальный итог "безнадежного дела"',
 
     createDate() {
@@ -719,8 +719,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 18,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: 'Ростовский Водоканал провел детский экоквест с посвящением в «Зеленые агенты»',
 
     createDate() {
@@ -729,8 +729,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 13,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: 'Лучший эколог Дона работает в Ростовском Водоканале',
 
     createDate() {
@@ -739,8 +739,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 7,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: '"Ростовводоканал" открыл комплекс повторного использования промывных вод',
 
     createDate() {
@@ -749,8 +749,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 5,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: '"Ростовский Водоканал принял участие в экологическом фестивале «Дети России – за сохранение природы!»',
 
     createDate() {
@@ -820,49 +820,28 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
   const month = document.getElementById('input-month');
   const year = document.getElementById('input-year');
   const button = document.querySelector('.press__filter-button');
-  const array = []; // for(let i = 0; i < arrayOfPopups.length; i++) {
-  //   const arrayForFiltred = arrayOfPopups[i].month + '.' + arrayOfPopups[i].year;
-  //   console.log(arrayForFiltred);
-  // }
+
+  const getFilteredData = () => {
+    const array = []; // console.log(month.value);
+
+    arrayOfPopups.filter(item => {
+      if (item.month === month.value && item.year === year.value) {
+        array.push(item);
+      }
+    });
+    array.forEach(element => createAccordion(element));
+  };
 
   button.addEventListener('click', () => {
-    while (array.length > 0) {
-      array.pop();
-    }
-
-    array.push(month.value);
-    console.log(month.value);
-    array.push(year.value);
-    console.log(year.value);
-    console.log(array);
-
-    for (let i = 0; i < array.length; i++) {
-      if (array[i].month === '') {
-        array[i].month;
-      }
-    } // console.log(arrayForFiltred);
-
-  }); // /////////////////////////////////////////// photoArchive ///////////////////////////////////////
-  // const copyarrayOfArchive = () => arrayOfPopups.map((item) => item);
-  // copyarrayOfArchive();
-  // /////////////////////////////////// completion content archive /////////////////////////////////
-  // const createImgArchive = (item) => {
-  //   const li = makeElement('li', listImg, 'press__content-list-collage');
-  //   const img = makeElement('img', li, 'press__content-list-collage-img', item.img);
-  // };
-  // /////////////////////////////////////////// load content ////////////////////////////////////////
-  // const loadArrayOfArchive = () => copyarrayOfArchive().forEach((item) => createImgArchive(item));
-  // loadArrayOfArchive();
-  // //////////////////////////////////// event listeners of photo archive  /////////////////////////
-  // const img = document.querySelector('.press__content-list-collage-img');
-  // img.addEventListener('click', () => {
-  // });
+    list.innerHTML = '';
+    getFilteredData();
+  });
 } else if (document.location.href === 'http://localhost:3000/pressCentre-publicationsSMI.html') {
   ///////////////////////////////// obj of pressCentre smi  ////////////////////////////
   const arrayOfPopups = [{
     day: 24,
-    month: 9,
-    year: 2019,
+    month: '9',
+    year: '2019',
     title: 'Ростовский Водоканал раскрыл секреты очистки питьевой воды',
     content: '<p>awdsdwadad<p><p>awdsdwadad<p><p>awdsdwadad<p><p>awdsdwadad<p>',
 
@@ -872,8 +851,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 22,
-    month: 10,
-    year: 2019,
+    month: '10',
+    year: '2019',
     content: '<p>awdsdwadad<p><p>awdsdwadad<p><p>awdsdwadad<p><p>awdsdwadad<p>',
     title: 'Ростовский Водоканал оказывает помощь городской общественной организации инвалидов «Надежда»',
 
@@ -883,8 +862,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 10,
-    month: 10,
-    year: 2019,
+    month: '10',
+    year: '2019',
     title: 'Ростовский Водоканал признан социально-эффективным работодателем',
 
     createDate() {
@@ -893,8 +872,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 8,
-    month: 10,
-    year: 2019,
+    month: '10',
+    year: '2019',
     title: 'В День профессий Ростовский Водоканал предложил работу выпускникам вузов',
 
     createDate() {
@@ -903,8 +882,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 1,
-    month: 10,
-    year: 2019,
+    month: '10',
+    year: '2019',
     title: 'Ростовский Водоканал наградил школьников-победителей экологического диктанта',
 
     createDate() {
@@ -913,8 +892,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 6,
-    month: 9,
-    year: 2019,
+    month: '9',
+    year: '2019',
     title: 'Ростовский Водоканал отметил 154-летие своего основания',
 
     createDate() {
@@ -923,8 +902,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 4,
-    month: 9,
-    year: 2019,
+    month: '9',
+    year: '2019',
     title: 'Поздравление Генерального директора АО "Евразийский" Вишневского Германа Александровича со 154-й годовщиной основания Ростовского водоканала',
 
     createDate() {
@@ -933,8 +912,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 19,
-    month: 7,
-    year: 2019,
+    month: '7',
+    year: '2019',
     title: 'Ростовский Водоканал рассказал детям о секретах производства питьевой воды',
 
     createDate() {
@@ -943,8 +922,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 18,
-    month: 7,
-    year: 2019,
+    month: '7',
+    year: '2019',
     title: 'Ростовский Водоканал подключил к сетям водоснабжения Южно-Батайскую промзону',
 
     createDate() {
@@ -953,8 +932,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 12,
-    month: 7,
-    year: 2019,
+    month: '7',
+    year: '2019',
     title: 'Ростовский Водоканал поделился знаниями с будущими географами и экологами',
 
     createDate() {
@@ -963,8 +942,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 25,
-    month: 6,
-    year: 2019,
+    month: '6',
+    year: '2019',
     title: 'Ростовский Водоканал принял участие в работе Всероссийского водного конгресса',
 
     createDate() {
@@ -973,8 +952,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 17,
-    month: 6,
-    year: 2019,
+    month: '6',
+    year: '2019',
     title: 'Ростовский Водоканала заменил почти 10 километров сетей в рамках подготовки к отопительному сезону',
 
     createDate() {
@@ -983,8 +962,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 6,
-    month: 6,
-    year: 2019,
+    month: '6',
+    year: '2019',
     title: 'В Ростовском Водоканале заложили «капсулу времени» в честь 15-летия Информационно-экологического центра',
 
     createDate() {
@@ -993,8 +972,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 20,
-    month: 5,
-    year: 2019,
+    month: '5',
+    year: '2019',
     title: 'Коллектив Ростовского Водоканала провел субботник на берегу Дона',
 
     createDate() {
@@ -1003,8 +982,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 8,
-    month: 5,
-    year: 2019,
+    month: '5',
+    year: '2019',
     title: 'В преддверии Дня Победы Ростовский Водоканал поздравил ветеранов и почтил память павших героев',
 
     createDate() {
@@ -1013,8 +992,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 8,
-    month: 5,
-    year: 2019,
+    month: '5',
+    year: '2019',
     title: '15 лет Информационно-экологическому центру Ростовского водоканала',
 
     createDate() {
@@ -1023,8 +1002,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 6,
-    month: 5,
-    year: 2019,
+    month: '5',
+    year: '2019',
     title: 'Для надежной работы очистных сооружений городской канализации в Ростове запустили биоэнергетическую установку',
 
     createDate() {
@@ -1033,8 +1012,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 24,
-    month: 4,
-    year: 2019,
+    month: '4',
+    year: '2019',
     title: 'Ростовский Водоканал напомнил ростовчанам о бережном отношении к природе и подарил экопакеты',
 
     createDate() {
@@ -1043,8 +1022,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 15,
-    month: 4,
-    year: 2019,
+    month: '4',
+    year: '2019',
     title: 'Ростовский Водоканал высадил «живую изгородь» и организовал флешмоб в честь 15-летия своего экоцентра',
 
     createDate() {
@@ -1053,8 +1032,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 8,
-    month: 4,
-    year: 2019,
+    month: '4',
+    year: '2019',
     title: 'Ростовский Водоканал капитально отремонтировал более 800 метров сетей водоотведения',
 
     createDate() {
@@ -1063,8 +1042,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 5,
-    month: 4,
-    year: 2019,
+    month: '4',
+    year: '2019',
     title: 'Ростовский Водоканал снизил количество повреждений на сетях почти на треть',
 
     createDate() {
@@ -1073,8 +1052,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 2,
-    month: 4,
-    year: 2019,
+    month: '4',
+    year: '2019',
     title: 'Новое оборудование на станции аэрации Ростовского Водоканала повысило эффективность очистки стоков на 50%',
 
     createDate() {
@@ -1083,8 +1062,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 28,
-    month: 3,
-    year: 2019,
+    month: '3',
+    year: '2019',
     title: 'Эксперты отметили вклад Ростовского Водоканала в оздоровление реки Темерник',
 
     createDate() {
@@ -1093,8 +1072,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 26,
-    month: 3,
-    year: 2019,
+    month: '3',
+    year: '2019',
     title: 'За пять лет автотранспортный парк Ростовского Водоканала обновился более чем на 50%',
 
     createDate() {
@@ -1104,8 +1083,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
   }, //////////////////////////////////////////////////// 2 страница /////////////////////////////////////////////
   {
     day: 19,
-    month: 3,
-    year: 2019,
+    month: '3',
+    year: '2019',
     title: 'Лучших специалистов Ростовского Водоканала наградили в честь Дня работников ЖКХ',
 
     createDate() {
@@ -1114,8 +1093,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 18,
-    month: 3,
-    year: 2019,
+    month: '3',
+    year: '2019',
     title: 'Ростовский Водоканал – самый динамично развивающийся в регионе',
 
     createDate() {
@@ -1124,8 +1103,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 4,
-    month: 3,
-    year: 2019,
+    month: '3',
+    year: '2019',
     title: 'Ростовский Водоканал показал донским педагогам процесс производства питьевой воды',
 
     createDate() {
@@ -1134,8 +1113,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 20,
-    month: 2,
-    year: 2019,
+    month: '2',
+    year: '2019',
     title: 'Суд отказал мэрии Сочи в расторжении договора с ООО "Сочиводоканал". Решение вступает в законную силу.',
 
     createDate() {
@@ -1144,8 +1123,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 15,
-    month: 2,
-    year: 2019,
+    month: '2',
+    year: '2019',
     title: 'Донские ученые представили специалистам Ростовского Водоканала прибор для онлайн-мониторинга концентрации микроводорослей в воде',
 
     createDate() {
@@ -1154,8 +1133,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 15,
-    month: 2,
-    year: 2019,
+    month: '2',
+    year: '2019',
     title: 'Новогоднюю подсветку здания Ростовского Водоканала признали лучшей',
 
     createDate() {
@@ -1164,8 +1143,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 8,
-    month: 2,
-    year: 2019,
+    month: '2',
+    year: '2019',
     title: 'Ростовский Водоканал – один из самых стабильных работодателей области',
 
     createDate() {
@@ -1174,8 +1153,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 5,
-    month: 2,
-    year: 2019,
+    month: '2',
+    year: '2019',
     title: 'Ростовский Водоканал начал серию экскурсий для потребителей',
 
     createDate() {
@@ -1184,8 +1163,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 21,
-    month: 1,
-    year: 2019,
+    month: '1',
+    year: '2019',
     title: 'Ростовский Водоканал отправил в Шахты гуманитарную помощь',
 
     createDate() {
@@ -1194,8 +1173,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 16,
-    month: 1,
-    year: 2019,
+    month: '1',
+    year: '2019',
     title: 'Ростовский Водоканал реконструировал и автоматизировал четыре ВНС',
 
     createDate() {
@@ -1204,8 +1183,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 11,
-    month: 1,
-    year: 2019,
+    month: '1',
+    year: '2019',
     title: 'В ООО "Сочиводоканал" назначен новый руководитель',
 
     createDate() {
@@ -1214,8 +1193,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 25,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'АО «Евразийский» и АО «Ростовводоканал» поздравляют с Новым Годом!',
 
     createDate() {
@@ -1224,8 +1203,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 21,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'Ростовский Водоканал снизил количество повреждений на сетях водоснабжения на 6%',
 
     createDate() {
@@ -1234,8 +1213,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 11,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'Ростовский Водоканал снизил количество повреждений на сетях канализации на 6,4 %',
 
     createDate() {
@@ -1244,8 +1223,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 6,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'Ростовский Водоканал стал участником форума частных операторов сферы ЖКХ',
 
     createDate() {
@@ -1254,8 +1233,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 5,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'ООО «Сочиводоканал» вернул себе статус гарантирующей организации на территории Сочи',
 
     createDate() {
@@ -1264,8 +1243,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 3,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'Ростовский Водоканал капитально отремонтировал Центр помощи и развития детей-инвалидов',
 
     createDate() {
@@ -1274,8 +1253,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 28,
-    month: 11,
-    year: 2018,
+    month: '11',
+    year: '2018',
     title: 'В ногу со временем',
 
     createDate() {
@@ -1284,8 +1263,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 27,
-    month: 11,
-    year: 2018,
+    month: '11',
+    year: '2018',
     title: 'Ростовский Водоканал получил благодарственное письмо за стопроцентную исправность пожарных гидрантов в Батайске',
 
     createDate() {
@@ -1294,8 +1273,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 26,
-    month: 11,
-    year: 2018,
+    month: '11',
+    year: '2018',
     title: 'ООО "Сочиводоканал" подтвердил добросовестность исполнения договора аренды',
 
     createDate() {
@@ -1304,8 +1283,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 7,
-    month: 11,
-    year: 2018,
+    month: '11',
+    year: '2018',
     title: 'Жирберги и бахчевые «пробки»: Ростовский Водоканал с начала года устранил более 9 тысяч закупорок канализации',
 
     createDate() {
@@ -1314,8 +1293,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 1,
-    month: 11,
-    year: 2018,
+    month: '11',
+    year: '2018',
     title: 'Ростовский Водоканал наградил школьников за селфи с водой',
 
     createDate() {
@@ -1324,8 +1303,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 3,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'Ростовский Водоканал капитально отремонтировал Центр помощи и развития детей-инвалидов',
 
     createDate() {
@@ -1334,8 +1313,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 23,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: 'Животные-биоиндикаторы помогают Ростовскому Водоканалу следить за качеством очистки стоков и состоянием воды в реке Дон',
 
     createDate() {
@@ -1344,8 +1323,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 23,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: 'Учебный центр Ростовского Водоканала будет готовить специалистов со школьной скамьи',
 
     createDate() {
@@ -1354,8 +1333,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 16,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: '15 лет перемен: как менялся и менял свой город "Ростовводоканал',
 
     createDate() {
@@ -1365,8 +1344,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
   }, /////////////////////////////////////////////////////////// 3 страница /////////////////////////////
   {
     day: 10,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: '«Ростовводоканал» поделился опытом в сфере водосбережения на межрегиональном общественном форуме',
 
     createDate() {
@@ -1375,8 +1354,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 2,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: 'Команда «Ростовводоканала» успешно выступила на Спартакиаде профсоюзов Дона',
 
     createDate() {
@@ -1385,8 +1364,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 1,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: 'Лаборант Ростовского Водоканала заняла 2 место в областном конкурсе профмастерства',
 
     createDate() {
@@ -1395,8 +1374,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 20,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'Автопарк Ростовского Водоканала пополнился современной землеройной техникой',
 
     createDate() {
@@ -1405,8 +1384,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 20,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'Не замечая противоречий: Следствие ведется годами, а где выведенные из банков деньги - неизвестно',
 
     createDate() {
@@ -1415,8 +1394,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 11,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'Награждение лучших сотрудников в честь 153-летия Ростовводоканала',
 
     createDate() {
@@ -1425,8 +1404,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 10,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'Губит людей вода: история и итоги «войны водоканалов» в Сочи',
 
     createDate() {
@@ -1435,8 +1414,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 10,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'Историческую экспозицию под открытым небом торжественно открыли к 153-годовщине Ростовского Водоканала',
 
     createDate() {
@@ -1445,8 +1424,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 10,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'В Донской столице отметили 153-годовщину Ростовского Водоканала',
 
     createDate() {
@@ -1455,8 +1434,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 22,
-    month: 8,
-    year: 2018,
+    month: '8',
+    year: '2018',
     title: 'В Ростовском Водоканале открылась детская экологическая смена «Капелька»',
 
     createDate() {
@@ -1465,8 +1444,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 20,
-    month: 8,
-    year: 2018,
+    month: '8',
+    year: '2018',
     title: 'Водные перспективы. Водоканал Ростова-на-Дону — это отличный пример ГЧП',
 
     createDate() {
@@ -1475,8 +1454,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 13,
-    month: 8,
-    year: 2018,
+    month: '8',
+    year: '2018',
     title: 'Гендиректор «Ростовводоканала» отмечен благодарностью за вклад в развитие строительной отрасли города',
 
     createDate() {
@@ -1485,8 +1464,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 3,
-    month: 8,
-    year: 2018,
+    month: '8',
+    year: '2018',
     title: 'Ростовский Водоканал увеличил надежность водоснабжения восточной части города',
 
     createDate() {
@@ -1495,8 +1474,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 23,
-    month: 7,
-    year: 2018,
+    month: '7',
+    year: '2018',
     title: 'Ростовский Водоканал построит новый водозабор и повысит надежность водоснабжения абонентов',
 
     createDate() {
@@ -1505,8 +1484,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 19,
-    month: 7,
-    year: 2018,
+    month: '7',
+    year: '2018',
     title: 'АО «Ростовводокнал» признан лучшим социально ориентированным работодателем Ростовской области',
 
     createDate() {
@@ -1515,8 +1494,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 17,
-    month: 7,
-    year: 2018,
+    month: '7',
+    year: '2018',
     title: 'В период проведения матчей ЧМ-2018 Ростовский Водоканал обеспечил бесперебойное водоснабжение значимых объектов',
 
     createDate() {
@@ -1525,8 +1504,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 13,
-    month: 7,
-    year: 2018,
+    month: '7',
+    year: '2018',
     title: 'Кислород и уголь против сине-зеленых: Ростовский Водоканал рассказал журналистам о методах борьбы с запахом водопроводной воды',
 
     createDate() {
@@ -1535,8 +1514,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 3,
-    month: 7,
-    year: 2018,
+    month: '7',
+    year: '2018',
     title: 'Ростовский Водоканал завершил реконструкцию главного городского коллектора в Батайске',
 
     createDate() {
@@ -1545,8 +1524,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 25,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: 'Охрана и условия труда в Ростовском Водоканале признаны лучшими на уровне города',
 
     createDate() {
@@ -1555,8 +1534,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 22,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: 'Охрана и условия труда в Ростовском Водоканале признаны лучшими на уровне города',
 
     createDate() {
@@ -1565,8 +1544,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 19,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: 'Печальный итог "безнадежного дела"',
 
     createDate() {
@@ -1575,8 +1554,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 18,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: 'Ростовский Водоканал провел детский экоквест с посвящением в «Зеленые агенты»',
 
     createDate() {
@@ -1585,8 +1564,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 13,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: 'Лучший эколог Дона работает в Ростовском Водоканале',
 
     createDate() {
@@ -1595,8 +1574,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 7,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: '"Ростовводоканал" открыл комплекс повторного использования промывных вод',
 
     createDate() {
@@ -1605,8 +1584,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 5,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: '"Ростовский Водоканал принял участие в экологическом фестивале «Дети России – за сохранение природы!»',
 
     createDate() {
@@ -1682,8 +1661,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
   ///////////////////////////////// obj of pressCentre gos news /////////////////////////
   const arrayOfPopups = [{
     day: 242222,
-    month: 9,
-    year: 2019,
+    month: '9',
+    year: '2019',
     title: 'Ростовский Водоканал раскрыл секреты очистки питьевой воды',
     content: '<p>awdsdwadad<p><p>awdsdwadad<p><p>awdsdwadad<p><p>awdsdwadad<p>',
 
@@ -1693,8 +1672,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 22,
-    month: 10,
-    year: 2019,
+    month: '10',
+    year: '2019',
     content: '<p>awdsdwadad<p><p>awdsdwadad<p><p>awdsdwadad<p><p>awdsdwadad<p>',
     title: 'Ростовский Водоканал оказывает помощь городской общественной организации инвалидов «Надежда»',
 
@@ -1704,8 +1683,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 10,
-    month: 10,
-    year: 2019,
+    month: '10',
+    year: '2019',
     title: 'Ростовский Водоканал признан социально-эффективным работодателем',
 
     createDate() {
@@ -1714,8 +1693,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 8,
-    month: 10,
-    year: 2019,
+    month: '10',
+    year: '2019',
     title: 'В День профессий Ростовский Водоканал предложил работу выпускникам вузов',
 
     createDate() {
@@ -1724,8 +1703,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 1,
-    month: 10,
-    year: 2019,
+    month: '10',
+    year: '2019',
     title: 'Ростовский Водоканал наградил школьников-победителей экологического диктанта',
 
     createDate() {
@@ -1734,8 +1713,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 6,
-    month: 9,
-    year: 2019,
+    month: '9',
+    year: '2019',
     title: 'Ростовский Водоканал отметил 154-летие своего основания',
 
     createDate() {
@@ -1744,8 +1723,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 4,
-    month: 9,
-    year: 2019,
+    month: '9',
+    year: '2019',
     title: 'Поздравление Генерального директора АО "Евразийский" Вишневского Германа Александровича со 154-й годовщиной основания Ростовского водоканала',
 
     createDate() {
@@ -1754,8 +1733,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 19,
-    month: 7,
-    year: 2019,
+    month: '7',
+    year: '2019',
     title: 'Ростовский Водоканал рассказал детям о секретах производства питьевой воды',
 
     createDate() {
@@ -1764,8 +1743,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 18,
-    month: 7,
-    year: 2019,
+    month: '7',
+    year: '2019',
     title: 'Ростовский Водоканал подключил к сетям водоснабжения Южно-Батайскую промзону',
 
     createDate() {
@@ -1774,8 +1753,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 12,
-    month: 7,
-    year: 2019,
+    month: '7',
+    year: '2019',
     title: 'Ростовский Водоканал поделился знаниями с будущими географами и экологами',
 
     createDate() {
@@ -1784,8 +1763,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 25,
-    month: 6,
-    year: 2019,
+    month: '6',
+    year: '2019',
     title: 'Ростовский Водоканал принял участие в работе Всероссийского водного конгресса',
 
     createDate() {
@@ -1794,8 +1773,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 17,
-    month: 6,
-    year: 2019,
+    month: '6',
+    year: '2019',
     title: 'Ростовский Водоканала заменил почти 10 километров сетей в рамках подготовки к отопительному сезону',
 
     createDate() {
@@ -1804,8 +1783,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 6,
-    month: 6,
-    year: 2019,
+    month: '6',
+    year: '2019',
     title: 'В Ростовском Водоканале заложили «капсулу времени» в честь 15-летия Информационно-экологического центра',
 
     createDate() {
@@ -1814,8 +1793,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 20,
-    month: 5,
-    year: 2019,
+    month: '5',
+    year: '2019',
     title: 'Коллектив Ростовского Водоканала провел субботник на берегу Дона',
 
     createDate() {
@@ -1824,8 +1803,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 8,
-    month: 5,
-    year: 2019,
+    month: '5',
+    year: '2019',
     title: 'В преддверии Дня Победы Ростовский Водоканал поздравил ветеранов и почтил память павших героев',
 
     createDate() {
@@ -1834,8 +1813,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 8,
-    month: 5,
-    year: 2019,
+    month: '5',
+    year: '2019',
     title: '15 лет Информационно-экологическому центру Ростовского водоканала',
 
     createDate() {
@@ -1844,8 +1823,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 6,
-    month: 5,
-    year: 2019,
+    month: '5',
+    year: '2019',
     title: 'Для надежной работы очистных сооружений городской канализации в Ростове запустили биоэнергетическую установку',
 
     createDate() {
@@ -1854,8 +1833,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 24,
-    month: 4,
-    year: 2019,
+    month: '4',
+    year: '2019',
     title: 'Ростовский Водоканал напомнил ростовчанам о бережном отношении к природе и подарил экопакеты',
 
     createDate() {
@@ -1864,8 +1843,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 15,
-    month: 4,
-    year: 2019,
+    month: '4',
+    year: '2019',
     title: 'Ростовский Водоканал высадил «живую изгородь» и организовал флешмоб в честь 15-летия своего экоцентра',
 
     createDate() {
@@ -1874,8 +1853,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 8,
-    month: 4,
-    year: 2019,
+    month: '4',
+    year: '2019',
     title: 'Ростовский Водоканал капитально отремонтировал более 800 метров сетей водоотведения',
 
     createDate() {
@@ -1884,8 +1863,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 5,
-    month: 4,
-    year: 2019,
+    month: '4',
+    year: '2019',
     title: 'Ростовский Водоканал снизил количество повреждений на сетях почти на треть',
 
     createDate() {
@@ -1894,8 +1873,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 2,
-    month: 4,
-    year: 2019,
+    month: '4',
+    year: '2019',
     title: 'Новое оборудование на станции аэрации Ростовского Водоканала повысило эффективность очистки стоков на 50%',
 
     createDate() {
@@ -1904,8 +1883,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 28,
-    month: 3,
-    year: 2019,
+    month: '3',
+    year: '2019',
     title: 'Эксперты отметили вклад Ростовского Водоканала в оздоровление реки Темерник',
 
     createDate() {
@@ -1914,8 +1893,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 26,
-    month: 3,
-    year: 2019,
+    month: '3',
+    year: '2019',
     title: 'За пять лет автотранспортный парк Ростовского Водоканала обновился более чем на 50%',
 
     createDate() {
@@ -1925,8 +1904,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
   }, //////////////////////////////////////////////////// 2 страница /////////////////////////////////////////////
   {
     day: 19,
-    month: 3,
-    year: 2019,
+    month: '3',
+    year: '2019',
     title: 'Лучших специалистов Ростовского Водоканала наградили в честь Дня работников ЖКХ',
 
     createDate() {
@@ -1935,8 +1914,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 18,
-    month: 3,
-    year: 2019,
+    month: '3',
+    year: '2019',
     title: 'Ростовский Водоканал – самый динамично развивающийся в регионе',
 
     createDate() {
@@ -1945,8 +1924,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 4,
-    month: 3,
-    year: 2019,
+    month: '3',
+    year: '2019',
     title: 'Ростовский Водоканал показал донским педагогам процесс производства питьевой воды',
 
     createDate() {
@@ -1955,8 +1934,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 20,
-    month: 2,
-    year: 2019,
+    month: '2',
+    year: '2019',
     title: 'Суд отказал мэрии Сочи в расторжении договора с ООО "Сочиводоканал". Решение вступает в законную силу.',
 
     createDate() {
@@ -1965,8 +1944,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 15,
-    month: 2,
-    year: 2019,
+    month: '2',
+    year: '2019',
     title: 'Донские ученые представили специалистам Ростовского Водоканала прибор для онлайн-мониторинга концентрации микроводорослей в воде',
 
     createDate() {
@@ -1975,8 +1954,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 15,
-    month: 2,
-    year: 2019,
+    month: '2',
+    year: '2019',
     title: 'Новогоднюю подсветку здания Ростовского Водоканала признали лучшей',
 
     createDate() {
@@ -1985,8 +1964,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 8,
-    month: 2,
-    year: 2019,
+    month: '2',
+    year: '2019',
     title: 'Ростовский Водоканал – один из самых стабильных работодателей области',
 
     createDate() {
@@ -1995,8 +1974,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 5,
-    month: 2,
-    year: 2019,
+    month: '2',
+    year: '2019',
     title: 'Ростовский Водоканал начал серию экскурсий для потребителей',
 
     createDate() {
@@ -2005,8 +1984,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 21,
-    month: 1,
-    year: 2019,
+    month: '1',
+    year: '2019',
     title: 'Ростовский Водоканал отправил в Шахты гуманитарную помощь',
 
     createDate() {
@@ -2015,8 +1994,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 16,
-    month: 1,
-    year: 2019,
+    month: '1',
+    year: '2019',
     title: 'Ростовский Водоканал реконструировал и автоматизировал четыре ВНС',
 
     createDate() {
@@ -2025,8 +2004,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 11,
-    month: 1,
-    year: 2019,
+    month: '1',
+    year: '2019',
     title: 'В ООО "Сочиводоканал" назначен новый руководитель',
 
     createDate() {
@@ -2035,8 +2014,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 25,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'АО «Евразийский» и АО «Ростовводоканал» поздравляют с Новым Годом!',
 
     createDate() {
@@ -2045,8 +2024,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 21,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'Ростовский Водоканал снизил количество повреждений на сетях водоснабжения на 6%',
 
     createDate() {
@@ -2055,8 +2034,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 11,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'Ростовский Водоканал снизил количество повреждений на сетях канализации на 6,4 %',
 
     createDate() {
@@ -2065,8 +2044,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 6,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'Ростовский Водоканал стал участником форума частных операторов сферы ЖКХ',
 
     createDate() {
@@ -2075,8 +2054,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 5,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'ООО «Сочиводоканал» вернул себе статус гарантирующей организации на территории Сочи',
 
     createDate() {
@@ -2085,8 +2064,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 3,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'Ростовский Водоканал капитально отремонтировал Центр помощи и развития детей-инвалидов',
 
     createDate() {
@@ -2095,8 +2074,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 28,
-    month: 11,
-    year: 2018,
+    month: '11',
+    year: '2018',
     title: 'В ногу со временем',
 
     createDate() {
@@ -2105,8 +2084,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 27,
-    month: 11,
-    year: 2018,
+    month: '11',
+    year: '2018',
     title: 'Ростовский Водоканал получил благодарственное письмо за стопроцентную исправность пожарных гидрантов в Батайске',
 
     createDate() {
@@ -2115,8 +2094,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 26,
-    month: 11,
-    year: 2018,
+    month: '11',
+    year: '2018',
     title: 'ООО "Сочиводоканал" подтвердил добросовестность исполнения договора аренды',
 
     createDate() {
@@ -2125,8 +2104,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 7,
-    month: 11,
-    year: 2018,
+    month: '11',
+    year: '2018',
     title: 'Жирберги и бахчевые «пробки»: Ростовский Водоканал с начала года устранил более 9 тысяч закупорок канализации',
 
     createDate() {
@@ -2135,8 +2114,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 1,
-    month: 11,
-    year: 2018,
+    month: '11',
+    year: '2018',
     title: 'Ростовский Водоканал наградил школьников за селфи с водой',
 
     createDate() {
@@ -2145,8 +2124,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 3,
-    month: 12,
-    year: 2018,
+    month: '12',
+    year: '2018',
     title: 'Ростовский Водоканал капитально отремонтировал Центр помощи и развития детей-инвалидов',
 
     createDate() {
@@ -2155,8 +2134,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 23,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: 'Животные-биоиндикаторы помогают Ростовскому Водоканалу следить за качеством очистки стоков и состоянием воды в реке Дон',
 
     createDate() {
@@ -2165,8 +2144,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 23,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: 'Учебный центр Ростовского Водоканала будет готовить специалистов со школьной скамьи',
 
     createDate() {
@@ -2175,8 +2154,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 16,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: '15 лет перемен: как менялся и менял свой город "Ростовводоканал',
 
     createDate() {
@@ -2186,8 +2165,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
   }, /////////////////////////////////////////////////////////// 3 страница /////////////////////////////
   {
     day: 10,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: '«Ростовводоканал» поделился опытом в сфере водосбережения на межрегиональном общественном форуме',
 
     createDate() {
@@ -2196,8 +2175,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 2,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: 'Команда «Ростовводоканала» успешно выступила на Спартакиаде профсоюзов Дона',
 
     createDate() {
@@ -2206,8 +2185,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 1,
-    month: 10,
-    year: 2018,
+    month: '10',
+    year: '2018',
     title: 'Лаборант Ростовского Водоканала заняла 2 место в областном конкурсе профмастерства',
 
     createDate() {
@@ -2216,8 +2195,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 20,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'Автопарк Ростовского Водоканала пополнился современной землеройной техникой',
 
     createDate() {
@@ -2226,8 +2205,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 20,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'Не замечая противоречий: Следствие ведется годами, а где выведенные из банков деньги - неизвестно',
 
     createDate() {
@@ -2236,8 +2215,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 11,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'Награждение лучших сотрудников в честь 153-летия Ростовводоканала',
 
     createDate() {
@@ -2246,8 +2225,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 10,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'Губит людей вода: история и итоги «войны водоканалов» в Сочи',
 
     createDate() {
@@ -2256,8 +2235,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 10,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'Историческую экспозицию под открытым небом торжественно открыли к 153-годовщине Ростовского Водоканала',
 
     createDate() {
@@ -2266,8 +2245,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 10,
-    month: 9,
-    year: 2018,
+    month: '9',
+    year: '2018',
     title: 'В Донской столице отметили 153-годовщину Ростовского Водоканала',
 
     createDate() {
@@ -2276,8 +2255,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 22,
-    month: 8,
-    year: 2018,
+    month: '8',
+    year: '2018',
     title: 'В Ростовском Водоканале открылась детская экологическая смена «Капелька»',
 
     createDate() {
@@ -2286,8 +2265,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 20,
-    month: 8,
-    year: 2018,
+    month: '8',
+    year: '2018',
     title: 'Водные перспективы. Водоканал Ростова-на-Дону — это отличный пример ГЧП',
 
     createDate() {
@@ -2296,8 +2275,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 13,
-    month: 8,
-    year: 2018,
+    month: '8',
+    year: '2018',
     title: 'Гендиректор «Ростовводоканала» отмечен благодарностью за вклад в развитие строительной отрасли города',
 
     createDate() {
@@ -2306,8 +2285,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 3,
-    month: 8,
-    year: 2018,
+    month: '8',
+    year: '2018',
     title: 'Ростовский Водоканал увеличил надежность водоснабжения восточной части города',
 
     createDate() {
@@ -2316,8 +2295,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 23,
-    month: 7,
-    year: 2018,
+    month: '7',
+    year: '2018',
     title: 'Ростовский Водоканал построит новый водозабор и повысит надежность водоснабжения абонентов',
 
     createDate() {
@@ -2326,8 +2305,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 19,
-    month: 7,
-    year: 2018,
+    month: '7',
+    year: '2018',
     title: 'АО «Ростовводокнал» признан лучшим социально ориентированным работодателем Ростовской области',
 
     createDate() {
@@ -2336,8 +2315,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 17,
-    month: 7,
-    year: 2018,
+    month: '7',
+    year: '2018',
     title: 'В период проведения матчей ЧМ-2018 Ростовский Водоканал обеспечил бесперебойное водоснабжение значимых объектов',
 
     createDate() {
@@ -2346,8 +2325,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 13,
-    month: 7,
-    year: 2018,
+    month: '7',
+    year: '2018',
     title: 'Кислород и уголь против сине-зеленых: Ростовский Водоканал рассказал журналистам о методах борьбы с запахом водопроводной воды',
 
     createDate() {
@@ -2356,8 +2335,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 3,
-    month: 7,
-    year: 2018,
+    month: '7',
+    year: '2018',
     title: 'Ростовский Водоканал завершил реконструкцию главного городского коллектора в Батайске',
 
     createDate() {
@@ -2366,8 +2345,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 25,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: 'Охрана и условия труда в Ростовском Водоканале признаны лучшими на уровне города',
 
     createDate() {
@@ -2376,8 +2355,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 22,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: 'Охрана и условия труда в Ростовском Водоканале признаны лучшими на уровне города',
 
     createDate() {
@@ -2386,8 +2365,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 19,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: 'Печальный итог "безнадежного дела"',
 
     createDate() {
@@ -2396,8 +2375,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 18,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: 'Ростовский Водоканал провел детский экоквест с посвящением в «Зеленые агенты»',
 
     createDate() {
@@ -2406,8 +2385,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 13,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: 'Лучший эколог Дона работает в Ростовском Водоканале',
 
     createDate() {
@@ -2416,8 +2395,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 7,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: '"Ростовводоканал" открыл комплекс повторного использования промывных вод',
 
     createDate() {
@@ -2426,8 +2405,8 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   }, {
     day: 5,
-    month: 6,
-    year: 2018,
+    month: '6',
+    year: '2018',
     title: '"Ростовский Водоканал принял участие в экологическом фестивале «Дети России – за сохранение природы!»',
 
     createDate() {
