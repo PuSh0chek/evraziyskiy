@@ -768,13 +768,22 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
   const button = document.querySelector('.press__filter-button');
 
   const getFilteredData = () => {
-    const array = []
+    const array = [];
+    while (array.length > 0) {
+      array.pop();
+    };
     // console.log(month.value);
     arrayOfPopups.filter((item) => {
       if (item.month === month.value && item.year === year.value) {
         array.push(item);
       }
-    })
+      // if (item.month === month.value) {
+      //   array.push(item);
+      // }
+      // if (item.year === year.value) {
+      //   array.push(item);
+      // }
+    });
     array.forEach((element) => createAccordion(element));
   };
 
