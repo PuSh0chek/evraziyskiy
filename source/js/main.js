@@ -1,6 +1,5 @@
 
 ////////////////////////////////////// URL CHECK ////////////////////////////////////////
-
 if (document.location.href === 'http://localhost:3000/pressCentre.html') {
   ///////////////////////////////// obj of pressCentre  ///////////////////////////////
   const arrayOfPopups = [
@@ -705,13 +704,13 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
     },
     /////////////////////////////////////////////// 4 страница //////////////////////////////////////
   ];
+
   //////////////////////////////////// CONST /////////////////////////////////////////////
   const list = document.querySelector('.press__content-list');
   const buttonNext = document.querySelector('.press__content-button-next');
   const buttonBack = document.querySelector('.press__content-button-back');
   let start = 0;
   let end = 15;
-  // arrayOfPopups.length / 15
 
   ///////////////////////// universal element creation function /////////////////////////
   const makeElement = (tag, parent, classTag, content = '') => {
@@ -772,17 +771,10 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
     while (array.length > 0) {
       array.pop();
     };
-    // console.log(month.value);
     arrayOfPopups.filter((item) => {
       if (item.month === month.value && item.year === year.value) {
         array.push(item);
       }
-      // if (item.month === month.value) {
-      //   array.push(item);
-      // }
-      // if (item.year === year.value) {
-      //   array.push(item);
-      // }
     });
     array.forEach((element) => createAccordion(element));
   };
@@ -794,7 +786,6 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
 } else if (document.location.href === 'http://localhost:3000/pressCentre-publicationsSMI.html') {
   ///////////////////////////////// obj of pressCentre smi  ////////////////////////////
-
   const arrayOfPopups = [
     {
       day: 24,
@@ -1523,7 +1514,6 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
     const details = makeElement('details', li, 'popup__item-detail', '');
     const summary = makeElement('summary', details, 'popup__item-detail-title', item.title);
     const contentContainer = makeElement('div', details, 'popup__item-detail-content', '');
-    const date = makeElement('time', summary, 'popup__item-date', item.createDate());
     contentContainer.innerHTML = item.content;
   };
 
@@ -1534,20 +1524,26 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
 
   //////////////////////////////////// event listeners of buttons press center ////////////////////////
   buttonNext.addEventListener('click', () => {
+    buttonBack.disabled = false;
     list.innerHTML = '';
-    start += 10;
-    end += 10;
+    start += 15;
+    end += 15;
     copyarrayOfPopups();
     loadArrayOfPopup();
   });
 
+  buttonBack.disabled = true;
   buttonBack.addEventListener('click', () => {
     list.innerHTML = '';
-    start -= 10;
-    end -= 10;
+    start -= 15;
+    end -= 15;
+    if (start === 0) {
+      buttonBack.disabled = true;
+    }
     copyarrayOfPopups();
     loadArrayOfPopup();
   });
+
 } else if (document.location.href === 'http://localhost:3000/pressCentre-gosNews.html') {
   ///////////////////////////////// obj of pressCentre gos news /////////////////////////
   const arrayOfPopups = [
@@ -2249,6 +2245,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
     },
     /////////////////////////////////////////////// 4 страница //////////////////////////////////////
   ];
+
   //////////////////////////////////// CONST /////////////////////////////////////////////
   const list = document.querySelector('.press__content-list');
   const buttonNext = document.querySelector('.press__content-button-next');
@@ -2280,23 +2277,27 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
   };
 
   /////////////////////////////////////// load content ///////////////////////////////////////////////
-
   const loadArrayOfPopup = () => copyarrayOfPopups().forEach((item) => createAccordion(item));
   loadArrayOfPopup();
 
   //////////////////////////////////// event listeners of buttons press center ////////////////////////
   buttonNext.addEventListener('click', () => {
+    buttonBack.disabled = false;
     list.innerHTML = '';
-    start += 10;
-    end += 10;
+    start += 15;
+    end += 15;
     copyarrayOfPopups();
     loadArrayOfPopup();
   });
 
+  buttonBack.disabled = true;
   buttonBack.addEventListener('click', () => {
     list.innerHTML = '';
-    start -= 10;
-    end -= 10;
+    start -= 15;
+    end -= 15;
+    if (start === 0) {
+      buttonBack.disabled = true;
+    }
     copyarrayOfPopups();
     loadArrayOfPopup();
   });
@@ -2775,6 +2776,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
   };
 
   arrayOfArchive.forEach((item) => createPhoto(item.img));
+
   /////////////////////////////// swiper /////////////////////////////////////////////////
   const swiper = new Swiper('.swiper', {
     // Optional parameters
@@ -2828,6 +2830,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
     });
   }
 };
+
 ////////////////////////////////// CONST /////////////////////////////////////////////
 const links = document.querySelectorAll('.roundDate__link');
 
