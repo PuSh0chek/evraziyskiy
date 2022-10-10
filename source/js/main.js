@@ -1514,6 +1514,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
     const details = makeElement('details', li, 'popup__item-detail', '');
     const summary = makeElement('summary', details, 'popup__item-detail-title', item.title);
     const contentContainer = makeElement('div', details, 'popup__item-detail-content', '');
+    const date = makeElement('time', summary, 'popup__item-date', item.createDate());
     contentContainer.innerHTML = item.content;
   };
 
@@ -1542,6 +1543,29 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
     }
     copyarrayOfPopups();
     loadArrayOfPopup();
+  });
+
+  /////////////////////////////////// filter ////////////////////////////////////////////////////////
+  const month = document.getElementById('input-month');
+  const year = document.getElementById('input-year');
+  const button = document.querySelector('.press__filter-button');
+
+  const getFilteredData = () => {
+    const array = [];
+    while (array.length > 0) {
+      array.pop();
+    };
+    arrayOfPopups.filter((item) => {
+      if (item.month === month.value && item.year === year.value) {
+        array.push(item);
+      }
+    });
+    array.forEach((element) => createAccordion(element));
+  };
+
+  button.addEventListener('click', () => {
+    list.innerHTML = '';
+    getFilteredData();
   });
 
 } else if (document.location.href === 'http://localhost:3000/pressCentre-gosNews.html') {
@@ -2301,11 +2325,35 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
     copyarrayOfPopups();
     loadArrayOfPopup();
   });
+
+  /////////////////////////////////// filter ////////////////////////////////////////////////////////
+  const month = document.getElementById('input-month');
+  const year = document.getElementById('input-year');
+  const button = document.querySelector('.press__filter-button');
+
+  const getFilteredData = () => {
+    const array = [];
+    while (array.length > 0) {
+      array.pop();
+    };
+    arrayOfPopups.filter((item) => {
+      if (item.month === month.value && item.year === year.value) {
+        array.push(item);
+      }
+    });
+    array.forEach((element) => createAccordion(element));
+  };
+
+  button.addEventListener('click', () => {
+    list.innerHTML = '';
+    getFilteredData();
+  });
+
 } else if (document.location.href === 'http://localhost:3000/pressCente-photoArchive.html') {
   /////////////////////////////// obj of pressCentre photo archive /////////////////////////
   const arrayOfArchive = [
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/2480.png',
       title: 'qqqqqqq',
       gallery: [
         {
@@ -2329,7 +2377,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/2721.png',
       gallery: [
         {
           img: '/img/ccv3.jpg',
@@ -2340,30 +2388,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
-      gallery: [
-        {
-          img: '/img/ccv3.jpg',
-        },
-        {
-          img: '/img/ccv3.jpg',
-        },
-        {
-          img: '/img/ccv3.jpg',
-        },
-        {
-          img: '/img/ccv3.jpg',
-        },
-        {
-          img: '/img/ccv3.jpg',
-        },
-        {
-          img: '/img/ccv3.jpg',
-        },
-      ],
-    },
-    {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/2745.png',
       gallery: [
         {
           img: '/img/ccv3.jpg',
@@ -2386,7 +2411,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/2745.png',
       gallery: [
         {
           img: '/img/ccv3.jpg',
@@ -2409,7 +2434,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/3029.png',
       gallery: [
         {
           img: '/img/ccv3.jpg',
@@ -2432,7 +2457,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/3046.png',
       gallery: [
         {
           img: '/img/ccv3.jpg',
@@ -2455,7 +2480,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/3175.png',
       gallery: [
         {
           img: '/img/ccv3.jpg',
@@ -2478,7 +2503,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/3257.png',
       gallery: [
         {
           img: '/img/ccv3.jpg',
@@ -2501,7 +2526,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/3280.png',
       gallery: [
         {
           img: '/img/ccv3.jpg',
@@ -2524,7 +2549,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/3368.png',
       gallery: [
         {
           img: '/img/ccv3.jpg',
@@ -2547,7 +2572,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/3393.png',
       gallery: [
         {
           img: '/img/ccv3.jpg',
@@ -2570,7 +2595,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/3417.png',
       gallery: [
         {
           img: '/img/ccv3.jpg',
@@ -2593,7 +2618,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/3578.png',
       gallery: [
         {
           img: '/img/ccv3.jpg',
@@ -2616,7 +2641,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/.jpg',
       gallery: [
         {
           img: '/img/ccv3.jpg',
@@ -2639,7 +2664,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/.jpg',
       gallery: [
         {
           img: '/img/ccv3.jpg',
@@ -2662,7 +2687,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/ccv3.jpg',
       gallery: [
         {
           img: '/img/ccv3.jpg',
@@ -2685,7 +2710,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/ccv3.jpg',
       gallery: [
         {
           img: '/img/ccv3.jpg',
@@ -2708,7 +2733,7 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/ccv3.jpg',
       gallery: [
         {
           img: '/img/ccv3.jpg',
@@ -2731,7 +2756,582 @@ if (document.location.href === 'http://localhost:3000/pressCentre.html') {
       ],
     },
     {
-      img: '/img/ccv3.jpg',
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
+      gallery: [
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+        {
+          img: '/img/ccv3.jpg',
+        },
+      ],
+    },
+    {
+      img: '/img/swiper/ccv3.jpg',
       gallery: [
         {
           img: '/img/ccv3.jpg',
