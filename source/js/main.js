@@ -1,4 +1,22 @@
+// Переменные //
 const links = document.querySelectorAll('.roundDate__link');
+
+// switch (window.location.href) {
+//   case 'http://localhost:3000/index.html':
+
+//     break;
+//   case 'http://localhost:3000/pressCentre.html':
+
+
+//     break;
+//   case 'http://localhost:3000/roundDate.html':
+
+//     break;
+// };
+const filterInput = document.querySelector('.press__filter-input');
+console.log(document.querySelector('.press__filter-input').children[1]);
+
+console.log(1);
 
 links.forEach((element) => {
   element.addEventListener('click', (evt) => {
@@ -14,5 +32,3 @@ links.forEach((element) => {
     });
   });
 });
-
-
