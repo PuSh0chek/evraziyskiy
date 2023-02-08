@@ -90,7 +90,7 @@ switch (window.location.href) {
       console.log(typeof elementsOfArray[1].value);
 
       for (let i = 0; i < elementsOfArray.length; i++) {
-        if (filterInputChild.innerHTML[i] === elementsOfArray[i].value) {
+        if (elementsOfArray[1].value === 'январь') {
           console.log(1);
         }
       }
