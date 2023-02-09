@@ -37,10 +37,17 @@
   background-color: rgba(170, 170, 170, 0.247);
   height: 39px;
 }
-.press__filter-text {
+.press__filter-month {
   margin: 50px;
 }
-.press__filter-input {
+.press__filter-year {
+  margin: 50px;
+}
+.press__filter-input-year {
+  margin: 10px;
+  width: 100px;
+}
+.press__filter-input-month {
   margin: 10px;
   width: 100px;
 }

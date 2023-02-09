@@ -51,7 +51,7 @@ const arrayOfNews = [
     id: 6,
     day: 2,
     month: 2,
-    year: 2023,
+    year: 2019,
     content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
   },
 ];
@@ -91,14 +91,46 @@ switch (window.location.href) {
     loadNewsContentInElement();
 
     const getListnerOfEvents = () => {
-      const filterIn = document.querySelector('.press__filter-input');
-      filterIn.addEventListener('change', () => {
-        Array.from(filterIn).forEach((item) => {
-          console.log(item.id);
-          
+      const filterMonth = document.querySelector('.press__filter-input-month');
+      const filterYear = document.querySelector('.press__filter-input-year');
+      filterMonth.addEventListener('change', () => {
+        arrayOfNews.filter((item) => {
+          if (item.month === +filterMonth.options[filterMonth.selectedIndex].dataset.month) {
+            arrayOfNewsFilterMonth.push(item);
+          }
         });
+        // if (filterMonth.value === 'январь') {
+        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 1));
+        // } else if (filterMonth.value === 'февраль') {
+        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 2));
+        // } else if (filterMonth.value === 'март') {
+        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 3));
+        // } else if (filterMonth.value === 'апрель') {
+        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 4));
+        // } else if (filterMonth.value === 'май') {
+        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 5));
+        // } else if (filterMonth.value === 'июнь') {
+        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 6));
+        // } else if (filterMonth.value === 'июль') {
+        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 7));
+        // } else if (filterMonth.value === 'август') {
+        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 8));
+        // } else if (filterMonth.value === 'сентябрь') {
+        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 9));
+        // } else if (filterMonth.value === 'октябрь') {
+        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 10));
+        // } else if (filterMonth.value === 'ноябрь') {
+        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 11));
+        // } else if (filterMonth.value === 'декабрь') {
+        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 12));
+        // }
       });
-
+      filterYear.addEventListener('change', () => {
+        if (filterYear.value === 2019) {
+          arrayOfNewsFilterYear.push(arrayOfNews.filter((item) => item.year === 2023));
+          console.log(arrayOfNewsFilterYear);
+        }
+      });
     };
     getListnerOfEvents();
 
