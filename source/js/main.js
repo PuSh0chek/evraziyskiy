@@ -61,7 +61,6 @@ switch (window.location.href) {
 
     break;
   case 'http://localhost:3000/pressCentre.html':
-
     const createNewsElement = () => {
       const pressContainer = document.querySelector('.press__content');
       const createNewsList = document.createElement('ul');
@@ -88,22 +87,24 @@ switch (window.location.href) {
         createNewsDateELement[i].innerHTML = arrayOfNews[i].day + '.' + arrayOfNews[i].month + '.' + arrayOfNews[i].year;
         createNewsContentElement[i].innerHTML = arrayOfNews[i].content;
       }
-
     };
     loadNewsContentInElement();
 
     const getListnerOfEvents = () => {
       const filterIn = document.querySelector('.press__filter-input');
-      Array.from(filterIn).forEach((item) => console.log(item).addEventListener('click', () => {
-        console.log(1);
-      }));
+      filterIn.addEventListener('change', () => {
+        Array.from(filterIn).forEach((item) => {
+          console.log(item.id);
+          
+        });
+      });
+
     };
     getListnerOfEvents();
 
     const getRemoveList = () => {
       const pressContainer = document.querySelector('.press__content');
       const pressList = document.querySelector('.press__content-list');
-      console.log(pressContainer);
       pressContainer.removeChild(pressList);
     };
 

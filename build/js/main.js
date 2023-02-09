@@ -84,9 +84,11 @@ switch (window.location.href) {
 
     const getListnerOfEvents = () => {
       const filterIn = document.querySelector('.press__filter-input');
-      Array.from(filterIn).forEach(item => console.log(item).addEventListener('click', () => {
-        console.log(1);
-      }));
+      filterIn.addEventListener('change', () => {
+        Array.from(filterIn).forEach(item => {
+          console.log(item.id);
+        });
+      });
     };
 
     getListnerOfEvents();
