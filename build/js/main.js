@@ -81,20 +81,28 @@ switch (window.location.href) {
     };
 
     loadNewsContentInElement();
-    const filterInput = document.querySelector('.press__filter-input');
-    filterInput.addEventListener('click', () => {
-      const elementsOfArray = Array.from(filterInput.children);
-      const contentsInElements = elementsOfArray.map(item => item.innerHTML);
-      const filterInputChild = document.querySelector('.press__element-filter-input');
-      console.log(typeof filterInputChild.innerHTML);
-      console.log(typeof elementsOfArray[1].value);
 
-      for (let i = 0; i < elementsOfArray.length; i++) {
-        if (elementsOfArray[1].value === 'январь') {
-          console.log(1);
-        }
-      }
-    });
+    const getListnerOfEvents = () => {
+      const filterIn = document.querySelector('.press__filter-input');
+      Array.from(filterIn).forEach(item => console.log(item).addEventListener('click', () => {
+        console.log(1);
+      }));
+    };
+
+    getListnerOfEvents();
+    const filterInput = document.querySelector('.press__filter-input'); // filterInput.addEventListener('click', () => {
+    //   const elementsOfArray = Array.from(filterInput.children);
+    //   const contentsInElements = elementsOfArray.map((item) => item.innerHTML);
+    //   const filterInputChild = document.querySelector('.press__element-filter-input');
+    //   console.log(typeof filterInputChild.innerHTML);
+    //   console.log(typeof elementsOfArray[1].value);
+    //   for (let i = 0; i < elementsOfArray.length; i++) {
+    //     if (elementsOfArray[1].value === 'январь') {
+    //       console.log(1);
+    //     };
+    //   }
+    // });
+
     break;
 
   case 'http://localhost:3000/roundDate.html':
