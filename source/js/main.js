@@ -1,9 +1,13 @@
 // Переменные //
 const links = document.querySelectorAll('.roundDate__link');
 
+// Фильтрованный массив по месяцам //
 const arrayOfNewsFilterMonth = [];
+// Фильтрованный массив по годам //
 const arrayOfNewsFilterYear = [];
-const arrayOfNewsFiltered = [];
+// // Фильтрованный массив после объединения двух предыдущих массивов //
+// const arrayOfNewsFiltered = [];
+// Массив новостей //
 const arrayOfNews = [
   {
     id: 0,
@@ -56,19 +60,28 @@ const arrayOfNews = [
   },
 ];
 
+// Блок кода для определения текущей странички сайта //
 switch (window.location.href) {
   case 'http://localhost:3000/index.html':
 
     break;
   case 'http://localhost:3000/pressCentre.html':
+    // Переменные //
+    const filterMonth = document.querySelector('.press__filter-input-month');
+    const filterYear = document.querySelector('.press__filter-input-year');
+    const filterButton = document.querySelector('.press__filter-button');
+    const pressContainer = document.querySelector('.press__content');
+    const pressList = document.querySelector('.press__content-list');
+
+    // Функция для создания каркаса для новостей //
     const createNewsElement = () => {
-      const pressContainer = document.querySelector('.press__content');
+      const pressContainerContent = document.querySelector('.press__content');
       const createNewsList = document.createElement('ul');
       const createNewsDateBlock = document.createElement('li');
       const createNewsDateELement = document.createElement('span');
       const createNewsContentBlock = document.createElement('li');
       const createNewsContentElement = document.createElement('span');
-      pressContainer.appendChild(createNewsList);
+      pressContainerContent.appendChild(createNewsList);
       createNewsList.appendChild(createNewsDateBlock);
       createNewsList.appendChild(createNewsContentBlock);
       createNewsContentBlock.appendChild(createNewsContentElement);
@@ -79,6 +92,7 @@ switch (window.location.href) {
       createNewsContentBlock.classList.add('press__content-element-wrapper');
       createNewsContentElement.classList.add('press__content-element');
     };
+    // Функция для загрузки новостей в карскас //
     const loadNewsContentInElement = () => {
       for (let i = 0; i < arrayOfNews.length; i++) {
         createNewsElement();
@@ -90,70 +104,70 @@ switch (window.location.href) {
     };
     loadNewsContentInElement();
 
-    const getListnerOfEvents = () => {
-      const filterMonth = document.querySelector('.press__filter-input-month');
-      const filterYear = document.querySelector('.press__filter-input-year');
-      filterMonth.addEventListener('change', () => {
-        arrayOfNews.filter((item) => {
-          if (item.month === +filterMonth.options[filterMonth.selectedIndex].dataset.month) {
-            arrayOfNewsFilterMonth.push(item);
-          }
-        });
-        // if (filterMonth.value === 'январь') {
-        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 1));
-        // } else if (filterMonth.value === 'февраль') {
-        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 2));
-        // } else if (filterMonth.value === 'март') {
-        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 3));
-        // } else if (filterMonth.value === 'апрель') {
-        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 4));
-        // } else if (filterMonth.value === 'май') {
-        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 5));
-        // } else if (filterMonth.value === 'июнь') {
-        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 6));
-        // } else if (filterMonth.value === 'июль') {
-        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 7));
-        // } else if (filterMonth.value === 'август') {
-        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 8));
-        // } else if (filterMonth.value === 'сентябрь') {
-        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 9));
-        // } else if (filterMonth.value === 'октябрь') {
-        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 10));
-        // } else if (filterMonth.value === 'ноябрь') {
-        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 11));
-        // } else if (filterMonth.value === 'декабрь') {
-        //   arrayOfNewsFilterMonth.push(arrayOfNews.filter((item) => item.month === 12));
-        // }
+    // Слушатели событий для фильтрации основного массива новостей для последующей его загрузки в новый массив arrayOfNewsFiltered //
+    filterMonth.addEventListener('change', () => {
+      arrayOfNews.filter((item) => {
+        if (item.month === +filterMonth.options[filterMonth.selectedIndex].dataset.month) {
+          arrayOfNewsFilterMonth.push(item);
+          console.log(arrayOfNewsFilterMonth);
+        };
       });
-      filterYear.addEventListener('change', () => {
-        if (filterYear.value === 2019) {
-          arrayOfNewsFilterYear.push(arrayOfNews.filter((item) => item.year === 2023));
+    });
+    filterYear.addEventListener('change', () => {
+      arrayOfNews.filter((item) => {
+        if (item.year === +filterYear.options[filterYear.selectedIndex].dataset.year) {
+          arrayOfNewsFilterYear.push(item);
           console.log(arrayOfNewsFilterYear);
-        }
+        };
       });
-    };
-    getListnerOfEvents();
+    });
 
+    // Удаление новостей //
     const getRemoveList = () => {
-      const pressContainer = document.querySelector('.press__content');
-      const pressList = document.querySelector('.press__content-list');
       pressContainer.removeChild(pressList);
     };
 
-    const filterInput = document.querySelector('.press__filter-input');
-    // filterInput.addEventListener('click', () => {
-    //   const elementsOfArray = Array.from(filterInput.children);
-    //   const contentsInElements = elementsOfArray.map((item) => item.innerHTML);
-    //   const filterInputChild = document.querySelector('.press__element-filter-input');
-    //   console.log(typeof filterInputChild.innerHTML);
-    //   console.log(typeof elementsOfArray[1].value);
-    //   for (let i = 0; i < elementsOfArray.length; i++) {
-    //     if (elementsOfArray[1].value === 'январь') {
-    //       console.log(1);
-    //     };
+    // Помещение результатов фильтрации в один итоговый массив //
+    const lodgeInArrayFiltredNews = () => {
+      const arrayOfNewsFiltered = arrayOfNewsFilterYear.concat(arrayOfNewsFilterMonth);
+    };
 
-    //   }
-    // });
+    // Функция для сортировки и удаления новостей с одинаковым id //
+    const getDelelteIdenticalNewsInArray = () => {
+      arrayOfNewsFiltered.id[1];
+    };
+    getDelelteIdenticalNewsInArray();
+
+    // Функция для вывода отфильтрованных новостей //
+    const getFiltredNewsOnPage = () => {
+      filterButton.addEventListener('click', () => {
+        // getRemoveList();
+        if (arrayOfNewsFilterMonth.length && arrayOfNewsFilterYear.length === 0) {
+          console.log('00');
+        } else if ( arrayOfNewsFilterMonth.length > 0 && arrayOfNewsFilterYear.length === 0 ) {
+          console.log('10');
+        } else if ( arrayOfNewsFilterMonth.length === 0 && arrayOfNewsFilterYear.length > 0 ) {
+          console.log('01');
+        } else if( arrayOfNewsFilterMonth.length > 0 && arrayOfNewsFilterYear.length > 0 ) {
+
+          // arrayOfNewsFiltered.find((item) => {
+          //   for (let i = 0; i < arrayOfNewsFiltered.length; i++) {
+          //     // console.log(item.id);
+          //     if(String(item.id) === String(arrayOfNewsFiltered.id)) {
+          //       console.log(1);
+          //     } else {
+          //       console.log(2);
+          //     }
+          //   }
+          // });
+          console.log('11');
+          console.log(arrayOfNewsFiltered);
+        } else {
+          console.log('error');
+        }
+      });
+    };
+    // getFiltredNewsOnPage();
 
     break;
   case 'http://localhost:3000/roundDate.html':
