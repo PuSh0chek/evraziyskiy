@@ -117,10 +117,11 @@ switch (window.location.href) {
     // Функция для сортировки и удаления новостей с одинаковым id //
 
     const getDelelteIdenticalNewsInArray = () => {
-      arrayOfNewsFiltered.id[1];
+      const arrayOfNewsFiltered = arrayOfNewsFilterYear.concat(arrayOfNewsFilterMonth);
     };
 
-    getDelelteIdenticalNewsInArray(); // Функция для вывода отфильтрованных новостей //
+    getDelelteIdenticalNewsInArray(); // Сортировка массива по возрастанию //
+    // Функция для вывода отфильтрованных новостей //
     // getFiltredNewsOnPage();
 
     break;

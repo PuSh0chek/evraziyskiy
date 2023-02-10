@@ -129,15 +129,29 @@ switch (window.location.href) {
 
     // Помещение результатов фильтрации в один итоговый массив //
     const lodgeInArrayFiltredNews = () => {
-      const arrayOfNewsFiltered = arrayOfNewsFilterYear.concat(arrayOfNewsFilterMonth);
+
     };
 
     // Функция для сортировки и удаления новостей с одинаковым id //
     const getDelelteIdenticalNewsInArray = () => {
-      arrayOfNewsFiltered.id[1];
+      const arrayOfNewsFiltered = arrayOfNewsFilterYear.concat(arrayOfNewsFilterMonth);
+
     };
     getDelelteIdenticalNewsInArray();
 
+    // Сортировка массива по возрастанию //
+    const getSortArray = (arr) => {
+      for (let j = arr.length - 1; j > 0; j--) {
+        for (let i = 0; i < j; i++) {
+          if (arr[i] > arr[i + 1]) {
+            let temp = arr[i];
+            arr[i] = arr[i + 1];
+            arr[i + 1] = temp;
+          }
+        }
+      }
+    };
+    
     // Функция для вывода отфильтрованных новостей //
     const getFiltredNewsOnPage = () => {
       filterButton.addEventListener('click', () => {
