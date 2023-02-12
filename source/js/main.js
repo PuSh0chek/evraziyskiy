@@ -71,7 +71,7 @@ switch (window.location.href) {
     const filterYear = document.querySelector('.press__filter-input-year');
     const filterButton = document.querySelector('.press__filter-button');
     const pressContainer = document.querySelector('.press__content');
-    const pressList = document.querySelector('.press__content-list');
+    const pressList = document.querySelectorAll('.press__content-list');
 
     // Функция для создания каркаса для новостей //
     const createNewsElement = () => {
@@ -124,7 +124,7 @@ switch (window.location.href) {
 
     // Удаление новостей //
     const getRemoveList = () => {
-      pressContainer.removeChild(pressList);
+      pressContainer.innerHTML = '';
     };
 
     // Помещение результатов фильтрации в один итоговый массив //
@@ -133,36 +133,69 @@ switch (window.location.href) {
     };
 
     // Функция для сортировки и удаления новостей с одинаковым id //
-    const getDelelteIdenticalNewsInArray = () => {
-      const arrayOfNewsFiltered = arrayOfNewsFilterYear.concat(arrayOfNewsFilterMonth);
-
+    const getDelelteIdenticalNewsInArray = (arrayFirst, arrayTwo) => {
+      let arrayOfNewsFiltered;
+      filterButton.addEventListener('click', () => {
+        console.log(typeof filterYear.value);
+        console.log(typeof String('-'));
+        getRemoveList();
+        // объединение сортированных массивов //
+        arrayOfNewsFiltered = arrayFirst.concat(arrayTwo);
+        // функция для проверки массива и удаления при не прохождения условий отбова новостей //
+        const getDeletedNewsOfArray = () => {
+          for(let i = 0; i < arrayOfNewsFiltered.length; i++) {
+            if ( arrayOfNewsFiltered[i].month !== String(filterMonth.value)  && arrayOfNewsFiltered[i].year !== String(filterYear.value) ) {
+              if ( arrayOfNewsFiltered[i].month === '-' && arrayOfNewsFiltered[i].year !== String(filterYear.value) ) {
+                arrayOfNewsFiltered.shift([i]);
+                arrayOfNewsFiltered.filter((item ,index, self) => index === self.indexOf(item));
+                console.log('Месяц не выбран, а год выбран');
+              } else if ( arrayOfNewsFiltered[i].month === String(filterMonth.value)  && arrayOfNewsFiltered[i].year === '-' ) {
+                console.log('Месяц выбран, а год не выбран');
+                arrayOfNewsFiltered.filter((item ,index, self) => index === self.indexOf(item));
+              } else if ( arrayOfNewsFiltered[i].month === '-' && arrayOfNewsFiltered[i].year === '-' ) {
+                // arrayOfNewsFiltered.shift([i]);
+                loadNewsContentInElement();
+                arrayOfNewsFiltered.filter((item ,index, self) => index === self.indexOf(item));
+                console.log('Месяц не выбран, а год не выбран');
+              }
+            } else {
+              console.log('error');
+            };
+            console.log(filterMonth.value, 'Выбранный месяц');
+            console.log(filterYear.value, 'Выбранный год');
+            console.log(arrayOfNewsFilterMonth, 'Массив по месяцам');
+            console.log(arrayOfNewsFilterYear, 'Массив по годам');
+            console.log(arrayOfNewsFiltered, 'Готовый массив');
+            console.log(arrayOfNewsFiltered.filter((item ,index, self) => index === self.indexOf(item)), 'Готовый массив фильтрованный');
+          };
+        };
+        getDeletedNewsOfArray();
+        // Сортировка массива по возрастанию id //
+        // const getSortArray = (arr) => {
+          // const sortArray = () => {
+            // for (let i = 0; i < arrayOfNewsFiltered.length; i++) {
+              // arrayOfNewsFiltered[i].id;
+            // };
+          // };
+          // arrayOfNewsFiltered.sort(sortArray());
+          // console.log(arrayOfNewsFiltered);
+        // };
+        // getSortArray();
+      });
     };
-    getDelelteIdenticalNewsInArray();
+    getDelelteIdenticalNewsInArray(arrayOfNewsFilterYear, arrayOfNewsFilterMonth);
 
-    // Сортировка массива по возрастанию //
-    const getSortArray = (arr) => {
-      for (let j = arr.length - 1; j > 0; j--) {
-        for (let i = 0; i < j; i++) {
-          if (arr[i] > arr[i + 1]) {
-            let temp = arr[i];
-            arr[i] = arr[i + 1];
-            arr[i + 1] = temp;
-          }
-        }
-      }
-    };
-    
     // Функция для вывода отфильтрованных новостей //
     const getFiltredNewsOnPage = () => {
       filterButton.addEventListener('click', () => {
         // getRemoveList();
         if (arrayOfNewsFilterMonth.length && arrayOfNewsFilterYear.length === 0) {
           console.log('00');
-        } else if ( arrayOfNewsFilterMonth.length > 0 && arrayOfNewsFilterYear.length === 0 ) {
+        } else if (arrayOfNewsFilterMonth.length > 0 && arrayOfNewsFilterYear.length === 0) {
           console.log('10');
-        } else if ( arrayOfNewsFilterMonth.length === 0 && arrayOfNewsFilterYear.length > 0 ) {
+        } else if (arrayOfNewsFilterMonth.length === 0 && arrayOfNewsFilterYear.length > 0) {
           console.log('01');
-        } else if( arrayOfNewsFilterMonth.length > 0 && arrayOfNewsFilterYear.length > 0 ) {
+        } else if (arrayOfNewsFilterMonth.length > 0 && arrayOfNewsFilterYear.length > 0) {
 
           // arrayOfNewsFiltered.find((item) => {
           //   for (let i = 0; i < arrayOfNewsFiltered.length; i++) {

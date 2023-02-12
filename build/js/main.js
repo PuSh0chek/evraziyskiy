@@ -63,7 +63,7 @@ switch (window.location.href) {
     const filterYear = document.querySelector('.press__filter-input-year');
     const filterButton = document.querySelector('.press__filter-button');
     const pressContainer = document.querySelector('.press__content');
-    const pressList = document.querySelector('.press__content-list'); // Функция для создания каркаса для новостей //
+    const pressList = document.querySelectorAll('.press__content-list'); // Функция для создания каркаса для новостей //
 
     const createNewsElement = () => {
       const pressContainerContent = document.querySelector('.press__content');
@@ -113,15 +113,66 @@ switch (window.location.href) {
         }
       });
     }); // Удаление новостей //
-    // Помещение результатов фильтрации в один итоговый массив //
+
+    const getRemoveList = () => {
+      pressContainer.innerHTML = '';
+    }; // Помещение результатов фильтрации в один итоговый массив //
     // Функция для сортировки и удаления новостей с одинаковым id //
 
-    const getDelelteIdenticalNewsInArray = () => {
-      const arrayOfNewsFiltered = arrayOfNewsFilterYear.concat(arrayOfNewsFilterMonth);
+
+    const getDelelteIdenticalNewsInArray = (arrayFirst, arrayTwo) => {
+      let arrayOfNewsFiltered;
+      filterButton.addEventListener('click', () => {
+        console.log(typeof filterYear.value);
+        console.log(typeof String('-'));
+        getRemoveList(); // объединение сортированных массивов //
+
+        arrayOfNewsFiltered = arrayFirst.concat(arrayTwo); // функция для проверки массива и удаления при не прохождения условий отбова новостей //
+
+        const getDeletedNewsOfArray = () => {
+          for (let i = 0; i < arrayOfNewsFiltered.length; i++) {
+            if (arrayOfNewsFiltered[i].month !== String(filterMonth.value) && arrayOfNewsFiltered[i].year !== String(filterYear.value)) {
+              if (arrayOfNewsFiltered[i].month === '-' && arrayOfNewsFiltered[i].year !== String(filterYear.value)) {
+                arrayOfNewsFiltered.shift([i]);
+                arrayOfNewsFiltered.filter((item, index, self) => index === self.indexOf(item));
+                console.log('Месяц не выбран, а год выбран');
+              } else if (arrayOfNewsFiltered[i].month === String(filterMonth.value) && arrayOfNewsFiltered[i].year === '-') {
+                console.log('Месяц выбран, а год не выбран');
+                arrayOfNewsFiltered.filter((item, index, self) => index === self.indexOf(item));
+              } else if (arrayOfNewsFiltered[i].month === '-' && arrayOfNewsFiltered[i].year === '-') {
+                // arrayOfNewsFiltered.shift([i]);
+                loadNewsContentInElement();
+                arrayOfNewsFiltered.filter((item, index, self) => index === self.indexOf(item));
+                console.log('Месяц не выбран, а год не выбран');
+              }
+            } else {
+              console.log('error');
+            }
+
+            console.log(filterMonth.value, 'Выбранный месяц');
+            console.log(filterYear.value, 'Выбранный год');
+            console.log(arrayOfNewsFilterMonth, 'Массив по месяцам');
+            console.log(arrayOfNewsFilterYear, 'Массив по годам');
+            console.log(arrayOfNewsFiltered, 'Готовый массив');
+            console.log(arrayOfNewsFiltered.filter((item, index, self) => index === self.indexOf(item)), 'Готовый массив фильтрованный');
+          }
+        };
+
+        getDeletedNewsOfArray(); // Сортировка массива по возрастанию id //
+        // const getSortArray = (arr) => {
+        // const sortArray = () => {
+        // for (let i = 0; i < arrayOfNewsFiltered.length; i++) {
+        // arrayOfNewsFiltered[i].id;
+        // };
+        // };
+        // arrayOfNewsFiltered.sort(sortArray());
+        // console.log(arrayOfNewsFiltered);
+        // };
+        // getSortArray();
+      });
     };
 
-    getDelelteIdenticalNewsInArray(); // Сортировка массива по возрастанию //
-    // Функция для вывода отфильтрованных новостей //
+    getDelelteIdenticalNewsInArray(arrayOfNewsFilterYear, arrayOfNewsFilterMonth); // Функция для вывода отфильтрованных новостей //
     // getFiltredNewsOnPage();
 
     break;
