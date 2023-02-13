@@ -5,9 +5,7 @@ const links = document.querySelectorAll('.roundDate__link'); // Фильтров
 
 const arrayOfNewsFilterMonth = []; // Фильтрованный массив по годам //
 
-const arrayOfNewsFilterYear = []; // // Фильтрованный массив после объединения двух предыдущих массивов //
-// const arrayOfNewsFiltered = [];
-// Массив новостей //
+const arrayOfNewsFilterYear = []; // Массив новостей //
 
 const arrayOfNews = [{
   id: 0,
