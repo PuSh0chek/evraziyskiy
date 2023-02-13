@@ -55,6 +55,48 @@ const arrayOfNews = [
     id: 6,
     day: 2,
     month: 2,
+    year: 2023,
+    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
+  },
+  {
+    id: 8,
+    day: 2,
+    month: 5,
+    year: 2019,
+    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
+  },
+  {
+    id: 9,
+    day: 2,
+    month: 2,
+    year: 2019,
+    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
+  },
+  {
+    id: 10,
+    day: 2,
+    month: 2,
+    year: 2019,
+    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
+  },
+  {
+    id: 11,
+    day: 2,
+    month: 1,
+    year: 2019,
+    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
+  },
+  {
+    id: 12,
+    day: 2,
+    month: 1,
+    year: 2019,
+    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
+  },
+  {
+    id: 13,
+    day: 2,
+    month: 1,
     year: 2019,
     content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
   },
@@ -76,12 +118,14 @@ switch (window.location.href) {
     // Функция для создания каркаса для новостей //
     const createNewsElement = () => {
       const pressContainerContent = document.querySelector('.press__content');
+      const createContainerElement = document.createElement('li');
       const createNewsList = document.createElement('ul');
       const createNewsDateBlock = document.createElement('li');
       const createNewsDateELement = document.createElement('span');
       const createNewsContentBlock = document.createElement('li');
       const createNewsContentElement = document.createElement('span');
-      pressContainerContent.appendChild(createNewsList);
+      pressContainerContent.appendChild(createContainerElement);
+      createContainerElement.appendChild(createNewsList);
       createNewsList.appendChild(createNewsDateBlock);
       createNewsList.appendChild(createNewsContentBlock);
       createNewsContentBlock.appendChild(createNewsContentElement);
@@ -136,51 +180,53 @@ switch (window.location.href) {
     const getDelelteIdenticalNewsInArray = (arrayFirst, arrayTwo) => {
       let arrayOfNewsFiltered;
       filterButton.addEventListener('click', () => {
-        console.log(typeof filterYear.value);
-        console.log(typeof String('-'));
+        // console.log(typeof arrayFirst[1].month);
+        // console.log(typeof String('-'));
+        // console.log();
+        // console.log();
         getRemoveList();
-        // объединение сортированных массивов //
-        arrayOfNewsFiltered = arrayFirst.concat(arrayTwo);
         // функция для проверки массива и удаления при не прохождения условий отбова новостей //
         const getDeletedNewsOfArray = () => {
-          for(let i = 0; i < arrayOfNewsFiltered.length; i++) {
-            if ( arrayOfNewsFiltered[i].month !== String(filterMonth.value)  && arrayOfNewsFiltered[i].year !== String(filterYear.value) ) {
-              if ( arrayOfNewsFiltered[i].month === '-' && arrayOfNewsFiltered[i].year !== String(filterYear.value) ) {
-                arrayOfNewsFiltered.shift([i]);
-                arrayOfNewsFiltered.filter((item ,index, self) => index === self.indexOf(item));
-                console.log('Месяц не выбран, а год выбран');
-              } else if ( arrayOfNewsFiltered[i].month === String(filterMonth.value)  && arrayOfNewsFiltered[i].year === '-' ) {
-                console.log('Месяц выбран, а год не выбран');
-                arrayOfNewsFiltered.filter((item ,index, self) => index === self.indexOf(item));
-              } else if ( arrayOfNewsFiltered[i].month === '-' && arrayOfNewsFiltered[i].year === '-' ) {
-                // arrayOfNewsFiltered.shift([i]);
-                loadNewsContentInElement();
-                arrayOfNewsFiltered.filter((item ,index, self) => index === self.indexOf(item));
-                console.log('Месяц не выбран, а год не выбран');
-              }
-            } else {
-              console.log('error');
+          // объединение сортированных массивов //
+          arrayOfNewsFiltered = arrayFirst.concat(arrayTwo);
+          // Удаление одинаковых элементов массива //
+          const arrayOfNewsFirstFiltered = arrayOfNewsFiltered.filter((item, index, self) => index === self.indexOf(item));
+          console.log(arrayOfNewsFirstFiltered.filter((item, index, self) => index === self.indexOf(item)), 'Готовый массив фильтрованный');
+          // Главная сортировка //
+          console.log(arrayOfNewsFirstFiltered.filter((item) => {
+            console.log(String(filterMonth.value) === String( item.month ));
+            // console.log(typeof String(filterMonth.value));
+            if ( String( item.month )  !== String(filterMonth.value) && String( item.year ) !== String('-') ) {
+              console.log(arrayOfNewsFirstFiltered, '1');
             };
-            console.log(filterMonth.value, 'Выбранный месяц');
-            console.log(filterYear.value, 'Выбранный год');
-            console.log(arrayOfNewsFilterMonth, 'Массив по месяцам');
-            console.log(arrayOfNewsFilterYear, 'Массив по годам');
-            console.log(arrayOfNewsFiltered, 'Готовый массив');
-            console.log(arrayOfNewsFiltered.filter((item ,index, self) => index === self.indexOf(item)), 'Готовый массив фильтрованный');
-          };
+            if ( String( item.month )  !== String('-') && String( item.year ) !== String(filterYear.value) ) {
+              console.log(arrayOfNewsFirstFiltered, '2');
+            };
+            if ( String( item.month )  !== String('-') && String( item.year ) !== String('-') ) {
+              if ( String( item.month ) !== String(filterMonth.value) && String( item.year ) !== String(filterYear.value) ) {
+                console.log(arrayOfNewsFirstFiltered.shift(item), 'удаленный элемент не подходящий к выбранным значениям');
+                console.log(arrayOfNewsFirstFiltered, 'массив после удаления');
+              };
+              if ( String( item.month )  !== String(filterMonth.value) && String( item.year ) === String(filterYear.value) ) {
+                console.log(arrayOfNewsFirstFiltered.shift(item), 'удаленный элемент не подходящий к выбранным значениям');
+                console.log(arrayOfNewsFirstFiltered, 'массив после удаления');
+              };
+              if ( String( item.month )  === String(filterMonth.value) && String( item.year ) !== String(filterYear.value) ) {
+                console.log(arrayOfNewsFirstFiltered.shift(item), 'удаленный элемент не подходящий к выбранным значениям');
+                console.log(arrayOfNewsFirstFiltered, 'массив после удаления');
+              };
+            };
+            if ( item.month !== String(filterMonth.value) && item.year !== String(filterYear.value) ) {
+              console.log('Удаление не требуется');
+            };
+          }), 'Готовый массив фильтрованный new');
+          //   console.log(filterMonth.value, 'Выбранный месяц');
+          //   console.log(filterYear.value, 'Выбранный год');
+          //   console.log(arrayOfNewsFilterMonth, 'Массив по месяцам');
+          //   console.log(arrayOfNewsFilterYear, 'Массив по годам');
+          //   console.log(arrayOfNewsFiltered, 'Готовый массив');
         };
         getDeletedNewsOfArray();
-        // Сортировка массива по возрастанию id //
-        // const getSortArray = (arr) => {
-          // const sortArray = () => {
-            // for (let i = 0; i < arrayOfNewsFiltered.length; i++) {
-              // arrayOfNewsFiltered[i].id;
-            // };
-          // };
-          // arrayOfNewsFiltered.sort(sortArray());
-          // console.log(arrayOfNewsFiltered);
-        // };
-        // getSortArray();
       });
     };
     getDelelteIdenticalNewsInArray(arrayOfNewsFilterYear, arrayOfNewsFilterMonth);
