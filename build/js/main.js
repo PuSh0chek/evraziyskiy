@@ -167,15 +167,17 @@ switch (window.location.href) {
         arrayOfNewsFiltered = arrayFirst.concat(arrayTwo);
         console.log(arrayOfNewsFiltered[1].month);
         console.log(arrayOfNewsFiltered, 'Массив после конкатинации'); // Удаление одинаковых элементов массива //
-        // arrayOfNewsFiltered = arrayOfNewsFiltered.filter((item, index, self) => index === self.indexOf(item));
-        // console.log(arrayOfNewsFiltered, 'Массив после удаления копий');
+
+        arrayOfNewsFiltered = arrayOfNewsFiltered.filter((item, index, self) => index === self.indexOf(item)); // console.log(arrayOfNewsFiltered, 'Массив после удаления копий');
 
         if (String('-') !== filterMonth.value && String('-') !== filterYear.value) {
           console.log('Выбраны месяц и год');
           arrayOfNewsFiltered = arrayOfNewsFiltered.filter(item => {
             item.month === filterMonth.value;
-          }); // arrayOfNewsFiltered = arrayOfNewsFiltered.filter((item) => {item.year === filterYear.value;});
-
+          });
+          arrayOfNewsFiltered = arrayOfNewsFiltered.filter(item => {
+            item.year === filterYear.value;
+          });
           console.log(arrayOfNewsFiltered, 'Массив после фильтрации по месяцу и году');
         } //   console.log(filterMonth.value, 'Выбранный месяц');
         //   console.log(filterYear.value, 'Выбранный год');
