@@ -192,53 +192,30 @@ switch (window.location.href) {
     const getDelelteIdenticalNewsInArray = (arrayFirst, arrayTwo) => {
       let arrayOfNewsFiltered;
       filterButton.addEventListener('click', () => {
-        // console.log(typeof arrayFirst[1].month);
-        // console.log(typeof String('-'));
-        // console.log();
-        // console.log();
+        console.log('Нажатие на кнопку');
         getRemoveList();
-        // функция для проверки массива и удаления при не прохождения условий отбова новостей //
-        const getDeletedNewsOfArray = () => {
-          // объединение сортированных массивов //
-          arrayOfNewsFiltered = arrayFirst.concat(arrayTwo);
-          // Удаление одинаковых элементов массива //
-          const arrayOfNewsFirstFiltered = arrayOfNewsFiltered.filter((item, index, self) => index === self.indexOf(item));
-          console.log(arrayOfNewsFirstFiltered.filter((item, index, self) => index === self.indexOf(item)), 'Готовый массив фильтрованный');
-          // Главная сортировка //
-          console.log(arrayOfNewsFirstFiltered.filter((item) => {
-            console.log(String(filterMonth.value) === String( item.month ));
-            // console.log(typeof String(filterMonth.value));
-            if ( String( item.month )  !== String(filterMonth.value) && String( item.year ) !== String('-') ) {
-              console.log(arrayOfNewsFirstFiltered, '1');
-            };
-            if ( String( item.month )  !== String('-') && String( item.year ) !== String(filterYear.value) ) {
-              console.log(arrayOfNewsFirstFiltered, '2');
-            };
-            if ( String( item.month )  !== String('-') && String( item.year ) !== String('-') ) {
-              if ( String( item.month ) !== String(filterMonth.value) && String( item.year ) !== String(filterYear.value) ) {
-                console.log(arrayOfNewsFirstFiltered.shift(item), 'удаленный элемент не подходящий к выбранным значениям');
-                console.log(arrayOfNewsFirstFiltered, 'массив после удаления');
-              };
-              if ( String( item.month )  !== String(filterMonth.value) && String( item.year ) === String(filterYear.value) ) {
-                console.log(arrayOfNewsFirstFiltered.shift(item), 'удаленный элемент не подходящий к выбранным значениям');
-                console.log(arrayOfNewsFirstFiltered, 'массив после удаления');
-              };
-              if ( String( item.month )  === String(filterMonth.value) && String( item.year ) !== String(filterYear.value) ) {
-                console.log(arrayOfNewsFirstFiltered.shift(item), 'удаленный элемент не подходящий к выбранным значениям');
-                console.log(arrayOfNewsFirstFiltered, 'массив после удаления');
-              };
-            };
-            if ( item.month !== String(filterMonth.value) && item.year !== String(filterYear.value) ) {
-              console.log('Удаление не требуется');
-            };
-          }), 'Готовый массив фильтрованный new');
-          //   console.log(filterMonth.value, 'Выбранный месяц');
-          //   console.log(filterYear.value, 'Выбранный год');
-          //   console.log(arrayOfNewsFilterMonth, 'Массив по месяцам');
-          //   console.log(arrayOfNewsFilterYear, 'Массив по годам');
-          //   console.log(arrayOfNewsFiltered, 'Готовый массив');
-        };
-        getDeletedNewsOfArray();
+        console.log(filterYear.value);
+
+        // проверка массива и удаления при не прохождения условий отбова новостей //
+        // объединение сортированных массивов //
+        arrayOfNewsFiltered = arrayFirst.concat(arrayTwo);
+        console.log(arrayOfNewsFiltered[1].month);
+        console.log(arrayOfNewsFiltered, 'Массив после конкатинации');
+        // Удаление одинаковых элементов массива //
+        // arrayOfNewsFiltered = arrayOfNewsFiltered.filter((item, index, self) => index === self.indexOf(item));
+        // console.log(arrayOfNewsFiltered, 'Массив после удаления копий');
+        if ( String('-') !== filterMonth.value && String('-') !== filterYear.value ) {
+          console.log('Выбраны месяц и год');
+          arrayOfNewsFiltered = arrayOfNewsFiltered.filter((item) => {item.month === filterMonth.value;});
+          // arrayOfNewsFiltered = arrayOfNewsFiltered.filter((item) => {item.year === filterYear.value;});
+          console.log(arrayOfNewsFiltered, 'Массив после фильтрации по месяцу и году');
+        }
+
+        //   console.log(filterMonth.value, 'Выбранный месяц');
+        //   console.log(filterYear.value, 'Выбранный год');
+        //   console.log(arrayOfNewsFilterMonth, 'Массив по месяцам');
+        //   console.log(arrayOfNewsFilterYear, 'Массив по годам');
+        //   console.log(arrayOfNewsFiltered, 'Готовый массив');
       });
     };
     getDelelteIdenticalNewsInArray(arrayOfNewsFilterYear, arrayOfNewsFilterMonth);
@@ -292,3 +269,4 @@ switch (window.location.href) {
     });
     break;
 };
+
