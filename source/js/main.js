@@ -3,15 +3,19 @@ const links = document.querySelectorAll('.roundDate__link');
 
 // Фильтрованный массив по месяцам //
 const arrayOfNewsFilterMonth = [];
+
 // Фильтрованный массив по годам //
 const arrayOfNewsFilterYear = [];
 // // Фильтрованный массив после объединения двух предыдущих массивов //
-// const arrayOfNewsFiltered = [];
+let arrayOfNewsFiltered = [];
 
 // Массив контента для новостей //
 const arrayOfContentNews = [
   {
     id: 0,
+    day: 3,
+    month: 2,
+    year: 2023,
     title: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
     content: 'Как руководитель и гражданин, которому не безразлична судьба градообразующего предприятия, поставщика важнейшего ресурса, считаю необходимым сделать официальное заявление для общественности и СМИ. Представитель «Альфа-Групп» - компания «Росводоканал» - продолжает предпринимать попытки рейдерского захвата Ростовского Водоканала. Использует при этом запрещённые законом методы и коррупционные связи. У меня на руках есть все доказательства сказанных выше слов. В ближайшее время я готовлю для обнародования сенсационную информацию о коррупционной деятельности господина Фрадкина А.В.',
     contentLow: 'Генеральный директор АО "Евразийский" Герман Вишневский',
@@ -23,93 +27,9 @@ const arrayOfContentNews = [
 const arrayOfNews = [
   {
     id: 0,
-    day: 8,
-    month: 8,
-    year: 2023,
-    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
-  },
-  {
-    id: 1,
-    day: 7,
-    month: 7,
-    year: 2023,
-    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
-  },
-  {
-    id: 2,
-    day: 6,
-    month: 6,
-    year: 2023,
-    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
-  },
-  {
-    id: 3,
-    day: 5,
-    month: 5,
-    year: 2023,
-    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
-  },
-  {
-    id: 4,
-    day: 4,
-    month: 4,
-    year: 2023,
-    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
-  },
-  {
-    id: 5,
     day: 3,
-    month: 3,
-    year: 2023,
-    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
-  },
-  {
-    id: 6,
-    day: 2,
     month: 2,
     year: 2023,
-    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
-  },
-  {
-    id: 8,
-    day: 2,
-    month: 5,
-    year: 2019,
-    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
-  },
-  {
-    id: 9,
-    day: 2,
-    month: 2,
-    year: 2019,
-    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
-  },
-  {
-    id: 10,
-    day: 2,
-    month: 2,
-    year: 2019,
-    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
-  },
-  {
-    id: 11,
-    day: 2,
-    month: 1,
-    year: 2019,
-    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
-  },
-  {
-    id: 12,
-    day: 2,
-    month: 1,
-    year: 2019,
-    content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
-  },
-  {
-    id: 13,
-    day: 2,
-    month: 1,
-    year: 2019,
     content: 'Заявление Генерального директора АО «Евразийский» Германа Вишневского о попытках рейдерского захвата Ростовводоканала',
   },
 ];
@@ -117,9 +37,10 @@ const arrayOfNews = [
 // Блок кода для определения текущей странички сайта //
 switch (window.location.href) {
   case 'http://localhost:3000/index.html':
-
     break;
+
   case 'http://localhost:3000/pressCentre.html':
+
     // Переменные //
     const filterMonth = document.querySelector('.press__filter-input-month');
     const filterYear = document.querySelector('.press__filter-input-year');
@@ -127,7 +48,8 @@ switch (window.location.href) {
     const pressContainer = document.querySelector('.press__content');
     const pressList = document.querySelectorAll('.press__content-list');
 
-    // Функция для создания каркаса для новостей //
+    // ФУНКЦИИ ДЛЯ РАБОТЫ С НОВОСТЯМИ //
+    // Функция для создания каркаса для списка новостей //
     const createNewsElement = () => {
       const pressContainerContent = document.querySelector('.press__content');
       const createContainerElement = document.createElement('li');
@@ -135,45 +57,50 @@ switch (window.location.href) {
       const createNewsDateBlock = document.createElement('li');
       const createNewsDateELement = document.createElement('span');
       const createNewsContentBlock = document.createElement('li');
-      const createNewsContentElement = document.createElement('span');
+      const createNewsContentElement = document.createElement('h4');
+      const createNewsIdElement = document.createElement('span');
       pressContainerContent.appendChild(createContainerElement);
       createContainerElement.appendChild(createNewsList);
       createNewsList.appendChild(createNewsDateBlock);
       createNewsList.appendChild(createNewsContentBlock);
       createNewsContentBlock.appendChild(createNewsContentElement);
       createNewsDateBlock.appendChild(createNewsDateELement);
+      createNewsDateBlock.appendChild(createNewsIdElement);
       createNewsList.classList.add('press__content-list');
       createNewsDateBlock.classList.add('press__date-element-wrapper');
       createNewsDateELement.classList.add('press__date-element');
       createNewsContentBlock.classList.add('press__content-element-wrapper');
       createNewsContentElement.classList.add('press__content-element');
+      createNewsIdElement.classList.add('press__content-element-id');
     };
-    // Функция для загрузки новостей в карскас //
-    const loadNewsContentInElement = () => {
-      for (let i = 0; i < arrayOfNews.length; i++) {
+
+    // Функция для загрузки новостей в список //
+    const loadNewsContentInElement = (array) => {
+      for (let i = 0; i < array.length; i++) {
         createNewsElement();
         const createNewsDateELement = document.querySelectorAll('.press__date-element');
         const createNewsContentElement = document.querySelectorAll('.press__content-element');
-        createNewsDateELement[i].innerHTML = arrayOfNews[i].day + '.' + arrayOfNews[i].month + '.' + arrayOfNews[i].year;
-        createNewsContentElement[i].innerHTML = arrayOfNews[i].content;
+        const newsIdElement = document.querySelectorAll('.press__content-element-id');
+        createNewsDateELement[i].innerHTML = array[i].day + '.' + array[i].month + '.' + array[i].year;
+        createNewsContentElement[i].innerHTML = array[i].content;
+        newsIdElement[i].innerHTML = array[i].id;
       }
     };
-    loadNewsContentInElement();
+    loadNewsContentInElement(arrayOfNews);
 
-    // Слушатели событий для фильтрации основного массива новостей для последующей его загрузки в новый массив arrayOfNewsFiltered //
+    // Слушатели событий для фильтрации основного массива новостей и для последующей его загрузки в новый массив arrayOfNewsFiltered //
     filterMonth.addEventListener('change', () => {
       arrayOfNews.filter((item) => {
         if (item.month === +filterMonth.options[filterMonth.selectedIndex].dataset.month) {
           arrayOfNewsFilterMonth.push(item);
-          // console.log(arrayOfNewsFilterMonth);
         };
       });
     });
+
     filterYear.addEventListener('change', () => {
       arrayOfNews.filter((item) => {
         if (item.year === +filterYear.options[filterYear.selectedIndex].dataset.year) {
           arrayOfNewsFilterYear.push(item);
-          // console.log(arrayOfNewsFilterYear);
         };
       });
     });
@@ -183,69 +110,114 @@ switch (window.location.href) {
       pressContainer.innerHTML = '';
     };
 
-    // Помещение результатов фильтрации в один итоговый массив //
-    const lodgeInArrayFiltredNews = () => {
-
+    // Вывод надписи 'Новостей не обнаружено' при пустом масииве //
+    const getNotFoundElement = () => {
+      const elementNotFound = document.createElement('h2');
+      elementNotFound.classList.add('press__element-not-found');
+      pressContainer.appendChild(elementNotFound);
+      pressContainer.textContent = 'Ничего не найдено';
     };
 
-    // Функция для сортировки и удаления новостей //
-    const getDelelteIdenticalNewsInArray = (arrayFirst, arrayTwo) => {
-      let arrayOfNewsFiltered = [];
+    // Функция для сортировки и вывода новостей //
+    const getSortAndDeleteNewsOfArray = (arrayFirst, arrayTwo) => {
       filterButton.addEventListener('click', () => {
-        // console.log('Нажатие на кнопку');
         getRemoveList();
-        // console.log(filterYear.value);
 
-        // проверка массива и удаления при не прохождения условий отбова новостей //
-        // объединение сортированных массивов //
+        // Проверка массива и удаления при не прохождения условий отбова новостей //
+        // Объединение сортированных массивов //
         arrayOfNewsFiltered = [...arrayFirst, ...arrayTwo];
-        console.log(arrayOfNewsFiltered);
-        // console.log(arrayOfNewsFiltered, 'Массив после конкатинации');
         if (filterMonth.value !== '-' && filterYear.value !== '-') {
-          console.log('Выбраны месяц и год');
           arrayOfNewsFiltered = arrayOfNewsFiltered.filter((item) => item.month === +filterMonth.options[filterMonth.selectedIndex].dataset.month);
           arrayOfNewsFiltered = arrayOfNewsFiltered.filter((item) => item.year === +filterYear.options[filterYear.selectedIndex].dataset.year);
-          console.log(arrayOfNewsFiltered, 'Массив после фильтрации по месяцу и году');
         }
+
         // Удаление одинаковых элементов массива //
         arrayOfNewsFiltered = arrayOfNewsFiltered.filter((item, index, self) => index === self.indexOf(item));
-        console.log(arrayOfNewsFiltered, 'Массив после удаления копий');
+        arrayOfNewsFiltered.length !== 0 ? loadNewsContentInElement(arrayOfNewsFiltered) : getNotFoundElement();
       });
     };
-    getDelelteIdenticalNewsInArray(arrayOfNewsFilterYear, arrayOfNewsFilterMonth);
+    getSortAndDeleteNewsOfArray(arrayOfNewsFilterYear, arrayOfNewsFilterMonth);
 
-    // Функция для вывода отфильтрованных новостей //
-    const getFiltredNewsOnPage = () => {
-      filterButton.addEventListener('click', () => {
-        // getRemoveList();
-        if (arrayOfNewsFilterMonth.length && arrayOfNewsFilterYear.length === 0) {
-          console.log('00');
-        } else if (arrayOfNewsFilterMonth.length > 0 && arrayOfNewsFilterYear.length === 0) {
-          console.log('10');
-        } else if (arrayOfNewsFilterMonth.length === 0 && arrayOfNewsFilterYear.length > 0) {
-          console.log('01');
-        } else if (arrayOfNewsFilterMonth.length > 0 && arrayOfNewsFilterYear.length > 0) {
+    // ФУНКЦИИ ДЛЯ РАБОТЫ С POPUP //
+    const getPopup = () => {
+      // Функция для создания popup //
+      const createPopupForNews = () => {
+        const containerWithPopup = document.querySelector('.press__content-wrapper');
+        const popup = document.createElement('div');
+        const date = document.createElement('span');
+        const title = document.createElement('h2');
+        const content = document.createElement('p');
+        const contentLow = document.createElement('p');
+        const image = document.createElement('img');
+        const buttonClose = document.createElement('button');
+        popup.classList.add('press__popup');
+        popup.classList.add('press__popup-hidden');
+        date.classList.add('press__date-popup');
+        title.classList.add('press__title-popup');
+        content.classList.add('press__content-popup');
+        contentLow.classList.add('press__content-low-popup');
+        image.classList.add('press__image-popup');
+        buttonClose.classList.add('press__button-close-popup');
+        containerWithPopup.appendChild(popup);
+        popup.appendChild(title);
+        popup.appendChild(content);
+        popup.appendChild(contentLow);
+        popup.appendChild(image);
+        popup.appendChild(date);
+        popup.appendChild(buttonClose);
+        buttonClose.textContent = 'Закрыть';
+      };
 
-          // arrayOfNewsFiltered.find((item) => {
-          //   for (let i = 0; i < arrayOfNewsFiltered.length; i++) {
-          //     // console.log(item.id);
-          //     if(String(item.id) === String(arrayOfNewsFiltered.id)) {
-          //       console.log(1);
-          //     } else {
-          //       console.log(2);
-          //     }
-          //   }
-          // });
-          console.log('11');
-          console.log(arrayOfNewsFiltered);
-        } else {
-          console.log('error');
+      // Загрузка контента из требуемого объекта в popup //
+      const getLoadContentInPopup = (array) => {
+        createPopupForNews();
+        for(let i = 0; i < array.length; i++) {
+          const date = document.querySelector(press__date-popup);
+          const title = document.querySelector(press__title-popup);
+          const content = document.querySelector(press__content-popup);
+          const image = document.querySelector(press__image-popup);
+          const contentLow = document.querySelector();
+          date[i].innerHTML= array[i].day + '.' + array[i].month + '.' + array[i].year;
+          title[i].innerHTML = array[i].title;
+          content[i].innerHTML = array[i].content;
+          contentLow[i].innerHTML = array[i].contentLow;
+          image[i].href = array[i].image;
         }
+        // Очистка popup //
+        const getRemoveContentInPopup = () => {
+          const popup = document.querySelector('.press__popup');
+          popup.innerHTML = '';
+        };
+
+        // Закрыть popup //
+        const getHiddenPopup = () => {
+          const buttonClose = document.querySelector('.press__button-close-popup');
+          buttonClose.addEventListener('click', () => {
+            const popup = document.querySelector('.press__popup');
+            popup.classList.add('press__popup-hidden');
+            getRemoveContentInPopup();
+          });
+        };
+      };
+
+      // Вывод popup //
+      const getPopupVisability = () => {
+        const popup = document.querySelector('.press__popup');
+        popup.classList.remove('press__popup-hidden');
+        getLoadContentInPopup();
+      };
+
+      // Слушатель события для вывода POPUP //
+      Array.from(pressContainer.children).forEach((element) => {
+        element.addEventListener('click', (item) => {
+          getPopupVisability();
+        });
       });
     };
-    // getFiltredNewsOnPage();
+    getPopup();
 
     break;
+
   case 'http://localhost:3000/roundDate.html':
     links.forEach((element) => {
       element.addEventListener('click', (evt) => {
@@ -263,4 +235,3 @@ switch (window.location.href) {
     });
     break;
 };
-
