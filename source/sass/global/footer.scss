@@ -1,8 +1,18 @@
 .footer {
+  font-size: 6px;
   display: flex;
   justify-content: center;
-  background-color: black;
+  align-items: center;
   color: white;
-  font-size: 6px;
+  background-color: black;
+}
+
+.footer__admin {
+  position: absolute;
+  font-size: 11px;
+  right: 30px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
