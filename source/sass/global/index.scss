@@ -149,8 +149,8 @@
 }
 
 .main__news-list {
-  list-style-type: none;
   padding: 0;
+  list-style-type: none;
 }
 
 .main__news-element {
@@ -187,6 +187,18 @@
 .main__news-content {
   color: #333333;
 
+}
+
+.main__title-of-element {
+  line-height: 20px;
+}
+
+.main__content-of-element {
+  line-height: 20px;
+}
+
+.main__content-lower-of-element {
+  font-weight: 600;
 }
 
 ///////////////////////

@@ -37,6 +37,51 @@ const arrayOfNews = [
 // Блок кода для определения текущей странички сайта //
 switch (window.location.href) {
   case 'http://localhost:3000/index.html':
+
+    // Создание требуемых элементов для новости на странице //
+    const getCreateNews = () => {
+      const newsList = document.querySelector('.main__news-list');
+      const createElementOfNews = document.createElement('li');
+      const createTitleOfNews = document.createElement('h3');
+      const createContentOfNews = document.createElement('p');
+      const createContentLowerOfNews = document.createElement('p');
+      const createImgOfNews = document.createElement('img');
+      createElementOfNews.classList.add('main__element-news-list');
+      createTitleOfNews.classList.add('main__title-of-element');
+      createContentOfNews.classList.add('main__content-of-element');
+      createContentLowerOfNews.classList.add('main__content-lower-of-element');
+      createImgOfNews.classList.add('main__img-of-element');
+      newsList.appendChild(createElementOfNews);
+      createElementOfNews.appendChild(createTitleOfNews);
+      createElementOfNews.appendChild(createContentOfNews);
+      createElementOfNews.appendChild(createContentLowerOfNews);
+      createElementOfNews.appendChild(createImgOfNews);
+    };
+
+    // Обращение к массиву и его обрезание //
+    const getTreatmentArray = () => {
+      if (arrayOfContentNews.length < 4) {
+        arrayOfContentNews.slice(arrayOfContentNews.length - 4, arrayOfContentNews.length - 1);
+      }
+    };
+
+    // Загрузка контента //
+    const getContent = (array) => {
+      getTreatmentArray();
+      for(let i = 0; i < array.length; i++) {
+        getCreateNews();
+        const dateOfNews = document.querySelector('.main__date-of-element');
+        const titleOfNews = document.querySelectorAll('.main__title-of-element');
+        const contentOfNews = document.querySelectorAll('.main__content-of-element');
+        const contentLowerOfNews = document.querySelectorAll('.main__content-lower-of-element');
+        const imgOfNews = document.querySelectorAll('.main__img-of-element');
+        titleOfNews[i].innerHTML = array[i].title;
+        contentOfNews[i].innerHTML = array[i].content;
+        contentLowerOfNews[i].innerHTML = array[i].contentLow;
+        imgOfNews[i].innerHTML = array[i].img;
+      };
+    };
+    getContent(arrayOfContentNews);
     break;
 
   case 'http://localhost:3000/pressCentre.html':
@@ -46,7 +91,6 @@ switch (window.location.href) {
     const filterYear = document.querySelector('.press__filter-input-year');
     const filterButton = document.querySelector('.press__filter-button');
     const pressContainer = document.querySelector('.press__content');
-    const pressList = document.querySelectorAll('.press__content-list');
 
     // ФУНКЦИИ ДЛЯ РАБОТЫ С НОВОСТЯМИ //
     // Функция для создания каркаса для списка новостей //
@@ -61,11 +105,12 @@ switch (window.location.href) {
       const createNewsIdElement = document.createElement('span');
       pressContainerContent.appendChild(createContainerElement);
       createContainerElement.appendChild(createNewsList);
+      createNewsList.appendChild(createNewsIdElement);
       createNewsList.appendChild(createNewsDateBlock);
       createNewsList.appendChild(createNewsContentBlock);
       createNewsContentBlock.appendChild(createNewsContentElement);
       createNewsDateBlock.appendChild(createNewsDateELement);
-      createNewsDateBlock.appendChild(createNewsIdElement);
+      createContainerElement.classList.add('press__element');
       createNewsList.classList.add('press__content-list');
       createNewsDateBlock.classList.add('press__date-element-wrapper');
       createNewsDateELement.classList.add('press__date-element');
@@ -115,7 +160,7 @@ switch (window.location.href) {
       const elementNotFound = document.createElement('h2');
       elementNotFound.classList.add('press__element-not-found');
       pressContainer.appendChild(elementNotFound);
-      pressContainer.textContent = 'Ничего не найдено';
+      elementNotFound.textContent = 'Ничего не найдено';
     };
 
     // Функция для сортировки и вывода новостей //
@@ -140,17 +185,35 @@ switch (window.location.href) {
 
     // ФУНКЦИИ ДЛЯ РАБОТЫ С POPUP //
     const getPopup = () => {
+
+      // // Очистка popup //
+      const getRemoveContentInPopup = () => {
+        const popup = document.querySelector('.press__popup');
+        popup.innerHTML = '';
+      };
+
+      // // Закрыть popup //
+      const getHiddenPopup = () => {
+        const buttonClose = document.querySelector('.press__button-close-popup');
+        buttonClose.addEventListener('click', () => {
+          const popup = document.querySelector('.press__popup');
+          popup.classList.add('press__popup-hidden');
+          const elementOfListNews = document.querySelector('.press__content');
+          elementOfListNews.style = 'display: block';
+          getRemoveContentInPopup();
+        });
+      };
+
       // Функция для создания popup //
       const createPopupForNews = () => {
         const containerWithPopup = document.querySelector('.press__content-wrapper');
-        const popup = document.createElement('div');
+        const popup = document.querySelector('.press__popup');
         const date = document.createElement('span');
         const title = document.createElement('h2');
         const content = document.createElement('p');
         const contentLow = document.createElement('p');
         const image = document.createElement('img');
         const buttonClose = document.createElement('button');
-        popup.classList.add('press__popup');
         popup.classList.add('press__popup-hidden');
         date.classList.add('press__date-popup');
         title.classList.add('press__title-popup');
@@ -166,51 +229,32 @@ switch (window.location.href) {
         popup.appendChild(date);
         popup.appendChild(buttonClose);
         buttonClose.textContent = 'Закрыть';
-      };
-
-      // Загрузка контента из требуемого объекта в popup //
-      const getLoadContentInPopup = (array) => {
-        createPopupForNews();
-        for(let i = 0; i < array.length; i++) {
-          const date = document.querySelector(press__date-popup);
-          const title = document.querySelector(press__title-popup);
-          const content = document.querySelector(press__content-popup);
-          const image = document.querySelector(press__image-popup);
-          const contentLow = document.querySelector();
-          date[i].innerHTML= array[i].day + '.' + array[i].month + '.' + array[i].year;
-          title[i].innerHTML = array[i].title;
-          content[i].innerHTML = array[i].content;
-          contentLow[i].innerHTML = array[i].contentLow;
-          image[i].href = array[i].image;
-        }
-        // Очистка popup //
-        const getRemoveContentInPopup = () => {
-          const popup = document.querySelector('.press__popup');
-          popup.innerHTML = '';
-        };
-
-        // Закрыть popup //
-        const getHiddenPopup = () => {
-          const buttonClose = document.querySelector('.press__button-close-popup');
-          buttonClose.addEventListener('click', () => {
-            const popup = document.querySelector('.press__popup');
-            popup.classList.add('press__popup-hidden');
-            getRemoveContentInPopup();
-          });
-        };
-      };
-
-      // Вывод popup //
-      const getPopupVisability = () => {
-        const popup = document.querySelector('.press__popup');
-        popup.classList.remove('press__popup-hidden');
-        getLoadContentInPopup();
+        getHiddenPopup();
       };
 
       // Слушатель события для вывода POPUP //
       Array.from(pressContainer.children).forEach((element) => {
-        element.addEventListener('click', (item) => {
-          getPopupVisability();
+        element.addEventListener('click', () => {
+          const childrenElement = element.children[0];
+          const elementOfListNews = document.querySelector('.press__content');
+          elementOfListNews.style = 'display: none';
+          createPopupForNews();
+
+          // Загрузка контента из требуемого объекта в popup //
+          for(let i = 0; i < arrayOfContentNews.length; i++) {
+            if (+arrayOfContentNews[i].id === +childrenElement.children[0].textContent) {
+              const date = document.querySelector('.press__date-popup');
+              const title = document.querySelector('.press__title-popup');
+              const content = document.querySelector('.press__content-popup');
+              const contentLow = document.querySelector('.press__content-low-popup');
+              const image = document.querySelector('.press__image-popup');
+              date.innerHTML= arrayOfContentNews[i].day + '.' + arrayOfContentNews[i].month + '.' + arrayOfContentNews[i].year;
+              title.innerHTML = arrayOfContentNews[i].title;
+              content.innerHTML = arrayOfContentNews[i].content;
+              contentLow.innerHTML = arrayOfContentNews[i].contentLow;
+              image.href = arrayOfContentNews[i].img;
+            };
+          };
         });
       });
     };
