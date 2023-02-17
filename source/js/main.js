@@ -36,7 +36,7 @@ const arrayOfNews = [
 
 // Блок кода для определения текущей странички сайта //
 switch (window.location.href) {
-  case 'http://localhost:3000/index.html':
+  case 'http://localhost:3000/index.html' :
 
     // Создание требуемых элементов для новости на странице //
     const getCreateNews = () => {
@@ -82,6 +82,29 @@ switch (window.location.href) {
       };
     };
     getContent(arrayOfContentNews);
+
+    // Анимация для рассылки новостей //
+    gsap.fromTo('.main__popup-of-mailing', {
+      x:-500,
+      opacity: 0,
+    }, {
+      x:0,
+      duration: 3,
+      opacity: 1,
+    });
+
+    // Функция скрывающая popup с предложением о подписке  //
+    const getHidePopupOfMailing = () => {
+      const mailingPopup = document.querySelector('.main__popup-of-mailing');
+      mailingPopup.style = 'display: none';
+    };
+
+    // Слушатель события mailing popup //
+    const buttonMailingCloseOfPopup = document.querySelector('.main__button-close-popup-of-mailing');
+    buttonMailingCloseOfPopup.addEventListener('click', () => {
+      getHidePopupOfMailing();
+    });
+
     break;
 
   case 'http://localhost:3000/pressCentre.html':

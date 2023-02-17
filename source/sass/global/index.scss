@@ -4,7 +4,6 @@
 /// /////////////////////////
 
 .main {
-
 }
 
 .main__wrapper {
@@ -237,5 +236,40 @@
 
 .main__popup-of-mailing {
   position: absolute;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  height: 250px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: 1px solid;
+  user-select: none;
+}
+
+.main__img-popup-of-mailing {
+  width: 80px;
+  height: 80px;
+}
+.main__content-popup-of-mailing {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 15px;
+}
+.main__link-popup-of-mailing {
+  color: rgba(0, 4, 255, 0.808);
+  text-decoration: underline;
+}
+.main__button-close-popup-of-mailing {
+  font-size: 18px;
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  transition: .4s;
+  &:hover {
+    transform: rotate(90deg);
+    transition: .4s;
+    cursor: pointer;
+  }
 }
