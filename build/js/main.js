@@ -171,28 +171,8 @@ switch (window.location.href) {
       elementNotFound.classList.add('press__element-not-found');
       pressContainer.appendChild(elementNotFound);
       elementNotFound.textContent = 'Ничего не найдено';
-    }; // Функция для сортировки и вывода новостей //
+    }; // ФУНКЦИИ ДЛЯ РАБОТЫ С POPUP //
 
-
-    const getSortAndDeleteNewsOfArray = (arrayFirst, arrayTwo) => {
-      filterButton.addEventListener('click', () => {
-        getRemoveList(); // Проверка массива и удаления при не прохождения условий отбова новостей //
-        // Объединение сортированных массивов //
-
-        arrayOfNewsFiltered = [...arrayFirst, ...arrayTwo];
-
-        if (filterMonth.value !== '-' && filterYear.value !== '-') {
-          arrayOfNewsFiltered = arrayOfNewsFiltered.filter(item => item.month === +filterMonth.options[filterMonth.selectedIndex].dataset.month);
-          arrayOfNewsFiltered = arrayOfNewsFiltered.filter(item => item.year === +filterYear.options[filterYear.selectedIndex].dataset.year);
-        } // Удаление одинаковых элементов массива //
-
-
-        arrayOfNewsFiltered = arrayOfNewsFiltered.filter((item, index, self) => index === self.indexOf(item));
-        arrayOfNewsFiltered.length !== 0 ? loadNewsContentInElement(arrayOfNewsFiltered) : getNotFoundElement();
-      });
-    };
-
-    getSortAndDeleteNewsOfArray(arrayOfNewsFilterYear, arrayOfNewsFilterMonth); // ФУНКЦИИ ДЛЯ РАБОТЫ С POPUP //
 
     const getPopup = () => {
       // // Очистка popup //
@@ -267,10 +247,32 @@ switch (window.location.href) {
       });
     };
 
-    getPopup();
+    getPopup(); // Функция для сортировки и вывода новостей //
+
+    const getSortAndDeleteNewsOfArray = (arrayFirst, arrayTwo) => {
+      filterButton.addEventListener('click', () => {
+        getRemoveList(); // Проверка массива и удаления при не прохождения условий отбова новостей //
+        // Объединение сортированных массивов //
+
+        arrayOfNewsFiltered = [...arrayFirst, ...arrayTwo];
+
+        if (filterMonth.value !== '-' && filterYear.value !== '-') {
+          arrayOfNewsFiltered = arrayOfNewsFiltered.filter(item => item.month === +filterMonth.options[filterMonth.selectedIndex].dataset.month);
+          arrayOfNewsFiltered = arrayOfNewsFiltered.filter(item => item.year === +filterYear.options[filterYear.selectedIndex].dataset.year);
+        } // Удаление одинаковых элементов массива //
+
+
+        arrayOfNewsFiltered = arrayOfNewsFiltered.filter((item, index, self) => index === self.indexOf(item));
+        arrayOfNewsFiltered.length !== 0 ? loadNewsContentInElement(arrayOfNewsFiltered) : getNotFoundElement();
+        getPopup();
+      });
+    };
+
+    getSortAndDeleteNewsOfArray(arrayOfNewsFilterYear, arrayOfNewsFilterMonth);
     break;
 
   case 'http://localhost:3000/roundDate.html':
+    // Вывод popup //
     links.forEach(element => {
       element.addEventListener('click', evt => {
         evt.preventDefault();
@@ -286,4 +288,10 @@ switch (window.location.href) {
       });
     });
     break;
+
+  case 'http://localhost:3000/mailing.html':
+    const buttonSignOfMailing = document.querySelector('.main__button-mailing');
+    const inputSignOfMailing = document.querySelectorAll('.main__mailing-input'); // слушатель события на добавление в массив элемента //
+
+    buttonSignOfMailing.addEventListener('click', () => {});
 }
