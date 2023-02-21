@@ -313,7 +313,6 @@ switch (window.location.href) {
     const inputSignOfMailing = document.querySelectorAll('.main__mailing-input');
     const countElmentOfName = 3;
     
-
     // слушатель события на добавление в массив элемента //
     buttonSignOfMailing.addEventListener('click', () =>   {
 
